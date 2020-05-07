@@ -1,0 +1,74 @@
+%%=============================================================================
+%% Inleiding
+%%=============================================================================
+
+\chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}
+\label{ch:inleiding}
+
+Men zal het niet beseffen maar zonder de Mainframe zouden veel hedendaagse diensten wegvallen. Ook al is de mainframe voor velen iets uit het verleden blijven veel sectoren er op vertrouwen. Bijvoorbeeld de banken de kans is groot dat als je iets betaalt met je bankkaart dat de transactie verwerkt wordt door een mainframe. Of de vliegmaatschappijen zou je een kijk kunnen nemen naar de computer die gebruikt word om je in te checken op je vlucht in het vliegveld zal je merken dat dit hoogstwaarschijnlijk een terminal is die aangesloten zit op een Mainframe. Verder wordt de mainframe nog gebruikt in andere sectoren:
+
+
+\begin{itemize}
+  \item Financiële Sector
+  \item Magazijnbeheer
+  \item Verzekeringen
+  \item Ziekenzorg
+  \item Overheid
+  \item \ldots
+\end{itemize}
+
+Een uitval van een mainframe kan dus kritische diensten laten wegvallen. Bijvoorbeeld de mogelijkheid tot overschrijven via de bank. Daarom is een van de belangrijkste factoren van de mainframe de toegankelijkheid. De mainframe garandeert een uptime van 24 op 24, 7 op 7, 365 op 365 het hele jaar door dus. Hiervoor heeft het al verscheidene technieken waaronder de alles 2 regel. Je zult in een mainframe alles dubbel vinden. Ook de architectuur binnen de mainframe, de Parallel Sysplex(Meer hierover in de hoofdstuk 2) zorgt dat bij een uitval van 1 partitie een andere zijn workload direct overneemt. Dan zijn er binnen die architectuur ook nog verschillende software componenten hiervoor. Een daarvan is degene waar deze proef zich op focust z/OS Health Checker, deze tool werkt preventief. Hij probeert dus problemen op te sporen voor ze kunnen plaatsnemen en verwittigd de System Administrator hiervan. In hoofdstuk 2 zal de werking hiervan tot in detail worden uitgelegd.
+
+\section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}
+\label{sec:probleemstelling}
+
+De z/OS Health Checker opstelling van HCL Technologies is al lang niet meer verandert en is ook niet gestandaardiseerd over de verschillende partities binnen de Mainframe. Bij eventuele uitbreiding van het systeem is er dus ook niet direct een standaardopstelling die men kan toepassen. Verder vind er ook een inefficiënte logging plaats. Deze is nu niet echt aanwezig, de bedoeling is dat de verantwoordelijke van elke partitie een log krijgt van alle fouten binnen zijn partitie.
+
+\section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}
+\label{sec:Hoofdonderzoeksvraag}
+
+Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
+
+Deze proef zal zich focussen op de z/OS Health checker opstelling van HCL technologies met volgende onderzoeksvraag.
+
+\begin{itemize}
+	\item Is het mogelijk een standaardopstelling te maken voor een z/OS Health Checker omgeving?
+\end{itemize}
+
+\subsection{Deelonderzoeksvragen}
+\label{subsec:Deelonderzoeksvragen}
+
+Daarnaast is er in deze proef ook een focus op verdere efficiëntere logging van z/OS Health Checker en of deze kan via een webUI. Daaruit volgen de deelonderzoeksvragen:
+
+\begin{itemize}
+	\item Kan er een efficiënt log-systeem opgezet worden voor de z/OS Health Checker output?
+	\item Is de het mogelijk om de output van z/OS Health Checker vanuit SDSF te loggen op een Web interface?
+\end{itemize}
+
+
+\section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}
+\label{sec:onderzoeksdoelstelling}
+
+Het doel van deze proef is om een standaardopstelling te bekomen van z/OS Health Checker binnen de omgeving van HCL Technologies zodat deze bij uitbreiding van het systeem deze onmiddellijk kan implementeren op nieuwe partities.
+
+Verder is het doel om ook een duidelijke logging op te stellen voor elke verantwoordelijke van elke logische partitie van de Mainframe omgeving van HCL, met als eventueel vervolg een mogelijkheid te vinden om die logging te laten gebeuren via een web interface.
+
+\section{\IfLanguageName{dutch}{Opzet van deze bachelorproef}{Structure of this bachelor thesis}}
+\label{sec:opzet-bachelorproef}
+
+% Het is gebruikelijk aan het einde van de inleiding een overzicht te
+% geven van de opbouw van de rest van de tekst. Deze sectie bevat al een aanzet
+% die je kan aanvullen/aanpassen in functie van je eigen tekst.
+
+De rest van deze bachelorproef is als volgt opgebouwd:
+
+In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
+
+In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de hoofdonderzoeksvraag en de 1ste deelonderzoeksvraag.
+
+In Hoofdstuk~\ref{ch:methodologie} wordt onderzocht naar de 2de deelonderzoeksvraag 
+
+
+% TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
+
+In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.

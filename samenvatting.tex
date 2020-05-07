@@ -1,0 +1,39 @@
+%%=============================================================================
+%% Samenvatting
+%%=============================================================================
+
+% TODO: De "abstract" of samenvatting is een kernachtige (~ 1 blz. voor een
+% thesis) synthese van het document.
+%
+% Deze aspecten moeten zeker aan bod komen:
+% - Context: waarom is dit werk belangrijk?
+% - Nood: waarom moest dit onderzocht worden?
+% - Taak: wat heb je precies gedaan?
+% - Object: wat staat in dit document geschreven?
+% - Resultaat: wat was het resultaat?
+% - Conclusie: wat is/zijn de belangrijkste conclusie(s)?
+% - Perspectief: blijven er nog vragen open die in de toekomst nog kunnen
+%    onderzocht worden? Wat is een mogelijk vervolg voor jouw onderzoek?
+%
+% LET OP! Een samenvatting is GEEN voorwoord!
+
+%%---------- Nederlandse samenvatting -----------------------------------------
+%
+% TODO: Als je je bachelorproef in het Engels schrijft, moet je eerst een
+% Nederlandse samenvatting invoegen. Haal daarvoor onderstaande code uit
+% commentaar.
+% Wie zijn bachelorproef in het Nederlands schrijft, kan dit negeren, de inhoud
+% wordt niet in het document ingevoegd.
+
+\IfLanguageName{english}{%
+\selectlanguage{dutch}
+\chapter*{Samenvatting}
+\lipsum[1-4]
+\selectlanguage{english}
+}{}
+
+%%---------- Samenvatting -----------------------------------------------------
+% De samenvatting in de hoofdtaal van het document
+
+\chapter*{\IfLanguageName{dutch}{Samenvatting}{Abstract}}
+De mainframe is een vitaal onderdeel van verscheidene belangrijke sectoren. Ze worden voornamelijk gebruikt door hun garantie van continue toegankelijkheid. Er is zowel software als hardware speciaal ontworpen voor dit doeleind. z/OS Health checker is een voorbeeld van software dat hiervoor gebruikt wordt. Dit is een preventie tool die problemen probeert op te sporen voordat ze gebeuren. Maar de logging hiervan is niet zo efficiënt en de standaardopstelling van deze tool is ook niet efficiënt voor elke opstelling van en mainframe. Dit is ook het geval bij de opstelling HCL Technologies BVBA het doel van deze proef is die opstelling optimaliseren en een veel efficiëntere manier van logging opstellen. Er wordt eerst gekeken naar structuur binnen de mainframe waar z/OS health checker opereert. Dan naar de opstelling van z/OS Health Checker zelf en een analyse van die opstelling binnen HCL Technologies BVBA. Dan zal er een efficiëntere logging opgezet worden via JCL - jobs met als vervolg een optie deze om te zetten naar een Web interface.
