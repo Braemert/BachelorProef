@@ -48,7 +48,7 @@ De IBM mainframe kan verdeeld worden in verscheidene logische systemen. Tussen d
 	\item Processors
 	\item Input-Output devices.
 \end{itemize}
-Deze aparte systemen noemt men een logische partitie of LPAR. Al deze LPARs staan onder de controle van een hyperisor. De hypervisor is een software laag voor het beheer van meerdere besturingssystemen. De Verdeling van resources gebeurt door de Processor Resource/Systems Manager(PR/SM). De volledige definitie van een LPAR luidt als volgt: Een subset van de processor hardware dat gedefinieerd is voor het ondersteunen van een besturingssysteem. Meerdere LPARs zijn dus gelijkaardig aan verschillende aparte mainframes. Ze hebben elk hun eigen besturingssysteem. \cite{Ebbers2011}
+Deze aparte systemen noemt men een logische partitie of LPAR. Al deze LPARs staan onder de controle van een hyperisor. De hypervisor is een software laag voor het beheer van meerdere besturingssystemen. De Verdeling van resources gebeurt door de Processor Resource/Systems Manager(PR/SM). De volledige definitie van een LPAR luidt als volgt: Een subset van de processor hardware dat gedefinieerd is voor het ondersteunen van een besturingssysteem. Meerdere LPARs zijn dus gelijkaardig aan verschillende aparte mainframes. Ze hebben elk hun eigen besturingssysteem en toegewezen hardware. \cite{Ebbers2011}
 
 \begin{figure}[h]
 	\centering
@@ -61,32 +61,92 @@ Deze aparte systemen noemt men een logische partitie of LPAR. Al deze LPARs staa
 \subsection{Parallel Sysplex}
 \label{subsec:Parallel Sysplex}
 
-De Parallel Sysplex is een een techniek van clusteren. Waarmee men meerdere LPARs groepeert.  z/OS Health Checker zal zowel opereren op aparte LPAR als op de gehele Parallel Sysplex door globale checks(meer hierover in \ref{sec:z/OS Health Checker}). Daarvoor gaan we ons ook verdiepen in deze clustering techniek.
+De Parallel Sysplex is een een techniek van clusteren. Waarmee men meerdere LPARs groepeert.  z/OS Health Checker zal zowel opereren op aparte LPAR als op de gehele Parallel Sysplex door globale checks(meer hierover in sectie \ref{sec:z/OS Health Checker}). Daarvoor gaan we ons ook verdiepen in deze clustering techniek.
 
-Sysplex staat voor SYStems comPLEX dit is een of meerdere LPARs met z/OS, samengevoegd als 1 unit die gespecialiseerde hardware en software gebruikt. Het gebruikt unieke messaging services en kan bestandsstructuren delen in de couple facilty(CF) datasets. Een sysplex is een instantie van een computer systeem dat draait op 1 of meerdere fysieke partities waarvan elke een andere release kan draaien van het z/OS besturingssysteem. Een sysplex is wel geïsoleerd tot 1 fysieke mainframe. De Parallel Sysplex anderzijnds laat meerdere mainframes zich voordoen als 1 systeem. \cite{Ebbers2011} 
+Sysplex staat voor SYStems comPLEX dit is een of meerdere LPARs met z/OS, samengevoegd als 1 unit die gespecialiseerde hardware en software gebruikt. Het gebruikt unieke messaging services en kan bestandsstructuren delen in de couple facilty(CF) datasets. Een sysplex is een instantie van een computer systeem dat draait op 1 of meerdere fysieke partities waarvan elke een andere release kan draaien van het z/OS besturingssysteem. Een sysplex is wel geïsoleerd tot 1 fysieke mainframe. De Parallel Sysplex anderzijds laat meerdere mainframes zich voordoen als 1 systeem. \cite{Ebbers2011} 
 
 Een Parallel Sysplex is een symmetrische sysplex die gebruik maakt van het delen van data met meerdere systemen. Dit is dus de clustering van meerder mainframes. We bespreken ook enkele protocollen die de Parallel Sysplex gebruikt. 
 
 \subsubsection{Server Time Protocol}
 \label{subsubsec:Server Time Protocol}
 
-Een belangrijk aspect van de Parallel Sysplex is het synchroniseren van de Time Of Day(TOD) klokken van de meerdere servers. Dit zorgt er bijvoorbeeld voor dat wanneer meerdere servers data aanpassen in de database en er een uitval is. Dat men aan de hand van alle juiste timestamps van de updates van de data de databank kan reconstrueren. Dit gebeurt vandaag met het Server Time Protocol(STP). \cite{Ebbers2011}
+Een belangrijk aspect van de Parallel Sysplex is het synchroniseren van de Time Of Day(TOD) klokken van de meerdere servers. Stel nu meerdere systemen hebben net in dezelfde database data aangepast, maar daarna gebeurt er een uitval. Dan zal men de databank reconstrueren met behulp van alle timestamps van alle aanpassingen. Hiervoor is het belangrijk dat de klokken van elke LPAR gesynchroniseerd zijn om zo de juiste data in de juiste volgorde te reconstrueren. Dit gebeurt vandaag met het Server Time Protocol(STP). \cite{Ebbers2011}
 
 \subsubsection{Coupling Facilty}
 \label{subsubsec:Coupling Facility}
 
-Sommige z/OS applicaites op verschillende LPARs hebben vaak toegang nodig to dezelfde informatie. Hiervoor betrouwt een Parallel Sysplex op een of meerder Coupling Facilities(CF). Een CF maakt het mogelijk om aan data sharing te doen met meerdere systemen. Een CF is ook een LPAR maar een speciale die andere LPARs toelaat data te delen.
+Sommige z/OS applicaties op verschillende LPARs hebben vaak toegang nodig to dezelfde informatie. Hiervoor betrouwt een Parallel Sysplex op een of meerder Coupling Facilities(CF). Een CF maakt het mogelijk om aan data sharing te doen met meerdere systemen. Een CF is ook een LPAR maar een speciale die andere LPARs toelaat data te delen. \cite{Ebbers2011}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics{img/ParallelSysplex}
-	\caption[Visualisatie van een Parallel Sysplex]{Visualisatie van een parallel sysplex met 2 LPARs en 1 Coupling Facility. Control Units controleren de logica voor bepaalde I/O-apparaten zoals printers of opslagfaciliteiten in dit geval zijn ze verbonden aan disk drives.}
+	\caption[Visualisatie van een Parallel Sysplex]{Visualisatie van een parallel sysplex met 2 LPARs en 1 Coupling Facility. Control Units controleren de logica voor bepaalde I/O-apparaten zoals printers of opslagfaciliteiten.}
 	\label{fig:parallelsysplex}
 \end{figure}
 
+Een goed geconfigureerde parallel sysplex cluster is ontworpen zodat hij een hoge availability aanbied met een minimale downtime. Dit is dus al een van technieken die de mainframe zijn hoge availabilty garanderen. Bijvoorbeeld: als een systeem een uitval zou hebben, zou een ander systeem het direct kunnen opvangen doordat alle data en kritieke applicaties gedeeld worden in de parallel sysplex deze zou de taken van het systeem overnemen en ondertussen zou het uitgevallen systeem zich herstarten. Dit zorgt er uiteindelijk voor dat een laag aantal single points of failure aanwezig is binnen de sysplex. \cite{Ebbers2011}
 
 \section{z/OS}
 \label{subsec:z/OS}
+
+Ook belangrijk component van elk systeem is natuurlijk het besturingssysteem. In het geval van deze proef is dat z/OS, dit niet het enigste maar wel het meest gebruikte besturingssysteem op de mainframe. Zoals de naam het zelf als zegt draait ook z/OS Health Checker op dit besturingssysteem. Daarom bespreken we ook dit besturingssysteem. Een besturingssysteem is eigenlijk een collectie van programma's die de interne werking van het computer systeem beheren. Een besturingssysteem is ontworpen om er voor te zorgen dat de resources van de computer optimaal gebruikt worden.
+
+z/OS is vandaag een resultaat van tientallen jaren technologische vooruitgang door IBM. Het begon als een besturingssysteem dat maar 1 programma tegelijk kon afhandelen naar een dat vandaag duizenden programma's en gebruikers tegelijk kan afhandelen. Het besturingssysteem wordt uitgevoerd in de processor en bevindt zich ook in de processor storage. Mainframe hardware bestaat uit een aantal processors en aanhangende toestellen zoals DASD(Direct Acces storage devices de mainframe term voor hard disks). Die worden dan allemaal aangestuurd vanuit de consoles gekoppeld aan de mainframe. De DASD's worden gebruikt voor systeem functies of door programma's van gebruikers die uitgevoerd worden door z/OS. \cite{Ebbers2011}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics{img/Omgeving_zOS}
+	\caption[z/OS binnen de mainframe omgeving]{z/OS binnen de hardware omgeving bevindt zich op de mainframe. En wordt aangestuurd door aangesloten consoles/terminals. Om dan de data te bewerken op tape drives of DASD(term voor hard disk binnen de mainframe wereld)}
+	\label{fig:omgevingzos}
+\end{figure}
+
+z/OS maakt het ook mogelijk om aan multiprocessing en multiprogramming te doen. Hierdoor maakt het z/OS geschikt voor het uitvoeren van programma's die veel input/output operaties nodig hebben. 
+
+\subsubsection{Multiprocessing}
+\label{subsubsec:Multiprocessing}
+Dit is het simultaan opereren van meerdere processors die meerdere hardware resources delen zoals memory of externe opslag
+
+\subsubsection{Multiprogramming}
+\label{subsubsec:Multiprogramming}
+Multiprogramming laat z/OS toe om duizenden programma's te draaien voor gebruikers die werken aan verschillende projecten waar men zich ook bevindt op de wereld.
+
+\subsection{Storage gebruik van z/OS}
+\label{subsec:Storage gebruik van z/OS}
+
+z/OS heeft ook zijn eigen manier voor het gebruik van opslag/storage dit is ook belangrijk om te bespreken, omdat de term 'address space' gebruikt zal worden binnen deze proef. En die term is de techniek die z/OS gebruikt binnen de storage omgeving.
+
+Een mainframe en een gewone computer hebben 2 soorten fysieke opslag:
+
+\begin{itemize}
+	\item Fysieke storage die zich bevindt op de mainframe processor zelf, ook wel 'real storage' genoemd te vergelijken met RAM op je laptop.
+	\item Fysieke storage die zich buiten de mainframe bevindt op een tape of disk drive, dit wordt de auxiliary storage genoemd.
+\end{itemize}
+
+z/OS gebruikt deze 2 soorten storage om een andere soort te vormen namelijk virtual storage. Virtual storage is een combinatie van real en auxiliary storage. Het gebruikt een serie van tabellen en indexen om locaties binnen het auxiliary geheugen te associëren met locaties in de auxiliary storage.
+
+Een address space is eigenlijk een range van virtuele adressen dat het besturingssysteem toekent aan een programma of gebruiker. Voor een gebruiker kan dit beschouwt worden als een container waar zijn data in zit. Door deze addres space moet z/OS niet een heel programma naar de real storage laden om het uit te voeren. Daarom zal men het programma in stukken(ook gekend als pages) van de auxiliary storage naar de real storage verplaatsen in de volgorde die nodig is om het prorgamma uit te voeren. Eens dat een page niet meer nodig is kan men het terugschrijven naar de auxiliary storage. Dit laat z/OS toe om meer programma's simultaan uit te voeren.
+
+De fysieke opslag is daarom opgedeeld in verschillende stukken die elke hun eigen adres hebben maar de pages worden opgevraagd met hun virtueel adres. Het proces om een virtueel adres te vertalen in een real adress noemt men Dynamic Address translation(DAT). \cite{Ebbers2011}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics{img/Storage}
+	\caption[Visualisatie van het concept van virtuele storage]{Bijna alle programma's gebruiken virtuele adressen als ze refereren naar data in de real storage. Maar als een aangevraagd adres zich niet in de real storage bevindt zal er een onderbreking plaatsvinden en zal men de nodige data uit auxiliary storage naar de real storage laden(ook wel paging genoemd)}
+	\label{fig:storage}
+\end{figure}
+
+Een andere manier om te denken aan een address space is eigenlijk een soort van kaart voor de programmeur waarmee hij als zijn code en data kan opvragen.
+
+\section{Interactie met z/OS}
+\label{sec:interactie met z/OS}
+
+Om een systeem te beheren moeten we er natuurlijk ook mee kunnen werken. Voor deze interactie gebruikt men TSO commando om aan te loggen en dan ISPF, een collectie van menus en panelen die brede range van functies aanbied.
+
+\subsection{Time Sharing Option}
+\label{subsec:Time Sharing Option}
+
+\subsection{Interactive System Productivity Facility}
+\label{subsec:Interactive System Productivity Facility}
 
 \section{z/OS Health Checker}
 \label{sec:z/OS Health Checker}
