@@ -35,21 +35,35 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Storage gebruik van z/OS}{22}{subsection.2.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}z/OS Health Checker}{23}{section.2.4}% 
+\contentsline {section}{\numberline {2.4}Interactie met z/OS}{23}{section.2.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Methodologie}{25}{chapter.3}% 
+\contentsline {subsection}{\numberline {2.4.1}Time Sharing Option/Extensions en Interactive System Productivity Facility}{23}{subsection.2.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusie}{27}{chapter.4}% 
+\contentsline {section}{\numberline {2.5}Job Control Language en Job Entry Subsystem}{24}{section.2.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{29}{appendix.A}% 
+\contentsline {section}{\numberline {2.6}System Display and Search Facility}{25}{section.2.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{29}{section.A.1}% 
+\contentsline {section}{\numberline {2.7}De Parmlib}{25}{section.2.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}State-of-the-art}{29}{section.A.2}% 
+\contentsline {section}{\numberline {2.8}z/OS Health Checker}{26}{section.2.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{30}{section.A.3}% 
+\contentsline {subsection}{\numberline {2.8.1}z/OS Health Checker Checks}{27}{subsection.2.8.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{30}{section.A.4}% 
+\contentsline {subsection}{\numberline {2.8.2}Health Checker Framework}{27}{subsection.2.8.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{30}{section.A.5}% 
+\contentsline {chapter}{\numberline {3}Methodologie}{29}{chapter.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Conclusie}{31}{chapter.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{33}{appendix.A}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Introductie}{33}{section.A.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}State-of-the-art}{33}{section.A.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Methodologie}{34}{section.A.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{34}{section.A.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{34}{section.A.5}% 
 \contentsfinish 

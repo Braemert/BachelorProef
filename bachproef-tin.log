@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.4.25)  8 MAY 2020 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.4.25)  10 MAY 2020 16:58
 entering extended mode
 **./bachproef-tin.tex
 (bachproef-tin.tex
@@ -1734,7 +1734,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 LaTeX Warning: Citation 'Ebbers2011' on page 17 undefined on input line 18.
 
 [17]
-<img/mainframe.jpg, id=182, 276.03125pt x 183.68625pt>
+<img/mainframe.jpg, id=212, 276.03125pt x 183.68625pt>
 File: img/mainframe.jpg Graphic file (type jpg)
 <use img/mainframe.jpg>
 Package pdftex.def Info: img/mainframe.jpg  used on input line 31.
@@ -1743,7 +1743,7 @@ Package pdftex.def Info: img/mainframe.jpg  used on input line 31.
 
 LaTeX Warning: Citation 'Ebbers2011' on page 19 undefined on input line 51.
 
-<img/LPAR.jpg, id=187, 370.38374pt x 210.7875pt>
+<img/LPAR.jpg, id=217, 370.38374pt x 210.7875pt>
 File: img/LPAR.jpg Graphic file (type jpg)
 <use img/LPAR.jpg>
 Package pdftex.def Info: img/LPAR.jpg  used on input line 55.
@@ -1762,7 +1762,7 @@ LaTeX Warning: Citation 'Ebbers2011' on page 19 undefined on input line 73.
 
 LaTeX Warning: Citation 'Ebbers2011' on page 20 undefined on input line 78.
 
-<img/ParallelSysplex.jpg, id=193, 371.58826pt x 251.7405pt>
+<img/ParallelSysplex.jpg, id=223, 371.58826pt x 251.7405pt>
 File: img/ParallelSysplex.jpg Graphic file (type jpg)
 <use img/ParallelSysplex.jpg>
 Package pdftex.def Info: img/ParallelSysplex.jpg  used on input line 82.
@@ -1772,52 +1772,101 @@ LaTeX Warning: Citation 'Ebbers2011' on page 20 undefined on input line 87.
 
 [20 <./img/ParallelSysplex.jpg>]
 
-LaTeX Warning: Citation 'Ebbers2011' on page 21 undefined on input line 95.
+LaTeX Warning: Citation 'Ebbers2011' on page 21 undefined on input line 94.
 
-<img/Omgeving_zOS.jpg, id=200, 363.15675pt x 321.6015pt>
+<img/Omgeving_zOS.jpg, id=230, 363.15675pt x 321.6015pt>
 File: img/Omgeving_zOS.jpg Graphic file (type jpg)
 <use img/Omgeving_zOS.jpg>
-Package pdftex.def Info: img/Omgeving_zOS.jpg  used on input line 99.
+Package pdftex.def Info: img/Omgeving_zOS.jpg  used on input line 98.
 (pdftex.def)             Requested size: 363.15585pt x 321.60071pt.
 [21 <./img/Omgeving_zOS.jpg>]
-<img/Storage.jpg, id=205, 366.77025pt x 283.65974pt>
+
+LaTeX Warning: Citation 'Ebbers2011' on page 22 undefined on input line 129.
+
+<img/Storage.jpg, id=235, 366.77025pt x 283.65974pt>
 File: img/Storage.jpg Graphic file (type jpg)
 <use img/Storage.jpg>
-Package pdftex.def Info: img/Storage.jpg  used on input line 134.
+Package pdftex.def Info: img/Storage.jpg  used on input line 133.
 (pdftex.def)             Requested size: 366.76935pt x 283.65904pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1990) has occurred while \output is active []
+
+ [22]
+
+LaTeX Warning: Citation 'Parziale2017' on page 23 undefined on input line 148.
+
+<img/IPSF.jpg, id=242, 891.33pt x 692.5875pt>
+File: img/IPSF.jpg Graphic file (type jpg)
+<use img/IPSF.jpg>
+Package pdftex.def Info: img/IPSF.jpg  used on input line 152.
+(pdftex.def)             Requested size: 298.75264pt x 232.13713pt.
+[23 <./img/Storage.jpg>]
+
+LaTeX Warning: Citation 'Cosimo2018' on page 24 undefined on input line 170.
+
+<img/JES.jpg, id=248, 405.31425pt x 277.035pt>
+File: img/JES.jpg Graphic file (type jpg)
+<use img/JES.jpg>
+Package pdftex.def Info: img/JES.jpg  used on input line 174.
+(pdftex.def)             Requested size: 405.31326pt x 277.03432pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:ispf' on page 24 undefined on input line 182.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24 <./img/IPSF.jpg>]
+<img/SDSF.jpg, id=253, 481.8pt x 361.35pt>
+File: img/SDSF.jpg Graphic file (type jpg)
+<use img/SDSF.jpg>
+Package pdftex.def Info: img/SDSF.jpg  used on input line 188.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
+
+Overfull \hbox (55.00746pt too wide) in paragraph at lines 188--189
+ [][] 
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (methodologie.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22]
-[23 <./img/Storage.jpg>] [24
+LaTeX Warning: Citation 'Cosimo2018' on page 25 undefined on input line 196.
+
+[25 <./img/JES.jpg>]
+
+LaTeX Warning: Citation 'Walle2013' on page 26 undefined on input line 203.
+
+[26 <./img/SDSF.jpg>]) (methodologie.tex [27] [28
 
 ]
 Hoofdstuk 3.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25])
-(conclusie.tex [26]
+ [29])
+(conclusie.tex [30]
 Hoofdstuk 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27
+ [31
 
 ])
-[28]
+[32]
 B"ylage A.
-(../voorstel/voorstel-inhoud.tex [29
+(../voorstel/voorstel-inhoud.tex [33
 
 ])
 
 LaTeX Warning: Empty bibliography on input line 129.
 
-[30]
+[34]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
  (bachproef-tin.aux)
@@ -1837,11 +1886,11 @@ Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39977 strings out of 492946
- 747173 string characters out of 3131573
- 1351220 words of memory out of 3000000
- 43077 multiletter control sequences out of 15000+200000
- 575670 words of font info for 144 fonts, out of 3000000 for 9000
+ 40028 strings out of 492946
+ 747880 string characters out of 3131573
+ 1351897 words of memory out of 3000000
+ 43107 multiletter control sequences out of 15000+200000
+ 575953 words of font info for 147 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,67p,1106b,3844s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Jonas-PC-2/Documents/Miktex/fonts/enc/dvips/base/8r.enc}<C:/Users/J
@@ -1850,9 +1899,9 @@ Jonas-PC-2/Documents/Miktex/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/Jonas
 -PC-2/Documents/Miktex/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Jonas-PC-2
 /Documents/Miktex/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Jonas-PC-2/Documen
 ts/Miktex/fonts/type1/urw/times/utmr8a.pfb>
-Output written on bachproef-tin.pdf (32 pages, 391406 bytes).
+Output written on bachproef-tin.pdf (36 pages, 765682 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
- 22747 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 420 PDF objects out of 1000 (max. 8388607)
+ 81 named destinations out of 1000 (max. 500000)
+ 22818 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -2154,6 +2154,11 @@
     <bcf:citekey order="6">Ebbers2011</bcf:citekey>
     <bcf:citekey order="7">Ebbers2011</bcf:citekey>
     <bcf:citekey order="8">Ebbers2011</bcf:citekey>
+    <bcf:citekey order="9">Ebbers2011</bcf:citekey>
+    <bcf:citekey order="10">Parziale2017</bcf:citekey>
+    <bcf:citekey order="11">Cosimo2018</bcf:citekey>
+    <bcf:citekey order="12">Cosimo2018</bcf:citekey>
+    <bcf:citekey order="13">Walle2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
