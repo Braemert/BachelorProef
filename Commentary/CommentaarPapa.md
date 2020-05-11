@@ -1,3 +1,3 @@
 # Commentaar bestand
 
-Als het lukt verwijzen naar hoofdstok of sectie.
+Als het lukt verwijzen naar hoofdstuk of sectie.
