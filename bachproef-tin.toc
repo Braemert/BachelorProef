@@ -47,9 +47,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.8}z/OS Health Checker}{26}{section.2.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8.1}z/OS Health Checker Checks}{27}{subsection.2.8.1}% 
+\contentsline {subsection}{\numberline {2.8.1}Health Checker Framework}{27}{subsection.2.8.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8.2}Health Checker Framework}{27}{subsection.2.8.2}% 
+\contentsline {subsection}{\numberline {2.8.2}De Checks}{27}{subsection.2.8.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Check Owner}{27}{section*.10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Check Name}{28}{section*.11}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Check Values}{28}{section*.12}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Check Types}{28}{section*.13}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Check Output}{28}{section*.14}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Methodologie}{29}{chapter.3}% 
 \defcounter {refsection}{0}\relax 

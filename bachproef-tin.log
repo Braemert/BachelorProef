@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.4.25)  10 MAY 2020 16:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.4.25)  11 MAY 2020 20:54
 entering extended mode
 **./bachproef-tin.tex
 (bachproef-tin.tex
@@ -1734,7 +1734,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 LaTeX Warning: Citation 'Ebbers2011' on page 17 undefined on input line 18.
 
 [17]
-<img/mainframe.jpg, id=212, 276.03125pt x 183.68625pt>
+<img/mainframe.jpg, id=215, 276.03125pt x 183.68625pt>
 File: img/mainframe.jpg Graphic file (type jpg)
 <use img/mainframe.jpg>
 Package pdftex.def Info: img/mainframe.jpg  used on input line 31.
@@ -1743,7 +1743,7 @@ Package pdftex.def Info: img/mainframe.jpg  used on input line 31.
 
 LaTeX Warning: Citation 'Ebbers2011' on page 19 undefined on input line 51.
 
-<img/LPAR.jpg, id=217, 370.38374pt x 210.7875pt>
+<img/LPAR.jpg, id=220, 370.38374pt x 210.7875pt>
 File: img/LPAR.jpg Graphic file (type jpg)
 <use img/LPAR.jpg>
 Package pdftex.def Info: img/LPAR.jpg  used on input line 55.
@@ -1762,7 +1762,7 @@ LaTeX Warning: Citation 'Ebbers2011' on page 19 undefined on input line 73.
 
 LaTeX Warning: Citation 'Ebbers2011' on page 20 undefined on input line 78.
 
-<img/ParallelSysplex.jpg, id=223, 371.58826pt x 251.7405pt>
+<img/ParallelSysplex.jpg, id=226, 371.58826pt x 251.7405pt>
 File: img/ParallelSysplex.jpg Graphic file (type jpg)
 <use img/ParallelSysplex.jpg>
 Package pdftex.def Info: img/ParallelSysplex.jpg  used on input line 82.
@@ -1774,7 +1774,7 @@ LaTeX Warning: Citation 'Ebbers2011' on page 20 undefined on input line 87.
 
 LaTeX Warning: Citation 'Ebbers2011' on page 21 undefined on input line 94.
 
-<img/Omgeving_zOS.jpg, id=230, 363.15675pt x 321.6015pt>
+<img/Omgeving_zOS.jpg, id=233, 363.15675pt x 321.6015pt>
 File: img/Omgeving_zOS.jpg Graphic file (type jpg)
 <use img/Omgeving_zOS.jpg>
 Package pdftex.def Info: img/Omgeving_zOS.jpg  used on input line 98.
@@ -1783,7 +1783,7 @@ Package pdftex.def Info: img/Omgeving_zOS.jpg  used on input line 98.
 
 LaTeX Warning: Citation 'Ebbers2011' on page 22 undefined on input line 129.
 
-<img/Storage.jpg, id=235, 366.77025pt x 283.65974pt>
+<img/Storage.jpg, id=238, 366.77025pt x 283.65974pt>
 File: img/Storage.jpg Graphic file (type jpg)
 <use img/Storage.jpg>
 Package pdftex.def Info: img/Storage.jpg  used on input line 133.
@@ -1798,7 +1798,7 @@ Underfull \vbox (badness 1990) has occurred while \output is active []
 
 LaTeX Warning: Citation 'Parziale2017' on page 23 undefined on input line 148.
 
-<img/IPSF.jpg, id=242, 891.33pt x 692.5875pt>
+<img/IPSF.jpg, id=245, 891.33pt x 692.5875pt>
 File: img/IPSF.jpg Graphic file (type jpg)
 <use img/IPSF.jpg>
 Package pdftex.def Info: img/IPSF.jpg  used on input line 152.
@@ -1807,7 +1807,7 @@ Package pdftex.def Info: img/IPSF.jpg  used on input line 152.
 
 LaTeX Warning: Citation 'Cosimo2018' on page 24 undefined on input line 170.
 
-<img/JES.jpg, id=248, 405.31425pt x 277.035pt>
+<img/JES.jpg, id=251, 405.31425pt x 277.035pt>
 File: img/JES.jpg Graphic file (type jpg)
 <use img/JES.jpg>
 Package pdftex.def Info: img/JES.jpg  used on input line 174.
@@ -1816,53 +1816,136 @@ Package pdftex.def Info: img/JES.jpg  used on input line 174.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `fig:ispf' on page 24 undefined on input line 182.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24 <./img/IPSF.jpg>]
-<img/SDSF.jpg, id=253, 481.8pt x 361.35pt>
+<img/SDSF.jpg, id=257, 481.8pt x 361.35pt>
 File: img/SDSF.jpg Graphic file (type jpg)
 <use img/SDSF.jpg>
 Package pdftex.def Info: img/SDSF.jpg  used on input line 188.
-(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
-
-Overfull \hbox (55.00746pt too wide) in paragraph at lines 188--189
- [][] 
- []
+(pdftex.def)             Requested size: 298.75264pt x 224.06776pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation 'Cosimo2018' on page 25 undefined on input line 196.
+LaTeX Warning: Citation 'Cosimo2018' on page 25 undefined on input line 197.
 
 [25 <./img/JES.jpg>]
 
-LaTeX Warning: Citation 'Walle2013' on page 26 undefined on input line 203.
+LaTeX Warning: Citation 'Walle2013' on page 26 undefined on input line 204.
 
-[26 <./img/SDSF.jpg>]) (methodologie.tex [27] [28
+
+LaTeX Warning: Citation 'Bezzi2010' on page 26 undefined on input line 206.
+
+[26 <./img/SDSF.jpg>]
+
+LaTeX Warning: Citation 'IBMCorporation2019' on page 27 undefined on input line
+ 217.
+
+<img/HCFramework.jpg, id=266, 448.67625pt x 200.54926pt>
+File: img/HCFramework.jpg Graphic file (type jpg)
+<use img/HCFramework.jpg>
+Package pdftex.def Info: img/HCFramework.jpg  used on input line 221.
+(pdftex.def)             Requested size: 298.75264pt x 133.54105pt.
+
+LaTeX Warning: Citation 'Bezzi2010' on page 27 undefined on input line 230.
+
+
+LaTeX Warning: Citation 'Bezzi2010' on page 27 undefined on input line 237.
+
+
+Overfull \hbox (16.45221pt too wide) in paragraph at lines 242--243
+\T1/ptm/m/n/12 (-20) mum 32 ka-rak-ters lang zijn. Een voor-beeld van een check
+ naam: "XCF_CDS_MAXSYSTEM". 
+ []
+
+[27 <./img/HCFramework.jpg>]) (methodologie.tex [28]
+Hoofdstuk 3.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 26
+.
+(C:\Users\Jonas-PC-2\Documents\Miktex\tex/latex/psnfss\ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `ztmcm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 26
+.
+
+(C:\Users\Jonas-PC-2\Documents\Miktex\tex/latex/psnfss\omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 26
+.
+
+(C:\Users\Jonas-PC-2\Documents\Miktex\tex/latex/psnfss\omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 26
+.
+
+(C:\Users\Jonas-PC-2\Documents\Miktex\tex/latex/psnfss\omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+(C:\Users\Jonas-PC-2\Documents\Miktex\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+(C:\Users\Jonas-PC-2\Documents\Miktex\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 26.
+
+(C:\Users\Jonas-PC-2\Documents\Miktex\tex/latex/psnfss\ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+
+Overfull \hbox (3.97644pt too wide) in paragraph at lines 28--28
+[]\T1/ptm/b/n/12 Outcome| 
+ []
+
+
+Overfull \hbox (4.89935pt too wide) in paragraph at lines 30--30
+[]\T1/ptm/m/n/12 (-20) ACTIVE(ENABLED)| 
+ []
+
+
+Overfull \hbox (1.76152pt too wide) in paragraph at lines 30--30
+[]\T1/ptm/m/n/12 (-20) SUCCES| 
+ []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 30--32
+[]\T1/ptm/m/n/12 (+20) CDS MAX-SY-S-TEM va-lue
+ []
+
+
+Overfull \hbox (47.99997pt too wide) in paragraph at lines 26--34
+[][] 
+ []
+
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29
 
 ]
-Hoofdstuk 3.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29])
 (conclusie.tex [30]
 Hoofdstuk 4.
+) [31
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] [32
 
- [31
-
-])
-[32]
+]
 B"ylage A.
-(../voorstel/voorstel-inhoud.tex [33
-
-])
+(../voorstel/voorstel-inhoud.tex [33])
 
 LaTeX Warning: Empty bibliography on input line 129.
 
@@ -1886,22 +1969,22 @@ Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40028 strings out of 492946
- 747880 string characters out of 3131573
- 1351897 words of memory out of 3000000
- 43107 multiletter control sequences out of 15000+200000
- 575953 words of font info for 147 fonts, out of 3000000 for 9000
+ 40186 strings out of 492946
+ 751039 string characters out of 3131573
+ 1352216 words of memory out of 3000000
+ 43222 multiletter control sequences out of 15000+200000
+ 585477 words of font info for 173 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,67p,1106b,3844s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,11n,67p,1106b,3844s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Jonas-PC-2/Documents/Miktex/fonts/enc/dvips/base/8r.enc}<C:/Users/J
 onas-PC-2/Documents/Miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
 Jonas-PC-2/Documents/Miktex/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/Jonas
 -PC-2/Documents/Miktex/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Jonas-PC-2
 /Documents/Miktex/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Jonas-PC-2/Documen
 ts/Miktex/fonts/type1/urw/times/utmr8a.pfb>
-Output written on bachproef-tin.pdf (36 pages, 765682 bytes).
+Output written on bachproef-tin.pdf (36 pages, 812098 bytes).
 PDF statistics:
- 420 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 22818 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 28967 words of extra memory for PDF output out of 29859 (max. 10000000)
 

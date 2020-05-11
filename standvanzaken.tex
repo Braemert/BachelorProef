@@ -7,7 +7,7 @@
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
 
-Dit onderzoek zal zich focussen op z/OS Health Checker dit is een tool die draait in een mainframe omgeving maar vooraleer we kunnen beginnen met het bespreken van de oplossingsmethode van de onderzoeksvragen moeten we ons eerst verdiepen in de mainframe zelf en de omgeving waarin z/OS Health Checker draait om zo duidelijk te maken waarom deze tool zijn aanwezigheid belangrijk is en hoe deze werkt. Verder moeten we ook de basis begrijpen van andere tools en systemen binnen de mainframe zoals ISPF, SDS en JES. Om daarna te eindigen met JCL de taal die word gebruikt om de z/OS Health checker logs op te stellen.
+Dit onderzoek zal zich focussen op z/OS Health Checker dit is een tool die draait in een mainframe omgeving maar vooraleer we kunnen beginnen met het bespreken van de oplossingsmethode van de onderzoeksvragen moeten we ons eerst verdiepen in de mainframe zelf en de omgeving waarin z/OS Health Checker draait om zo duidelijk te maken waarom deze tool zijn aanwezigheid belangrijk is en hoe deze werkt. Verder moeten we ook de basis begrijpen van andere tools en systemen binnen de mainframe zoals ISPF, SDS en JES. Om daarna te eindigen met JCL de taal die word gebruikt om de z/OS Health Checker logs op te stellen.
 
 \section{De Mainframe}
 \label{sec:De Mainframe}
@@ -151,7 +151,7 @@ TSO/E of Time Sharing Option/Extensions laat gebruikers toe om een interactieve 
 	\centering
 	\includegraphics[width=0.7\linewidth]{img/IPSF}
 	\caption[ISPF hoofdmenu]{Dit is het hoofdmenu van ISPF vanaf hier kan je de verschillende panelen gebruiken}
-	\label{fig:ipsf}
+	\label{fig:ispf}
 \end{figure}
 
 
@@ -179,30 +179,31 @@ Vooraleer je het z/OS systeem een programma voor je laat uitvoeren moet je een p
 \section{System Display and Search Facility}
 \label{sec:System Display and Search Facility}
 
-We willen natuurlijk de output van onze jobs kunnen zien daarvoor wordt er gebruikt gemaakt van de System Display and Search Facility of SDSF. Dit is niet het enigste dat we kunnen zien in SDSF. Voor z/OS Health Checker zullen we namelijk ook deze tool gebruiken om alle info van het systeem op te vragen. Deze utiliteit kan je bereiken via het hoofdmenu van ISPF met de optie 'S'(zie figuur \ref{fig:ispf})
+We willen natuurlijk de output van onze jobs kunnen zien daarvoor wordt er gebruikt gemaakt van de System Display and Search Facility of SDSF. Dit is niet het enigste dat we kunnen zien in SDSF. Voor z/OS Health Checker zullen we namelijk ook deze tool gebruiken om alle info van het systeem op te vragen. Deze utiliteit kan je bereiken via het hoofdmenu van ISPF met de optie 'S'(zie figuur \ref{fig:ispf} )
 
 In SDSF zijn er veel panelen en soorten output die je kan opvragen maar de enige die wij zullen gebruiken is namelijk die van z/OS Health Checker die bereik je binnen SDSF via de 'ck' optie. Verder zal je bij het schrijven van jobs het 'Status of jobs' paneel nodig hebben. Dit paneel toont de output van uitgevoerde jobs, dit paneel bereik je met de 'st' optie.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics{img/SDSF}
-	\caption[Hoofdmenu van SDSF]{Hier zie je het hoofdmenu van SDSF en onder andere ook de 2 opties die gebruikt worden doorheen de proef namelijk 'ck' en 'st'}
+	\includegraphics[width=0.7\linewidth]{img/SDSF}
+	\caption[SDSF Hoofdmenu]{Hier zie je het hoofdmenu van SDSF en onder andere ook de 2 opties die gebruikt worden doorheen de proef namelijk 'ck' en 'st'}
 	\label{fig:sdsf}
 \end{figure}
+
  
- \section{De Parmlib}
- \label{sec:De Parmlib}
+\section{De Parmlib}
+\label{sec:De Parmlib}
+
+z/OS Health Checker heeft ook enkele datasets in de parmlib die verandert worden in deze proef daarom moeten we ook begrijpen wat die parmlib eigenlijk is. Elk z/OS systeem heeft een PDS dat volzit met members die worden meegegeven door IBM. Deze PDS is SYS1.PARMLIB. De members zijn allemaal systeem en applicatie parameters die het systeem nodig heeft bij het opstarten(Initial Program Load(IPL) in mainframe term). Bij de IPL wordt de parmlib dus gelezen om het systeem op te zetten. Deze PDS wordt later ook nog gelezen door andere componenten en programma's. \cite{Cosimo2018}
  
- z/OS Health Checker heeft ook enkele datasets in de parmlib die verandert worden in deze proef daarom moeten we ook begrijpen wat die parmlib eigenlijk is. Elk z/OS systeem heeft een PDS dat volzit met members die worden meegegeven door IBM. Deze PDS is SYS1.PARMLIB. De members zijn allemaal systeem en applicatie parameters die het systeem nodig heeft bij het opstarten(Initial Program Load(IPL) in mainframe term). Bij de IPL wordt de parmlib dus gelezen om het systeem op te zetten. Deze PDS wordt later ook nog gelezen door andere componenten en programma's. \cite{Cosimo2018}
- 
- Een van deze componenten is namelijk z/OS Health Checker in de parmlib zitten namelijk de members die definiëren welke Checks(meer hierover in sectie ) er zullen draaien en welke niet.
+Een van deze componenten is namelijk z/OS Health Checker in de parmlib zitten namelijk de members die definiëren welke Checks(meer hierover in sectie ) er zullen draaien en welke niet.
  
 \section{z/OS Health Checker}
 \label{sec:z/OS Health Checker}
 
-Na een analyse naar de redenen van verscheidene uitvallen kwam men tot een conclusie dat veel hiervan perfect vermeden konden worden. Vele uitvallen kwamen door slechte configuraties die leiden tot single points of failure. Hierdoor is z/OS Health Checker ontwikkelt. \cite{Walle2013}
+Na een analyse naar de redenen van verscheidene uitvallen kwam men tot een conclusie dat veel hiervan perfect vermeden konden worden. Vele uitvallen kwamen door slechte configuraties die leiden tot single points of failure. Hierdoor is z/OS Health Checker ontwikkelt door IBM. \cite{Walle2013}
 
-IBM Health Checker voor z/OS is een tool die helpt om potentiële problemen op te sporen in de configuratie van het systeem. Deze problemen zouden een grote impact kunnen hebben op het systeem of zouden zelfs een uitval kunnen veroorzaken. Health Checker kijkt de huidige instellingen van z/OS en de Sysplex na en vergelijkt deze met instellingen die door IBM aangeraden worden. Bij eventuele problemen zal Health Checker een output genereren met gedetailleerde info over het probleem zelf en op welke manier je het probleem het beste oplost. Wel belangrijk is dat Health Checker eerder een preventieve tool is en geen monitoring tool.
+IBM Health Checker voor z/OS is een tool die helpt om potentiële problemen op te sporen in de configuratie van het systeem. Deze problemen zouden een grote impact kunnen hebben op het systeem of zouden zelfs een uitval kunnen veroorzaken. Health Checker kijkt de huidige instellingen van z/OS en de Sysplex na en vergelijkt deze met instellingen die door IBM aangeraden worden. Bij eventuele problemen zal Health Checker een output genereren met gedetailleerde info over het probleem zelf en op welke manier je het probleem het beste oplost. Wel belangrijk is dat Health Checker eerder een preventieve tool is en geen monitoring tool. \cite{Bezzi2010}
 
 z/OS Health Checker bestaat uit 2 delen
 \begin{itemize}
@@ -210,8 +211,61 @@ z/OS Health Checker bestaat uit 2 delen
 	\item Het framework	
 \end{itemize}
 
-\subsection{z/OS Health Checker Checks}
-\label{sec:z/OS Health Checker Checks}
-
 \subsection{Health Checker Framework}
 \label{subsec:Health Checker Framework}
+
+Het framework van z/OS Health Checker is de interface die je gebruikt om checks uit te voeren en te beheren. Deze ondersteunt niet enkele checks van IBM maar ook die van software producenten zoals Computer Associates en Compuware. Binnen het framework zit de HZSPQE data, hierin zit alle informatie die een check nodig zou hebben zoals de default parameters. Het framework bevat ook de Message table die houd de data bij van de output van de checks. \cite{IBMCorporation2019}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/HCFramework}
+	\caption[z/OS Health Checker Framework]{Het z/OS Health Checker Framework dat het mogelijk maakt om checks uit te voeren en de output hiervan door te geven aan SDSF en andere tools.}
+	\label{fig:hcframework}
+\end{figure}
+
+
+\subsection{De Checks}
+\label{sec:z/OS Health Checker Checks}
+
+De Checks zelf zijn programma's die componenten en instellingen evalueren en dan eventuele problemen melden. Deze checks worden voornamelijk aangeboden door IBM zelf maar deze kunnen ook van andere bedrijven zijn. Je kan ook zelf Checks scrhijven met System REXX. Een check vergelijkt de instellingen van 1 bepaald component met een set van instellingen die aangeraden worden door de eigenaar van de check. De aangeraden instellingen zijn geen verplichte instellingen maar eerder een best practice van IBM. Je kan deze ook zelf definiëren of aanpassen. \cite{Bezzi2010}
+
+Een check wordt gedefinieerd met 3 waarden
+
+\subsubsection{Check Owner}
+\label{subsubsec:Check Owner}
+
+Elke check heeft zijn eigenaar. De naam van de check is meestal verbonden met het component waarvoor hij draait. In deze naam zit ook bijna altijd een verwijzing naar het bedrijf of product die de check gemaakt heeft. De checks van IBM beginnen dan ook allemaal met IBM. Een check owner is een string van maximum 16 karakters. Een voorbeeld van een check owner is bijvoorbeeld IBMXCF. Deze check is dus geschreven door IBM en zal iets te maken hebben met XCF(Cross-system Coupling Facility). Een check owner heeft meerdere checks zelf. \cite{Bezzi2010}
+
+\subsubsection{Check Name}
+\label{subsubsec:Check Name}
+
+De check zelf heeft natuurlijk ook een naam. En is uniek voor elke check. Deze zal maximum 32 karakters lang zijn. Een voorbeeld van een check naam: "XCF\_CDS\_MAXSYSTEM".
+
+\subsubsection{Check Values}
+\label{subsubsec:Check Values}
+
+Een check bezit verder ook nog enkele vooraf gedefinieerde waarden
+
+\begin{enumerate}
+	\item Een interval die definieert hoe vaak en wanneer de check uitgevoerd wordt.
+	\item De ernst(Severity) van een check deze definieert de check output. Hoe grotere het potentiele probleem hoe hoger de severity. 
+\end{enumerate}
+
+\subsubsection{Check Types}
+\label{subsubsec:Check Type}
+
+Verder zijn er ook 3 types van checks: Local, remote en REXX checks. In deze proef komen enkel de local checks aan bod. De lokale check is geschreven in ASSEMBLER. En draaien binnen de Health Checker address space. Deze worden opgeroepen met parameters die verwijzen naar de HZSPQE data hierin zit alle data die de check routine nodig heeft. Het verschil met een Remote check is dat een remote check niet binnen de addres space van Health Checker draait. 
+
+\subsubsection{Check Output}
+\label{subsubsec:Check Output}
+
+De check output is ook zeer belangrijk deze duid namelijk aan of een check al dan niet succesvol was. Er zijn verschillende soorten check messages.
+
+\begin{itemize}
+	\item Information Message: Deze message krijg je wanneer een check succesvol is of wanneer deze niet kan draaien in de huidige omgeving(Bijvoorbeeld wanneer het component dat de check evalueert niet aanwezig is op het systeem).
+	\item Exception Message: Deze message krijg je wanneer de check onsuccesvol was en deze een potentieel probleem heeft gevonden. Dit noemt een exception. Dit bericht bevat de severity van het probleem samen met suggesteis om het probleem op te lossen
+	\item Report: Bij een exception zal er ook een extra report bijgevoegd zijn met extra informatie over het probleem.
+	\item Debug: Sommige checks kan je in debug mode uitvoeren. Dit wordt vooral enkel gebruikt bij het ontwikkelen van een eigen check.	
+\end{itemize}
+
+Verder is er nog 1 speciaal soort check. Namelijk de migration check. Deze check helpen je bij het plannen voor een overschakelen van z/OS versie. Deze checks kan je uitvoeren na een migratie om te kijken of deze succesvol was. Deze checks beginnen altijd met 'ZOSMIG'.
