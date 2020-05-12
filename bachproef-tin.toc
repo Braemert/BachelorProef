@@ -87,5 +87,27 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {B.1}Check Output}{41}{section.B.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Tabellen Standaard opstelling z/OS Health Checker}{43}{section.B.2}% 
+\contentsline {section}{\numberline {B.2}Tabellen Standaard opstelling z/OS Health Checker}{44}{section.B.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.3}Parmlib members voor z/OS Health Checker}{84}{section.B.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.3.1}HZSPRM00}{84}{subsection.B.3.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.3.2}HZSPRMT1}{87}{subsection.B.3.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.3.3}HZSPRMT2}{87}{subsection.B.3.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.3.4}HZSPRMT3}{90}{subsection.B.3.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.3.5}HZSPRMT4}{93}{subsection.B.3.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.4}JCL jobs}{96}{section.B.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.4.1}FHZSVT11}{96}{subsection.B.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.4.2}FHZSVT21}{97}{subsection.B.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.4.3}FHZSVT31}{97}{subsection.B.4.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.4.4}FHZSVT41}{98}{subsection.B.4.4}% 
 \contentsfinish 

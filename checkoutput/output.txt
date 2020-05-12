@@ -106,6 +106,5 @@ difference between the INITSIZE and SIZE values.
   Check Reason:  Too large a difference between INITSIZE and SIZE may          
     waste coupling facility space or prevent structure allocation.             
 
-END TIME: 05/12/2020 09:42:53.031335  STATUS: EXCEPTION-MED
-                     
+END TIME: 05/12/2020 09:42:53.031335  STATUS: EXCEPTION-MED                    
 ******************************** BOTTOM OF DATA ********************************

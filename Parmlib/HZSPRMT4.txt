@@ -1,0 +1,131 @@
+LOGGER=OFF                                                            
+ADDREPLACE POLICY,STATEMENTNAME(MODT401)                              
+   UPDATE CHECK(IBMUSS,USS_FILESYS_CONFIG)                            
+      INACTIVE                                                        
+      DATE(20070608)                                                  
+      REASON('VT02 always run with RW')                               
+ADDREPLACE POLICY,STATEMENTNAME(MODT402)                              
+   UPDATE CHECK(IBMHSM,HSM_CDSB_BACKUP_COPIES)                        
+      SEVERITY(MED) INTERVAL(24:00) PARM('CRITVAL(2)')                
+      DATE(20200427)                                                  
+      REASON('Ensure critcal value of HSM CDS backup copies exist')   
+ADDREPLACE POLICY,STATEMENTNAME(MODT403)                              
+   UPDATE CHECK(IBMHSM,HSM_CDSB_BACKUP_COPIES)                        
+      SEVERITY(MED) INTERVAL(24:00) PARM('CRITVAL(2)')                
+      DATE(20200427)                                                  
+      REASON('Ensure critical value of HSM CDS Backups exist')        
+ADDREPLACE POLICY,STATEMENTNAME(MODT404)                              
+   UPDATE CHECK(IBMCNZ,CNZ_EMCS_INACTIVE_CONSOLES)      
+      INACTIVE                                          
+      DATE(20200427)                                    
+      REASON('Force global to run on VT1')              
+ADDREPLACE POLICY,STATEMENTNAME(MODT405)                
+   UPDATE CHECK(IBMXCF,XCF_CDS_MAXSYSTEM)               
+      INACTIVE                                          
+      DATE(20200427)                                    
+      REASON('Force global to run on VT1')              
+ADDREPLACE POLICY,STATEMENTNAME(MODT406)                
+   UPDATE CHECK(IBMXCF,XCF_CF_ALLOCATION_PERMITTED)     
+      INACTIVE                                          
+      DATE(20200427)                                    
+      REASON('Force global to run on VT1')              
+ADDREPLACE POLICY,STATEMENTNAME(MODT407)                
+   UPDATE CHECK(IBMXCF,XCF_CF_STR_AVAILABILITY)         
+      INACTIVE                                          
+      DATE(20200427)                                    
+      REASON('Force global to run on VT1')              
+ADDREPLACE POLICY,STATEMENTNAME(MODT408)                
+   UPDATE CHECK(IBMXCF,XCF_CF_STR_DUPLEX)               
+      INACTIVE                                          
+      DATE(20200427)                                    
+      REASON('Force global to run on VT1')              
+ADDREPLACE POLICY,STATEMENTNAME(MODT409)                
+   UPDATE CHECK(IBMXCF,XCF_CF_STR_ENCRYPT)              
+      INACTIVE                                          
+      DATE(20200427)                                    
+      REASON('Force global to run on VT1')              
+ADDREPLACE POLICY,STATEMENTNAME(MODT410)                
+   UPDATE CHECK(IBMXCF,XCF_CF_STR_EXCLLIST)             
+      INACTIVE                                          
+      DATE(20200427)                                    
+      REASON('Force global to run on VT1')              
+ADDREPLACE POLICY,STATEMENTNAME(MODT411)                
+   UPDATE CHECK(IBMXCF,XCF_CF_STR_NONVOLATILE)          
+      INACTIVE                                      
+      DATE(20200427)                                
+      REASON('Force global to run on VT1')          
+ADDREPLACE POLICY,STATEMENTNAME(MODT412)            
+   UPDATE CHECK(IBMXCF,XCF_CF_STR_POLICYSIZE)       
+      INACTIVE                                      
+      DATE(20200427)                                
+      REASON('Force global to run on VT1')          
+ADDREPLACE POLICY,STATEMENTNAME(MODT413)            
+   UPDATE CHECK(IBMXCF,XCF_CF_STR_PREFLIST)         
+      INACTIVE                                      
+      DATE(20200427)                                
+      REASON('Force global to run on VT1')          
+ADDREPLACE POLICY,STATEMENTNAME(MODT414)            
+   UPDATE CHECK(IBMXCF,XCF_CF_SYSPLEX_CONNECTIVITY) 
+      INACTIVE                                      
+      DATE(20200427)                                
+      REASON('Force global to run on VT1')          
+ADDREPLACE POLICY,STATEMENTNAME(MODT415)            
+   UPDATE CHECK(IBMXCF,XCF_CFRM_MSGBASED)           
+      INACTIVE                                      
+      DATE(20200427)                                
+      REASON('Force global to run on VT1')          
+ADDREPLACE POLICY,STATEMENTNAME(MODT416)            
+   UPDATE CHECK(IBMXCF,XCF_SFM_ACTIVE)              
+      INACTIVE                                      
+      DATE(20200427)                                
+      REASON('Force global to run on VT1')          
+ADDREPLACE POLICY,STATEMENTNAME(MODT417)            
+   UPDATE CHECK(IBMXCF,XCF_SFM_CONNFAIL)            
+      INACTIVE                                      
+      DATE(20200427)                                
+      REASON('Force global to run on VT1')          
+ADDREPLACE POLICY,STATEMENTNAME(MODT418)            
+   UPDATE CHECK(IBMGRS,GRS_CONVERT_RESERVES)        
+      INACTIVE                                      
+      DATE(20200427)                                     
+      REASON('Force global to run on VT1')               
+ADDREPLACE POLICY,STATEMENTNAME(MODT419)                 
+   UPDATE CHECK(IBMGRS,GRS_MODE)                         
+      INACTIVE                                           
+      DATE(20200427)                                     
+      REASON('Force global to run on VT1')               
+ADDREPLACE POLICY,STATEMENTNAME(MODT420)                 
+   UPDATE CHECK(IBMGRS,GRS_RNL_IGNORED_CONV)             
+      INACTIVE                                           
+      DATE(20200427)                                     
+      REASON('Force global to run on VT1')               
+ADDREPLACE POLICY,STATEMENTNAME(MODT421)                 
+   UPDATE CHECK(IBMVSAMRLS,VSAMRLS_CFCACHE_MINIMUM_SIZE) 
+      INACTIVE                                           
+      DATE(20200427)                                     
+      REASON('Force global to run on VT1')               
+ADDREPLACE POLICY,STATEMENTNAME(MODT422)                 
+   UPDATE CHECK(IBMVSAMRLS,VSAMRLS_CFLS_FALSE_CONTENTION)
+      INACTIVE                                           
+      DATE(20200427)                                     
+      REASON('Force global to run on VT1')               
+ADDREPLACE POLICY,STATEMENTNAME(MODT423)                 
+   UPDATE CHECK(IBMVSAMRLS,VSAMRLS_SHCDS_CONSISTENCY)    
+      INACTIVE                                           
+      DATE(20200427)                                     
+      REASON('Force global to run on VT1')               
+ADDREPLACE POLICY,STATEMENTNAME(MODT424)                 
+   UPDATE CHECK(IBMVSAMRLS,VSAMRLS_SHCDS_MINIMUM_SIZE)   
+      INACTIVE                                           
+      DATE(20200427)                                     
+      REASON('Force global to run on VT1')               
+ADDREPLACE POLICY,STATEMENTNAME(MODT425)                 
+   UPDATE CHECK(IBMVSAMRLS,VSAMRLS_SINGLE_POINT_FAILURE) 
+      INACTIVE                                           
+      DATE(20200427)                                     
+      REASON('Force global to run on VT1')        
+ADDREPLACE POLICY,STATEMENTNAME(MODT426)          
+   UPDATE CHECK(CPWR_THRUPUT_MGR,MS_MHS_TM_HOLDS) 
+      INACTIVE                                    
+      DATE(20200427)                              
+      REASON('HCL Config')                        

@@ -1,0 +1,134 @@
+LOGGER=ON,LOGSTREAMNAME=HZS.HEALTH.CHECKER.HISTORY                    
+/*                                                                  */
+/* STATEMENTNAME use MOD00nn (nn sequence number)                   */
+/* if overide is needed in an LPAR use same name in LPAR specific   */
+/* HZSPRMnn                                                         */
+ADDREPLACE POLICY,STATEMENTNAME(MOD0001)                              
+  UPDATE CHECK(IBMUSS,USS_MAXSOCKETS_MAXFILEPROC)                     
+  PARM('35000,64000')                                                 
+  DATE(20070608)                                                      
+  REASON('HCL default value in VT')                                   
+ADDREPLACE POLICY,STATEMENTNAME(MOD0002)                              
+  UPDATE CHECK(IBMVSM,VSM_ALLOWUSERKEYCSA)                            
+  inactive                                                            
+  DATE(20190130)                                                      
+  REASON('HCL have default YES')                                      
+ADDREPLACE POLICY,STATEMENTNAME(MOD0003)                              
+  UPDATE CHECK(IBMUSS,USS_FILESYS_CONFIG)                             
+  SEVERITY(HI)                                                        
+  INTERVAL(06:00)                                                     
+  PARM('SYSPLEX')                                                     
+  DATE(20110128)                                                      
+  REASON('SYSPLEX.ROOT must be mounted AUTOMOVE')                     
+ADDREPLACE POLICY,STATEMENTNAME(MOD0004)                              
+  UPDATE CHECK(IBMXCF,XCF_CDS_SPOF)                                   
+  inactive                                                              
+  DATE(20111119)                                                        
+  REASON('sufficient separation')                                       
+ADDREPLACE POLICY,STATEMENTNAME(MOD0005)                                
+  UPDATE CHECK(IBMIOS,IOS_IORATE_MONITOR)                               
+  INTERVAL(ONETIME)                                                     
+  SEVERITY(MEDIUM)                                                      
+  DATE(20131219)                                                        
+  REASON('Check at IPL only')                                           
+ADDREPLACE POLICY,STATEMENTNAME(MOD0006)                                
+  UPDATE CHECK(CA_DB2,DB2_PRA_#LOAD_LAST_RUN@PTXMAN*)                   
+  inactive                                                              
+  DATE(20190130)                                                        
+  REASON(' N/A ')                                                       
+ADDREPLACE POLICY,STATEMENTNAME(MOD0007)                                
+  UPDATE CHECK(CA_DB2,DB2_PRA_TAPE_RETENTION@PTXMAN*)                   
+  inactive                                                              
+  DATE(20190130)                                                        
+  REASON(' N/A ')                                                       
+ADDREPLACE POLICY,STATEMENTNAME(MOD0008)                                
+  UPDATE CHECK(CA_DB2,DB2_RCM_FULLTREE_CHECK@PTXMAN*)                   
+  inactive                                                              
+  DATE(20190130)                                                        
+  REASON(' N/A ')                                                       
+ADDREPLACE POLICY,STATEMENTNAME(MOD0009)                                
+  UPDATE CHECK(IBMCATALOG,CATALOG_IMBED_REPLICATE)                      
+  inactive                                                              
+  DATE(20151001)                                                        
+  REASON(' N/A ')                                                       
+ADDREPLACE POLICY,STATEMENTNAME(MOD0010)                                
+  UPDATE CHECK(IBMCS,CSTCP_CINET_PORTRNG_RSV_TCP*)                      
+  inactive                                                              
+  DATE(20170504)                                                        
+  REASON('Check not possible in HCL')                                   
+ADDREPLACE POLICY,STATEMENTNAME(MOD0011)                                
+  UPDATE CHECK(IBMCICS,CICS_CEDA_ACCESS)                                
+   INACTIVE                                                             
+   DATE(20180607)                                                       
+   REASON('Functionality not used')                                     
+ ADDREPLACE POLICY,STATEMENTNAME(MOD0012)                               
+   UPDATE CHECK(IBMCICS,CICS_JOBSUB_SPOOL)                              
+   INACTIVE                                                             
+   DATE(20180607)                                                       
+   REASON('Functionality not used')                                     
+ ADDREPLACE POLICY,STATEMENTNAME(MOD0013)                               
+   UPDATE CHECK(IBMCICS,CICS_JOBSUB_TDQINTRDR)                          
+   INACTIVE                                                             
+   DATE(20180607)                                                       
+   REASON('Functionality not used')                                     
+ ADDREPLACE POLICY,STATEMENTNAME(MOD0014)                               
+   UPDATE CHECK(IBMIXGLOGR,IXGLOGR_ENTRYTHRESHOLD)                      
+   ACTIVE                                                               
+   PARM('ALL')                                                          
+   DATE(20181204)                                                       
+   REASON('Standard value')                                             
+ ADDREPLACE POLICY,STATEMENTNAME(MOD0015)                               
+   UPDATE CHECK(IBMALLOC,ALLOC_TAPELIB_PREF)                            
+   INACTIVE                                                             
+   DATE(20190130)                                                       
+   REASON('Storage teams acive choice')                                                       
+ ADDREPLACE POLICY,STATEMENTNAME(MOD0016)                               
+   UPDATE CHECK(IBMASM,ASM_LOCAL_SLOT_USAGE)                            
+   INACTIVE                                                             
+   DATE(20200427)                                                       
+   REASON('Page datasets on SCM/VFM')                                   
+ ADDREPLACE POLICY,STATEMENTNAME(MOD0017)                               
+   UPDATE CHECK(IBMASM,ASM_NUMBER_LOCAL_DATASETS)                       
+   INACTIVE                                                             
+   DATE(20200427)                                                       
+   REASON('Page datasets on SCM/VFM')                                   
+ADDREPLACE POLICY,STATEMENTNAME(MOD0018)                                
+  UPDATE CHECK(IBMASM,ASM_PAGE_ADD)                                     
+  INACTIVE                                                              
+  DATE(20200427)                                                        
+  REASON('Page datasets on SCM/VFM')                                    
+ADDREPLACE POLICY,STATEMENTNAME(MOD0019)                                
+  UPDATE CHECK(IBMASM,ASM_PLPA_COMMON_SIZE)                             
+  INACTIVE                                                              
+  DATE(20200427)                                                        
+  REASON('Page datasets on SCM/VFM')                                    
+ADDREPLACE POLICY,STATEMENTNAME(MOD0020)                                
+  UPDATE CHECK(IBMASM,ASM_PLPA_COMMON_USAGE)                            
+  INACTIVE                                                              
+  DATE(20200427)                                                        
+  REASON('Page datasets on SCM/VFM')                                    
+ADDREPLACE POLICY,STATEMENTNAME(MOD0021)                                
+  UPDATE CHECK(IBMHSM,HSM_CDSB_DASD_BACKUP)                             
+  INACTIVE                                                              
+  DATE(20200427)                                                        
+  REASON('There is always a preallocated DASD dataset for CDS backups') 
+ADDREPLACE POLICY,STATEMENTNAME(MOD0022)                                
+  UPDATE CHECK(IBMVSAMRLS,VSAMRLS_TVS_ENABLED)                          
+  INACTIVE                                                              
+  DATE(20200427)                                                        
+  REASON('Feature not present in HCL setup')                            
+ADDREPLACE POLICY,STATEMENTNAME(MOD0023)                                
+  UPDATE CHECK(IBMCNZ,CNZ_CONSOLE_MSCOPE_AND_ROUTCODE)                  
+  INACTIVE                                                              
+  DATE(20200427)                                                        
+  REASON('Uncontrolled Consoles')                                       
+ADDREPLACE POLICY,STATEMENTNAME(MOD0024)                                
+  UPDATE CHECK(IBMCNZ,CNZ_EMCS_HARDCOPY_MSCOPE)                         
+  INACTIVE                                                              
+  DATE(20200427)                                                        
+  REASON('Uncontrolled Consoles')                                       
+ADDREPLACE POLICY,STATEMENTNAME(MOD0025)                                
+   UPDATE CHECK(IBMGDPS,GDPS_CHECK_SPOF)                                
+   INACTIVE                                                             
+   DATE(20200427)                                                       
+   REASON('HCL setup')                                                  

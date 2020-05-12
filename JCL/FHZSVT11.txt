@@ -1,0 +1,24 @@
+//FHZSVT11 JOB (610VV110000,4352,,,,1800),'RTN=FHZSPRVT',CLASS=D,   
+//          MSGCLASS=A,MSGLEVEL=(1,1)                               
+/*ROUTE XEQ NJEVT                                                   
+/*ROUTE PRINT NJOVT                                                 
+//*+JBS BIND VT01                                                   
+//*                                                                 
+//HZSPRINT EXEC PGM=HZSPRNT,                                        
+//   PARM='CHECK(*,*),EXCEPTIONS'                                   
+//SYSOUT   DD DISP=(NEW,PASS),DSN=&&OUT,LRECL=256,RECFM=FB,         
+//         DATACLAS=PSEN                                            
+//*                                                                 
+//SNDMEM  EXEC PGM=SMTPAPIX,PARM='MSGLVL=4,FROM=NOREPLYÖVOLVO.COM', 
+//             COND=(0400,EQ,HZSPRINT)                              
+//APIFILE DD *                                                      
+)SEND                                                               
+  ETITLE    VT01: Health Checker exceptions                         
+   OPTION   FORCE                                                   
+   DEST     jonas.braemÖsupplier.volvo.com                          
+   DEST     david.westbrandÖhcl.com                                 
+   DEST     kevin.somersÖhcl.com                                    
+   DEST     bengt.gellingskogÖhcl.com                               
+   MEMO FILEA                                                       
+)END                                                                
+//FILEA DD DISP=(OLD,DELETE),DSN=&&OUT       
