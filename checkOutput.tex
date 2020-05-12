@@ -1,0 +1,110 @@
+********************************* TOP OF DATA **********************************
+CHECK(IBMXCF,XCF\_CF\_STR\_POLICYSIZE)                                            
+SYSPLEX:    PLEXVT    SYSTEM: VT01                                             
+START TIME: 05/12/2020 09:42:52.954735                                         
+CHECK DATE: 20090707  CHECK SEVERITY: MEDIUM                                   
+
+                                                                            
+IXCH0923I Coupling facility structure policy sizing is summarized by the       
+following report:                                                               
+
+An asterisk (*) before a structure name indicates an exception                 
+condition. When the qualification is "Alter not allowed", an exception         
+condition is when INITSIZE is specified not equal to SIZE. Otherwise an        
+exception condition is when INITSIZE is less than half of SIZE.                
+
+Structure Name    INITSIZE     Max SIZE     Alter Qualification               
+----------------  -----------  -----------  ---------------------------       
+*ISGLOCK                  20 M         30 M  Alter not allowed                  
+*MQT0APPL1               256 M          1 G  Alter supported                   
+*MQT0APPL3               256 M          1 G  Alter supported                   
+*MQT0APPL4               256 M          1 G  No connections defined             
+*MQT0APPL5               256 M          1 G  Alter supported                   
+                                                                              
+* Medium Severity Exception *                                                  
+
+IXCH0255E A CFRM policy structure specification has too large a                
+difference between the INITSIZE and SIZE values.                               
+
+  Explanation:  A specification of INITSIZE in the active or pending           
+	CFRM policy indicates an initial structure size that is too small          
+    for the maximum structure size (as determined by the SIZE                  
+    specification). Either a structure has an initial size specified as        
+    less than half the maximum size, or a structure whose users do not         
+    allow structure alter has an initial size specified different than         
+    the maximum size.                                                          
+
+    When allocating the structure initially, whether INITSIZE is               
+   specified or not, the system attempts to build all control                 
+   structures that will be required to support the maximum size of the        
+   structure. These control structures are built in the control storage       
+   allocation of the structure. For structures whose users do not allow       
+   structure alter, the control storage allocated to accommodate larger       
+   sizes is wasted. An INITSIZE value substantially smaller than the          
+   SIZE value might cause the following:                                      
+
+     - It might be impossible to allocate a structure at a size of            
+       INITSIZE, because the amount of control storage required to            
+       support the SIZE value might actually be larger than INITSIZE.          
+
+     - If the allocation succeeds, it might result in a structure with        
+       a proportionally large amount of its storage allotted to               
+       structure controls, leaving too few structure objects to be            
+       exploited usefully by the associated application.                      
+
+ System Action:  The system continues processing.                             
+
+ Operator Response:  N/A                                                      
+
+ System Programmer Response:  IBM suggests that the INITSIZE and SIZE         
+   specification for structures be determined by the CfSizer (Coupling        
+   Facility Structure Sizer) tool:                                            
+                                                                               
+      http://www.ibm.com/systems/z/cfsizer                                    
+
+   Use the CfSizer tool to determine the INITSIZE and SIZE parameters         
+   for structures with an exception condition. Update the CFRM policy         
+   (or policies) with the new parameters. The new parameters should not       
+   have an INITSIZE value for a structure less than half the SIZE value       
+   for that structure. If alter is not allowed by users of a structure,       
+   INITSIZE should not be specified for that structure. Start an              
+   updated policy with the following system command:                          
+
+      SETXCF START,POLICY,TYPE=CFRM,POLNAME=polname                            
+
+    The policy changes will become pending and affect only future              
+    structure allocations, not currently allocated structures. REBUILD          
+    or REALLOCATE can be used to activate the pending changes for              
+    currently allocated structures. For example, a REALLOCATE process          
+    can be started with the following system command:                          
+
+       SETXCF START,REALLOCATE                                                 
+
+   Problem Determination:  See IXCH0923I in the message buffer that             
+    identifies the coupling facility structures with an exception              
+    condition.                                                                 
+
+    The problem may have occurred because a CFRM policy structure SIZE         
+    value was adjusted without also adjusting the INITSIZE value (or           
+    vice versa).                                                                
+
+    The following system command can be used to determine the name of          
+    the active or pending CFRM policy:                                         
+
+       DISPLAY XCF,POLICY,TYPE=CFRM                                            
+
+  Source:  Parallel Sysplex (XCF)                                              
+
+  Reference Documentation:  For more information on planning and               
+    activating CFRM policies, see z/OS MVS Setting Up a Sysplex.               
+
+    For the syntax of the SETXCF START command, see "SETXCF Start              
+    Command" in z/OS MVS System Commands.                                      
+
+  Automation:  N/A                                                             
+
+  Check Reason:  Too large a difference between INITSIZE and SIZE may          
+    waste coupling facility space or prevent structure allocation.             
+
+END TIME: 05/12/2020 09:42:53.031335  STATUS: EXCEPTION-MED                     
+******************************** BOTTOM OF DATA ********************************
