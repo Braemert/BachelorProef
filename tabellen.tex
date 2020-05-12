@@ -1,0 +1,137 @@
+
+In deze bijlage bevinden zich de tabellen met de standaardopstelling van de checks van volgende teams in deze volgorde
+
+\begin{enumerate}
+	\item CICS
+	\item Communication
+	\item Print
+	\item Automation
+	\item Rollout \& Operate
+	\item Runtime Control
+	\item Security
+	\item SOE
+	\item Storage
+	\item zOPEN
+	\item DB
+\end{enumerate}
+
+De tabellen staan horizontaal omdat ze verticaal niet op een pagina passen.
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|l|l|p{5cm}|l|l|}
+			\hline
+			\textbf{Name}                    & \textbf{Status}            & \textbf{Outcome} &\textbf{ Reason} & \textbf{Run} & \textbf{00/\&SUF.} \\ \hline
+			CICS\_CEDA\_ACCES       & INACTIVE(ENABLED) & INACT   & CEDA   can be used by unauthenticated users                                        & No  & 00        \\ \hline
+			CICS\_JOBSUB\_SPOOL     & INACTIVE(ENABLED) & INACT   & Jobs   can be run with regionid authority by unauthenticated users using the SPOOL & No  & 00        \\ \hline
+			CICS\_JOBSUB\_TDQINTRDR & INACTIVE(ENABLED) & INACT   & Jobs   can be run with regionid authority by unauthenticated users using a TDQ     & No  & 00        \\ \hline
+		\end{tabular}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|l|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}                                                                                                & \textbf{Run} & \textbf{00/\&SUF.} \\ \hline
+			CSAPP\_FTPD\_ANONYMOUS\_JES         & ACTIVE(ENABLED)   & SUCCES           & CHECK   FTPD ANONYMOUS JES STATEMENT IS IN USE                                                                 & Yes          & N/A                \\ \hline
+			CSAPP\_FTPDMVRSHD\_RHOSTS\_DATA     & ACTIVE(ENABLED)   & SUCCES           & CHECK   MVRSHD RHOSTS DATA IS IN USE                                                                           & Yes          & N/A                \\ \hline
+			CSAPP\_SNMPAGENT\_PUBLIC\_COMMUNITY & ACTIVE(ENABLED)   & SUCCES           & CHECK   SNMP AGENT PUBLIC COMMUNITY IS IN USE                                                                  & Yes          & N/A                \\ \hline
+			CSRES\_AUTOQ\_GLOBALTCPIPDATE       & ACTIVE(ENABLED)   & SUCCES           & CHECK   THAT GLOBALTCPIPDATA IS NOT    SPECIFIED   WHEN AUTOQUIESCE IS SPECIFIED                               & Yes          & N/A                \\ \hline
+			CSRES\_AUTOQ\_RESOLVEVIA            & ACTIVE(ENABLED)   & SUCCES           & CHECK   RESOLVEVIA VALUE WHEN THE AUTONOMIC QUIESCING OF UNRESPONSIVE NAME SERVERS FUNCTION IS ACTIVE          & Yes          & N/A                \\ \hline
+			CSRES\_AUTOQ\_TIMEOUT               & ACTIVE(ENABLED)   & SUCCES           & CHECK   RESOLVEVIA VALUE WHEN THE AUTONOUTONOMIC QUIESCING OF UNRESPONSIVE   NAME   SERVERS FUNCTION IS ACTIVE & Yes          & N/A                \\ \hline
+			CSTCP\_CINENT\_PORTRNG\_RSV\_TCPIP* & INACTIVE(ENABLED) & INACT            & CHECK   THAT CINET INADDRANYPORT RANGE IS   RESERVED   FOR OMVS ON THE TCP/IP STACK                            & No           & 00                 \\ \hline
+		\end{tabular}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|l|l|p{4.5cm}|l|l|}
+			\hline
+			CSTCP-IPMAXRT4\_TCPIP*           & ACTIVE(ENABLED)  & SUCCES & CHECK   FOR TCP/IP IPV4 INDIRECT ROUTES    MAXIMUM   THRESHOLD                      & Yes & N/A \\ \hline
+			CSTCP-IPMAXRT6\_TCPIP*           & ACTIVE(ENABLED)  & SUCCES & CHECK   FOR TCP/IP IPV6 INDIRECT ROUTES    MAXIMUM   THRESHOLD                      & Yes & N/A \\ \hline
+			CSTCP\_IWQ\_IPSEC\_TCPIP*        & ACTIVE(ENABLED)  & SUCCES & ENSURE SUFFICIENT FIXED STORAGE IS   AVAILABLE FOR IWQ IPSEC                        & Yes & N/A \\ \hline
+			CSTCP\_SYSPLEXMON\_RECOV\_TCPIP* & ACTIVE(ENABLED)  & SUCCES & CHECK   THAT SYSPLEXMONITOR RECOVERY IS    SPECIFIED   WHEN DYNAMICXCF IS SPECIFIED & Yes & N/A \\ \hline
+			CSTCP\_SYSTCPIP\_CTRACE\_TCPIP*  & ACTIVE(ENABLED)  & SUCCES & CHECK   FOR TCP/IP SYSTCPIP CTRACE WITH   NONDEFAULT   OPTION                       & Yes & N/A \\ \hline
+			CSTCP\_TCPMAXRCVBUFRSIZE\_TCPIP* & ACTIVE(ENABLED)  & SUCCES & ENSURE   TCP RECEIVE BUFFER SIZE IS    SUFFICIENT   FOR FTP SERVER                  & Yes & N/A \\ \hline
+			CSVTAM\_CSM\_STG\_LIMIT          & ACTIVE(ENABLED)  & SUCCES & CHECK CSM STORAGE LIMIT    VTV0022 REXX?                                            & Yes & N/A \\ \hline
+			CSVTAM\_T1BUF\_T2BUF\_EE         & ACTIVE(ENABLED)  & SUCCES & CHECK   T1BUF/T2BUF ALLOCATIONS WITH EE                                             & Yes & N/A \\ \hline
+
+		\end{tabular}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|l|l|p{4.5cm}|l|l|}
+			\hline
+			CSVTAM\_T1BUF\_T2BUF\_NOEE    & ACTIVE(DISABLED) & ENV N  & CHECK T1BUF/T2BUF ALLOCATIONS WITHOUT EE &Yes & N/A \\ \hline
+			CSVTAM\_VIT\_OPT\_ALL         & ACTIVE(ENABLED) & SUCCES & CHECK   VIT OPT=ALL IS NOT SPECIFIED     & Yes & N/A \\ \hline
+			CSVTAM\_VIT\_OPT\_STDOPTS     & ACTIVE(ENABLED) & SUCCES & CHECK   VIT STDOPTS OPTION IS ACTIVE     & Yes & N/A \\ \hline
+			TPX\_ACB\_INACTIVE\_@TPX*     & ACTIVE(ENABLED) & SUCCES & TPX ACB   is inactive                    & Yes & N/A \\ \hline
+			TPX\_CF\_UNCONNECTED\_@TPX*   & ACTIVE(ENABLED) & SUCCES & TPX   coupling facility is not connected & Yes & N/A \\ \hline
+			TPX\_STORAGE\_OVERFLOW\_@TPX* & ACTIVE(ENABLED) & SUCCES & TPX   storage overflow beyond boundries  & Yes & N/A \\ \hline
+		\end{tabular}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|l|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}               & \textbf{Status} & \textbf{Outcome} & \textbf{Reason}                                                                            & \textbf{Run} & \textbf{00/\&SUF.} \\ \hline
+			DLVR\_CKPT\_USAGE@RMOVT1    & ACTIVE(ENABLED) & SUCCES           & Monitor   CA Deliver checkpoint utilization.                                               & Yes          & N/A                \\ \hline
+			DLVR\_OPT\_HDETAIL@RMOVT1   & ACTIVE(ENABLED) & SUCCES           & Insure   the HDETAIL option is only activated when necessary                               & Yes          & N/A                \\ \hline
+			DLVR\_PRFM\_PQE@RMOVT1      & ACTIVE(ENABLED) & SUCCES           & Monitor   CA Deliver application work queues.                                              & Yes          & N/A                \\ \hline
+			SPOOL\_CKPT\_ACT@ESF        & ACTIVE(ENABLED) & SUCCES           & To   check CA Spool checkpoint working                                                     & Yes          & N/A                \\ \hline
+			SPOOL\_FILE\_QUEUE\_PCT@ESF & ACTIVE(ENABLED) & SUCCES           & To   check CA Spool file queue utilization                                                 & Yes          & N/A                \\ \hline
+			SPOOL\_SPACE\_PCT@ESF       & ACTIVE(ENABLED) & SUCCES           & To   check CA Spool data set space utilization                                             & Yes          & N/A                \\ \hline
+			SPOOL\_TCP\_ACT@ESF         & ACTIVE(ENABLED) & SUCCES           & To   check CA Spool TCP/IP printer subtasks                                                & Yes          & N/A                \\ \hline
+			SPOOL\_TRANSFRM\_ACT@ESF    & ACTIVE(ENABLED) & SUCCES           & To   check CA Spool Transformer subtasks                                                   & Yes          & N/A                \\ \hline
+			VIEW\_OPT\_CLFMDST@SAR*     & ACTIVE(ENABLED) & SUCCES           & Alert   datacenter staff that CA View is configured to archive every report in the   spool & Yes          & N/A                \\ \hline
+			VIEW\_OPT\_MASTER@SAR*      & ACTIVE(ENABLED) & SUCCES           & Insure   that all CA View users do not have access to ADMINISTRATIVE functions             & Yes          & N/A                \\ \hline
+			VIEW\_OPT\_TBACKUP@SAR*     & ACTIVE(ENABLED) & SUCCES           & Insure   that TBACKUP is set to a value that allows the database to be restored            & Yes          & N/A                \\ \hline
+		\end{tabular}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|l|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}             & \textbf{Status}  & \textbf{Outcome} & \textbf{Reason}                                 & \textbf{Run} & \textbf{00/\&SUF.} \\ \hline
+			GDPS\_CHECK\_CONFIG       & ACTIVE(ENABLED)  & EXCEPTION        & GDPS check verifies configurations              & Yes          & N/A                \\ \hline
+			GDPS\_CHECK\_CONSOLE      & ACTIVE(ENABLED)  & SUCCES           & GDPS   check CONSOLE information                & Yes          & N/A                \\ \hline
+			GDPS\_CHECK\_DASDMIH      & ACTIVE(ENABLED)  & SUCCES           & GDPS   check DASD MIH                           & Yes          & N/A                \\ \hline
+			GDPS\_CHECK\_DEVICE       & ACTIVE(ENABLED)  & EXCEPTION        & GDPS   check verifies device configuration      & Yes          & N/A                \\ \hline
+			GDPS\_CHECK\_GRS          & ACTIVE(DISABLED) & ENV N            & GDPS check verifies GRS definitions             & Yes          & N/A                \\ \hline
+			GDPS\_CHECK\_JOBS         & ACTIVE(ENABLED)  & SUCCES           & GDPS   check JOBS                               & Yes          & N/A                \\ \hline
+			GDPS\_CHECK\_K\_SYS\_LPAR & ACTIVE(DISABLED) & ENV N            & GDPS check K SYS LPAR informationx              & Yes          & N/A                \\ \hline
+			GDPS\_CHECK\_LOGR         & ACTIVE(ENABLED)  & SUCCES           & GDPS   check verifies LOGR configuration        & Yes          & N/A                \\ \hline
+			GDPS\_CHECK\_MAXSYS       & ACTIVE(ENABLED)  & SUCCES           & GDPS   check MAXSYS information                 & Yes          & N/A                \\ \hline
+			GDPS\_CHECK\_NUMUCBS      & ACTIVE(ENABLED)  & SUCCES           & GDPS   max devices generated                    & Yes          & N/A                \\ \hline
+		\end{tabular}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|l|l|p{4.5cm}|l|l|}
+			\hline
+			GDPS\_CHECK\_SPOF         & ACTIVE(ENABLED)  & EXCEPTION        & GDPS check connectivity Single Point Of Failure & No           & 00                 \\ \hline
+			GDPS\_CHECK\_STATE        & ACTIVE(ENABLED)  & SUCCES           & GDPS   check STATE                              & Yes          & N/A                \\ \hline
+			GDPS\_CHECK\_XCF          & ACTIVE(ENABLED)  & SUCCES           & GDPS   check verifies XCF definitions           & Yes          & N/A                \\ \hline
+			GDPS\_CHECK\_XCF\_CDS     & ACTIVE(ENABLED)  & SUCCES           & GDPS   check verify XCF CDS datasets            & Yes          & N/A                \\ \hline
+		\end{tabular}
+	\end{table}
+\end{landscape}
+
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|l|l|p{4.5cm}|l|l|}
+			
+		\end{tabular}
+	\end{table}
+\end{landscape}

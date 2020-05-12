@@ -34,15 +34,43 @@ De analyse is gemaakt met de check data uit SDSF deze kan je bereiken door bij h
 \end{figure}
 
 
-Na het overlopen van alle checks op VT1 zijn deze samengevat zoals volgende tabel. Met de naam van de check. De status, deze beschrijft of de check aanstaat of niet. De outcome, deze beschrijft of de check succesvol was of niet. En de reason, dit is de reden waarvoor de check draait.
+Na het overlopen van alle checks op VT1 hebben we de SDSF ouptut samengevat in volgende tabel. Met de naam van de check. De status, deze beschrijft of de check aanstaat of niet. De outcome, deze beschrijft of de check succesvol was of niet. En de reason, dit is de reden waarvoor de check draait. Een voorbeeld:
+\begin{table}
+	\begin{tabular}{|p{5cm}|p{3.5cm}|p{1.5cm}|p{5cm}|}
+		\hline
+		\textbf{Name} & \textbf{Status} & \textbf{Outcome} & \textbf{Reason} \\
+		\hline
+		XCF\_CDS\_MAXSYSTEM & ACTIVE(ENABLED) & SUCCES & CDS MAXSYSTEM value across all CDS types should be at least equal to the value 
+		in the primary sysplex CDS.  \\
+		\hline
+	\end{tabular}
+	\caption[Individuele check]{Waarden van de check die bij de eerste analyse werden samengevat}
+	\label{tbl:Individuele check}
+\end{table}
 
-\begin{tabular}{|p{5cm}|p{3.5cm}|p{1.5cm}|p{5cm}|}
-	\hline
-	\textbf{Name} & \textbf{Status} & \textbf{Outcome} & \textbf{Reason} \\
-	\hline
-	XCF\_CDS\_MAXSYSTEM & ACTIVE(ENABLED) & SUCCES & CDS MAXSYSTEM value across all CDS types should be at least equal to the value 
-	in the primary sysplex CDS.  \\
-	\hline
-\end{tabular}
 
-Maar sommige checks hebben GLOBAL als outcome. Dit betekent dat de check niet op de huidige LPAR draait maar op een andere. Global checks draaien voor de gehele sysplex maar moeten maar op 1 LPAR geactiveerd staan.
+Voor de volledige tabel zie bijlage 
+
+Hier uit bleek dat er verscheidene check een exception hadden. Deze zijn eerst gecontroleerd of dat men deze zelf kon oplossen zonder ondersteuning van de collega's die het product beheren. Bij deze analyse bleek ook dat er veel checks zijn die onnodig draaiden omdat het product van de check bijvoorbeeld niet aanwezig was. Niet alle checks moeten in alle LPARs draaien en sommige moesten aangepast worden. Maar daarvoor heb je nog de belangrijke vraag of een wijziging van een check doorgevoerd moet worden naar alle LPARs of maar naar 1 LPAR binnen de Parallel Sysplex. Met deze informatie is naar feedback gevraagd van alle Mainframe Teams binnen HCL Technologies. Want men kan checks niet aanpassen van bijvoorbeeld DB2 zonder dit raad te plegen met het DB team. Hiervoor zijn alle checks gegroepeerd per owner daarna nog eens gegroepeerd per mainframe team en uiteindelijk werd tabel \ref{tbl:Checks Per Team} bereikt.
+
+\begin{table}[]
+	\begin{tabular}{|l|p{9cm}|}
+		\hline
+		\textbf{Team}                      & \textbf{Checks(Owner)}                                                                                                                                                 \\ \hline
+		\textbf{Cics}                      & IBMCICS                                                                                                                                                                \\ \hline
+		\textbf{Communication}             & IBMCS, CA\_TPX                                                                                                                                                         \\ \hline
+		\textbf{Print}                     & CA\_DLVR, CA\_SPOOL, CA\_VIEW                                                                                                                                          \\ \hline
+		\textbf{Rollout and Opperate(ROO)} & CA\_CSS, IBMCNZ,  IMBCTRACE, IBMDAE, IBMISPF, IBMXLOGR, IBMJES(2), IBMRRS, IBMRTM, IBMSDSF, IBMSDUMP, IBMSLIP, IBMSVA, IBMSYSTRACE, IBMTIMER, IBMTSOE,  IBMXCF, IBMGRS \\ \hline
+		\textbf{Run Time Control(RTC)}     & IBMVLF, CA\_PMO, IBMRCF, IBMASM, IBMRSM, IBMSUP, IBMVSM,  CPWR\_THRUPUT\_MGR                                                                                           \\ \hline
+		\textbf{Security}                  & CA\_ACF2, IBMICSF                                                                                                                                                      \\ \hline
+		\textbf{SOE}                       & All checks starting with ZOSMIG                                                                                                                                        \\ \hline
+		\textbf{Storage}                   & CA\_DISK, IBMALLOC, IBMCATALOG, IBMDMO, IBMHSM, IMBIOS, IBMOCE, IMBPDSE, IBMSMS, IBMVSAM(RLS), CA\_VANTAGE                                                             \\ \hline
+		\textbf{zOpen}                     & IBMSSH, IBMUSS, IBMZFS                                                                                                                                                 \\ \hline
+		\textbf{Databse(DB)}               & CA\_DB2, CA\_DTCM, CA\_IDMS                                                                                                                                            \\ \hline
+		\textbf{Automation}                & IBMGDPS                                                                                                                                                                \\ \hline
+	\end{tabular}
+	\caption[Checks Per team]{Alle checkowners gegroepeerd per team binnen HCL}
+	\label{tbl:Checks Per Team}
+\end{table}
+
+Nadat alle checks per team werden gegroepeerd, is er eerst zelf een voorstel gemaakt voor een de opstelling van hun checks waar zij feedback op konden geven. Wanneer er geen feedback was is de voorgestelde opstelling geimplementeerd.

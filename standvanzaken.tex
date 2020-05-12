@@ -273,4 +273,14 @@ Voor een voorbeeld van check output zie bijlage \ref{sec:Check Output}
 \subsubsection{Check Status}
 \label{subsubsec:Check Status}
 
+Een check heeft ook een bepaalde status. Deze status duid aan of dat een check al dan niet geactiveerd is. Volgende statussen zijn mogelijk. \cite{IBM2019}
+
+\begin{itemize}
+	\item ACTIVE: Dit specifieert dat de check actief is en draait.
+	\item INACTIVE: Dit specifieert dat de check niet actief is en deze niet zal draaien.
+	\item Ookal is een check actief of inactief kan deze ook nog 2 opties hebben namelijk Enabled \& Disabled. Wanneer een check enabled is betekent dat dat deze kan draaien binnen de huidige omgeving. Als een check disabled is kan dit betekenen dat deze niet kan draaien omdat er condities binnen de huidige parallel sysplex omgeving zijn die dat verhinderen. Bijvoorbeeld een check van DB2 die disabled staat omdat er om een bepaalde LPAR geen DB2 product is.
+	\item GLOBAL: Dit betekent dat de check globaal is en daarom maar op 1 LPAR mag draaien van de gehele sysplex. Maar de check zal wel instellingen controleren voor de hele parallel sysplex. 
+\end{itemize}
+
+
 Verder is er nog 1 speciaal soort check. Namelijk de migration check. Deze check helpen je bij het plannen voor een overschakelen van z/OS versie. Deze checks kan je uitvoeren na een migratie om te kijken of deze succesvol was. Deze checks beginnen altijd met 'ZOSMIG'.
