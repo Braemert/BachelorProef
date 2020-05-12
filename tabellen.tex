@@ -26,6 +26,8 @@ De tabellen staan horizontaal omdat ze verticaal niet op een pagina passen.
 			CICS\_JOBSUB\_SPOOL     & INACTIVE(ENABLED) & INACT   & Jobs   can be run with regionid authority by unauthenticated users using the SPOOL & No  & 00        \\ \hline
 			CICS\_JOBSUB\_TDQINTRDR & INACTIVE(ENABLED) & INACT   & Jobs   can be run with regionid authority by unauthenticated users using a TDQ     & No  & 00        \\ \hline
 		\end{tabular}
+		\caption[Health Checker Setup CICS team]{Setup van Health Checker voor het CICS team}
+		\label{tbl:CICS Team tabel}
 	\end{table}
 \end{landscape}
 
@@ -40,8 +42,9 @@ De tabellen staan horizontaal omdat ze verticaal niet op een pagina passen.
 			CSRES\_AUTOQ\_GLOBALTCPIPDATE       & ACTIVE(ENABLED)   & SUCCES           & CHECK   THAT GLOBALTCPIPDATA IS NOT    SPECIFIED   WHEN AUTOQUIESCE IS SPECIFIED                               & Yes          & N/A                \\ \hline
 			CSRES\_AUTOQ\_RESOLVEVIA            & ACTIVE(ENABLED)   & SUCCES           & CHECK   RESOLVEVIA VALUE WHEN THE AUTONOMIC QUIESCING OF UNRESPONSIVE NAME SERVERS FUNCTION IS ACTIVE          & Yes          & N/A                \\ \hline
 			CSRES\_AUTOQ\_TIMEOUT               & ACTIVE(ENABLED)   & SUCCES           & CHECK   RESOLVEVIA VALUE WHEN THE AUTONOUTONOMIC QUIESCING OF UNRESPONSIVE   NAME   SERVERS FUNCTION IS ACTIVE & Yes          & N/A                \\ \hline
-			CSTCP\_CINENT\_PORTRNG\_RSV\_TCPIP* & INACTIVE(ENABLED) & INACT            & CHECK   THAT CINET INADDRANYPORT RANGE IS   RESERVED   FOR OMVS ON THE TCP/IP STACK                            & No           & 00                 \\ \hline
 		\end{tabular}
+		\caption[Health Checker Communication team tabel 1]{Setup van Health Checker voor het Communication team tabel 1}
+		\label{tbl:Communication Team Tabel 1}
 	\end{table}
 \end{landscape}
 
@@ -49,6 +52,7 @@ De tabellen staan horizontaal omdat ze verticaal niet op een pagina passen.
 	\begin{table}[h]
 		\begin{tabular}{|l|l|l|p{4.5cm}|l|l|}
 			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}                                                                                      & \textbf{Run} & \textbf{00/\&SUF.} \\ \hline
 			CSTCP-IPMAXRT4\_TCPIP*           & ACTIVE(ENABLED)  & SUCCES & CHECK   FOR TCP/IP IPV4 INDIRECT ROUTES    MAXIMUM   THRESHOLD                      & Yes & N/A \\ \hline
 			CSTCP-IPMAXRT6\_TCPIP*           & ACTIVE(ENABLED)  & SUCCES & CHECK   FOR TCP/IP IPV6 INDIRECT ROUTES    MAXIMUM   THRESHOLD                      & Yes & N/A \\ \hline
 			CSTCP\_IWQ\_IPSEC\_TCPIP*        & ACTIVE(ENABLED)  & SUCCES & ENSURE SUFFICIENT FIXED STORAGE IS   AVAILABLE FOR IWQ IPSEC                        & Yes & N/A \\ \hline
@@ -57,8 +61,9 @@ De tabellen staan horizontaal omdat ze verticaal niet op een pagina passen.
 			CSTCP\_TCPMAXRCVBUFRSIZE\_TCPIP* & ACTIVE(ENABLED)  & SUCCES & ENSURE   TCP RECEIVE BUFFER SIZE IS    SUFFICIENT   FOR FTP SERVER                  & Yes & N/A \\ \hline
 			CSVTAM\_CSM\_STG\_LIMIT          & ACTIVE(ENABLED)  & SUCCES & CHECK CSM STORAGE LIMIT    VTV0022 REXX?                                            & Yes & N/A \\ \hline
 			CSVTAM\_T1BUF\_T2BUF\_EE         & ACTIVE(ENABLED)  & SUCCES & CHECK   T1BUF/T2BUF ALLOCATIONS WITH EE                                             & Yes & N/A \\ \hline
-
 		\end{tabular}
+		\caption[Health Checker Communication team tabel 2]{Setup van Health Checker voor het Communication team tabel 2}
+		\label{tbl:Communication Team Tabel 2}
 	\end{table}
 \end{landscape}
 
@@ -66,13 +71,17 @@ De tabellen staan horizontaal omdat ze verticaal niet op een pagina passen.
 	\begin{table}[h]
 		\begin{tabular}{|l|l|l|p{4.5cm}|l|l|}
 			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}  & \textbf{Run} & \textbf{00/\&SUF.} \\ \hline
 			CSVTAM\_T1BUF\_T2BUF\_NOEE    & ACTIVE(DISABLED) & ENV N  & CHECK T1BUF/T2BUF ALLOCATIONS WITHOUT EE &Yes & N/A \\ \hline
 			CSVTAM\_VIT\_OPT\_ALL         & ACTIVE(ENABLED) & SUCCES & CHECK   VIT OPT=ALL IS NOT SPECIFIED     & Yes & N/A \\ \hline
 			CSVTAM\_VIT\_OPT\_STDOPTS     & ACTIVE(ENABLED) & SUCCES & CHECK   VIT STDOPTS OPTION IS ACTIVE     & Yes & N/A \\ \hline
 			TPX\_ACB\_INACTIVE\_@TPX*     & ACTIVE(ENABLED) & SUCCES & TPX ACB   is inactive                    & Yes & N/A \\ \hline
 			TPX\_CF\_UNCONNECTED\_@TPX*   & ACTIVE(ENABLED) & SUCCES & TPX   coupling facility is not connected & Yes & N/A \\ \hline
 			TPX\_STORAGE\_OVERFLOW\_@TPX* & ACTIVE(ENABLED) & SUCCES & TPX   storage overflow beyond boundries  & Yes & N/A \\ \hline
+			CSTCP\_CINENT\_PORTRNG\_RSV\_TCPIP* & INACTIVE(ENABLED) & INACT            & CHECK   THAT CINET INADDRANYPORT RANGE IS   RESERVED   FOR OMVS ON THE TCP/IP STACK & No & 00  \\ \hline
 		\end{tabular}
+		\caption[Health Checker Communication team tabel 3]{Setup van Health Checker voor het Communication team tabel 3}
+		\label{tbl:Communication Team Tabel 3}
 	\end{table}
 \end{landscape}
 
@@ -93,6 +102,8 @@ De tabellen staan horizontaal omdat ze verticaal niet op een pagina passen.
 			VIEW\_OPT\_MASTER@SAR*      & ACTIVE(ENABLED) & SUCCES           & Insure   that all CA View users do not have access to ADMINISTRATIVE functions             & Yes          & N/A                \\ \hline
 			VIEW\_OPT\_TBACKUP@SAR*     & ACTIVE(ENABLED) & SUCCES           & Insure   that TBACKUP is set to a value that allows the database to be restored            & Yes          & N/A                \\ \hline
 		\end{tabular}
+		\caption[Health Checker Setup Print team]{Setup van Health Checker voor het Print team}
+		\label{tbl:Print Team Tabel}
 	\end{table}
 \end{landscape}
 
@@ -111,27 +122,619 @@ De tabellen staan horizontaal omdat ze verticaal niet op een pagina passen.
 			GDPS\_CHECK\_LOGR         & ACTIVE(ENABLED)  & SUCCES           & GDPS   check verifies LOGR configuration        & Yes          & N/A                \\ \hline
 			GDPS\_CHECK\_MAXSYS       & ACTIVE(ENABLED)  & SUCCES           & GDPS   check MAXSYS information                 & Yes          & N/A                \\ \hline
 			GDPS\_CHECK\_NUMUCBS      & ACTIVE(ENABLED)  & SUCCES           & GDPS   max devices generated                    & Yes          & N/A                \\ \hline
-		\end{tabular}
-	\end{table}
-\end{landscape}
-
-\begin{landscape}
-	\begin{table}[h]
-		\begin{tabular}{|l|l|l|p{4.5cm}|l|l|}
-			\hline
 			GDPS\_CHECK\_SPOF         & ACTIVE(ENABLED)  & EXCEPTION        & GDPS check connectivity Single Point Of Failure & No           & 00                 \\ \hline
 			GDPS\_CHECK\_STATE        & ACTIVE(ENABLED)  & SUCCES           & GDPS   check STATE                              & Yes          & N/A                \\ \hline
 			GDPS\_CHECK\_XCF          & ACTIVE(ENABLED)  & SUCCES           & GDPS   check verifies XCF definitions           & Yes          & N/A                \\ \hline
 			GDPS\_CHECK\_XCF\_CDS     & ACTIVE(ENABLED)  & SUCCES           & GDPS   check verify XCF CDS datasets            & Yes          & N/A                \\ \hline
 		\end{tabular}
+		\caption[Health Checker Setup Automation team]{Setup van Health Checker voor het Automation team}
+		\label{tbl:Automation Team Tabel}
 	\end{table}
 \end{landscape}
 
 
 \begin{landscape}
 	\begin{table}[h]
-		\begin{tabular}{|l|l|l|p{4.5cm}|l|l|}
-			
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}                                                                                      & \textbf{Run} & \textbf{00/\&SUF.} \\ \hline
+			CSS\_ENF\_SCREEN\_VALIDITY          & ACTIVE (ENABLED)   & SUCCES           & ENF   screen command check                                                                           & Yes          & N/A                \\ \hline
+			CNZ\_ARMF\_EVENTUAL\_ACTION\_MSGS   & ACTIVE (ENABLED)   & SUCCES           & Avoid   the loss of critical action messages                                                         & Yes          & N/A                \\ \hline
+			CNZ\_CONSOLE\_MASTERAUTH\_CMDSYS    & ACTIVE (ENABLED)   & SUCCES           & Ability   to control this system                                                                     & Yes          & N/A                \\ \hline
+			CNZ\_CONSOLE\_MSCOPE\_AND\_ROUTCODE & ACTIVE (ENABLED)   & EXCEPTION        & Reduces the number of messages sent to a console in the sysplex                                      & No      & 00                 \\ \hline
+			CNZ\_CONSOLE\_ROUTCODE\_11          & ACTIVE (ENABLED)   & SUCCES           & To   reduce message traffic by removing messages that are only intended for the   problem programmer & Yes          & N/A                \\ \hline
+			CNZ\_EMCS\_HARDCOPY\_MSCOPE         & ACTIVE (ENABLED)   & EXCEPTION        & To avoid having EMCS consoles process an excessive number of   messages                              & No     & 00                 \\ \hline
+			CNZ\_EMCS\_INACTIVE\_CONSOLES       & ACTIVE (DISABLED)  & SUCCES     & Reduces   the time a system takes to join a sysplex                                                  & Yes          & \&SUF.             \\ \hline
+			CNZ\_OBSOLETE\_MSGFLD\_AUTOMATION   & ACTIVE (ENABLED)   & SUCCES           & Obsolete   versions of Message Flood Automation must be removed from the system                      & Yes          & N/A                \\ \hline
+			CNZ\_SYSCONS\_ALLOWCMD              & INACTIVE (ENABLED) & EXCEPTION        & To   ensure that the system console is as available as possible to act as a   console of last resort & No           & N/A                \\ \hline
 		\end{tabular}
+		\caption[Health Checker ROO team tabel 1]{Setup van Health Checker voor het ROO team tabel 1}
+		\label{tbl:ROO Team Tabel 1}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}                                                                                      & \textbf{Run} & \textbf{00/\&SUF.} \\ \hline
+			CNZ\_SYSCONS\_MSCOPE     & ACTIVE (ENABLED)   & SUCCES       & To   ensure the system console is configured to receive messages from only the   local system         & Yes & N/A \\ \hline
+			CNZ\_SYSCONS\_PD\_MODE   & ACTIVE (ENABLED)   & SUCCES       & Should   only run in Problem Determination mode when there is a problem                               & Yes & N/A \\ \hline
+			CNZ\_SYSCONS\_ROUTCODE   & ACTIVE (ENABLED)   & SUCCES       & To   ensure the system console is configured to receive important messages                            & Yes & N/A \\ \hline
+			CNZ\_TASK\_TABLE         & ACTIVE (ENABLED)   & SUCCES       & Check   Consoles Task Table                                                                           & Yes & N/A \\ \hline
+			CTRACE\_DEFAULT\_OR\_MIN & ACTIVE (ENABLED)   & SUCCES       & A   component trace that is tracing more than the default can cause degraded    system   performance. & Yes & N/A \\ \hline
+			DAE\_SHAREDSN            & ACTIVE (ENABLED)   & SUCCES       & To   ensure DAE data set is shared between systems in sysplex                                         & Yes & N/A \\ \hline
+			DAE\_SUPPRESSING         & ACTIVE (ENABLED)   & SUCCES       & To   ensure DAE subsystem is active and suppressing dumps                                             & Yes & N/A \\ \hline
+			ISPF\_WSA                & INACTIVE (ENABLED) & INACT/SUCCES & CHECK   IF ISPF WORKSTATION AGENT IS IN USE                                                           & No  & N/A \\ \hline	
+		\end{tabular}
+		\caption[Health Checker ROO team tabel 2]{Setup van Health Checker voor het ROO team tabel 2}
+		\label{tbl:ROO Team Tabel 2}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}                                                                                      & \textbf{Run} & \textbf{00/\&SUF.} \\ \hline
+			IXGLOGR\_ENTRYTHRESHOLD          & ACTIVE (ENABLED)   & SUCCES             & Logger   entry threshold reached conditions should be investigated to determine if   applications performance is being impacted & Yes & N/A \\ \hline
+			IXGLOGR\_STAGINGDSFULL           & ACTIVE (ENABLED)   & SUCCES             & Logger   staging dataset full conditions should be investigated to determine if   application performance is being impacted     & Yes & N/A \\ \hline
+			IXGLOGR\_STRUCTUREFULL           & ACTIVE (ENABLED)   & SUCCES             & Logger   structure full conditions should be investigated to determine if application   performance is being impacted           & Yes & N/A \\ \hline
+			JES\_NJE\_SECURITY               & ACTIVE (ENABLED)   & UNEXPECTED   ERROR & Verify   primary JES NJE security settings                                                                                      & YES & N/A \\ \hline
+			JES2\_UPGRADE\_CKPT\_LEVEL\_JES2 & ACTIVE (ENABLED)   & SUCCES             & JES2   checkpoint level upgrade checks                                                                                          & Yes & N/A \\ \hline
+			RRS\_ARCHIVECFSTRUCTURE          & ACTIVE (ENABLED)   & SUCCES             & RRS   Archive log stream is sharing its coupling facility structure with another   log stream.  This is not   reccomended.      & Yes & N/A \\ \hline
+			RRS\_DELAYED\_TRANSACTIONS       & INACTIVE (ENABLED) & INACT              & The   follwing list of RRS Transactions are active in SyncPoint but have not yet   completed in the alloted amount of time.     & Yes & N/A \\ \hline		
+		\end{tabular}
+		\caption[Health Checker ROO team tabel 3]{Setup van Health Checker voor het ROO team tabel 3}
+		\label{tbl:ROO Team Tabel 3}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			RRS\_DUROFFLOADSIZE           & ACTIVE (ENABLED) & SUCCES & Delayed   UR log offload dataset size should be at least as large as the space   allocated for the log stream in the   structure. & Yes & N/A \\ \hline
+			RRS\_MUROFFLOADSIZE           & ACTIVE (ENABLED) & SUCCES & Main UR   log offload dataset size should be at least as large as the space   allocated  for the log stream in the   structure.   & Yes & N/A \\ \hline
+			RRS\_RMDATALOGDUPLEXMODE      & ACTIVE (ENABLED) & SUCCES & RM Data   log should use a better duplexing scheme than local buffer duplexing.                                                   & Yes & N/A \\ \hline
+			RRS\_RMDOFFLOADSIZE           & ACTIVE (ENABLED) & SUCCES & RM Data   log offload dataset size should be at least as large as the space   allocated  for the log stream in the   structure.   & Yes & N/A \\ \hline
+			RRS\_RSTOFFLOADSIZE           & ACTIVE (ENABLED) & SUCCES & Restart   log offload dataset size should be at least as large as the space   allocated  for the log stream in the   structure.   & Yes & N/A \\ \hline
+			RRS\_STORAGE\_NUMLARGELOGBLKS & ACTIVE (ENABLED) & SUCCES & If the   count of large log buffers in RRS grows too big then RRS might encounter a   terminating failure.                        & Yes & N/A \\ \hline	
+		\end{tabular}
+		\caption[Health Checker ROO team tabel 4]{Setup van Health Checker voor het ROO team tabel 4}
+		\label{tbl:ROO Team Tabel 4}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			RRS\_STORAGE\_NUMLARGEMSGBLKS & ACTIVE (ENABLED) & SUCCES & If the   count of large message blocks in RRS grows too big then RRS might encounter a   terminating failure.       & Yes & N/A \\ \hline
+			RRS\_STORAGE\_NUMSERVERREQS   & ACTIVE (ENABLED) & SUCCES & If the   count of server requests within RRS grows too big then RRS might be   encountering a hang situation.       & Yes & N/A \\ \hline
+			RRS\_STORAGE\_NUMTRANSBLKS    & ACTIVE (ENABLED) & SUCCES & If the   count of transactions that RRS is managing grows too big then RRS might   encounter a terminating failure. & Yes & N/A \\ \hline
+			RTM\_IEAVTRML                 & ACTIVE (ENABLED) & SUCCES & Placing   resource manager names into IEAVTRML can hurt system performance.                                         & Yes & N/A \\ \hline
+			SDSF\_CLASS\_SDSF\_ACTIVE     & ACTIVE (ENABLED) & SUCCES & Verify   SAF class SDSF is active                                                                                   & Yes & N/A \\ \hline
+			SDSF\_ISFPARMS\_IN\_USE       & ACTIVE (ENABLED) & SUCCES & Check   source of SDSF configuration parameters                                                                     & Yes & N/A \\ \hline
+			SDUMP\_AUTO\_ALLOCATION       & ACTIVE (ENABLED) & SUCCES & Automatic   allocation of dump data sets efficiently writes the dump from virtual storage   to DASD.                & Yes & N/A \\ \hline	
+		\end{tabular}
+		\caption[Health Checker ROO team tabel 5]{Setup van Health Checker voor het ROO team tabel 5}
+		\label{tbl:ROO Team Tabel 5}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			SDUMP\_AVAILABLE              & ACTIVE (ENABLED)  & SUCCES & The   SDUMP setup should ensure a dump can be generated when system problems occur.         & Yes & N/A \\ \hline
+			SLIP\_PER                     & ACTIVE (ENABLED)  & SUCCES & An   active, but not needed, SLIP PER trap can cause degraded system performance.           & Yes & N/A \\ \hline
+			SVA\_AUTOIPL\_DEFINED         & ACTIVE (DISABLED) & ENV N  & To   ensure AutoIPL function is in use when available.                                      & Yes & N/A \\ \hline
+			SVA\_AUTOIPL\_DEV\_VALIDATION & ACTIVE (DISABLED) & ENV N  & To   ensure IPL device(s) defined in AutoIPL policy are valid.                              & Yes & N/A \\ \hline
+			SYSTRACE\_BRANCH              & ACTIVE (ENABLED)  & SUCCES & An   active, but not needed, SYSTRC BR=ON option can cause degraded system   performance.   & Yes & N/A \\ \hline
+			SYSTRACE\_MODE                & ACTIVE (ENABLED)  & SUCCES & An   active, but not needed, SYSTRC MODE=ON option can cause degraded system   performance. & Yes & N/A \\ \hline
+			TSOE\_OPERSEWAIT\_SETTING     & ACTIVE (ENABLED)  & SUCCES & Verify   OPERSEWAIT is the preferred setting.                                               & Yes & N/A \\ \hline
+			TSOE\_PARMLIB\_ERROR          & ACTIVE (ENABLED)  & SUCCES & PARMLIB   errors may have occurred during IPL.                                              & Yes & N/A \\ \hline
+			TSOE\_USERLOGS                & ACTIVE (ENABLED)  & SUCCES & User   logs should be in use.                                                               & Yes & N/A \\ \hline	
+		\end{tabular}
+		\caption[Health Checker  ROO team tabel 6]{Setup van Health Checker voor het ROO team tabel 6}
+		\label{tbl:ROO Team Tabel 6}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			XCF\_CDS\_MAXSYSTEM            & ACTIVE (ENABLED)   & SUCCES & CDS   MAXSYSTEM value across all CDS types should be at least equal to the value    in the   primary sysplex CDS.             & Yes & \&SUF \\ \hline
+			XCF\_CDS\_SEPARATION           & ACTIVE (ENABLED)   & SUCCES & Ensure that CDS separation has been maintained.                                                                               & Yes & N/A   \\ \hline
+			XCF\_CDS\_SPOF                 & INACTIVE (ENABLED) & INACT  & Ensure   that couple data sets are configured without single points of failure.                                               & No  & 00    \\ \hline
+			XCF\_CF\_ALLOCATION\_PERMITTED & ACTIVE (DISABLED)  & SUCCES & Coupling   facilities should have allocation permitted.                                                                       & Yes & \&SUF \\ \hline
+			XCF\_CF\_CONNECTIBITY          & ACTIVE (ENABLED)   & SUCCES & Avoid   problems with CF Connectivity.                                                                                        & Yes & N/A   \\ \hline
+			XCF\_CF\_MEMORY\_UTILIZATION   & ACTIVE (ENABLED)   & SUCCES & Coupling   facility memory should allow for expansion and failover.                                                           & Yes & N/A   \\ \hline
+			XCF\_CF\_PROCESSORS            & ACTIVE (ENABLED)   & SUCCES & Coupling   facility performance as measured in service time is degraded with   shared   coupling facility central processors. & Yes & N/A   \\ \hline	
+		\end{tabular}
+		\caption[Health Checker ROO team tabel 7]{Setup van Health Checker voor het ROO team tabel 7}
+		\label{tbl:ROO Team Tabel 7}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			XCF\_CF\_SCM\_UTILIZATION & ACTIVE (DISABLED) & ENV N     & Coupling facility storage-class memory should be   available to provide relief for coupling facility real storage   contraints.      & Yes & N/A   \\ \hline
+			XCF\_CF\_STR\_AVAILABILTY & ACTIVE (DISABLED) & EXCEPTION & Each   structure preference list definition should have two usable coupling    facilities   which are in different CECs.             & Yes & \&SUF \\ \hline
+			XCF\_CF\_STR\_DUPLEX      & ACTIVE (DISABLED) & SUCCES    & Allocated   structures with active CFRM policy values of   DUPLEX(ALLOWED)   or (ENABLED) should be duplexed in the preferred mode.  & Yes & \&SUF \\ \hline
+			XCF\_CF\_STR\_ENCRYPT     & ACTIVE (DISABLED) & SUCCES    & Structure   data is consistent with the ENCRYPT parameter and cryptographic   encryption   key for the structure in the CFRM policy. & Yes & \&SUF \\ \hline
+			XCF\_CF\_STR\_EXCLLIST    & ACTIVE (DISABLED) & SUCCES    & Check   Structure exclusion lists.                                                                                                   & Yes & \&SUF \\ \hline	
+		\end{tabular}
+		\caption[Health Checker  ROO team tabel 8]{Setup van Health Checker voor het ROO team tabel 8}
+		\label{tbl:ROO Team Tabel 8}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			XCF\_CF\_STR\_MAXCSM      & ACTIVE (DISABLED) & ENV N     & Storage-class memory (SCM) eligible for use by structures should   not exceed the   total SCM available to the CF          & Yes & N/A   \\ \hline
+			XCF\_CF\_STR\_MAXSPACE    & ACTIVE (ENABLED)  & SUCCES    & CF real   storage eligible for use by structures should not exceed the total    space   available to the CF                & Yes & N/A   \\ \hline
+			XCF\_CF\_STR\_NONVOLATILE & ACTIVE (DISABLED) & EXCEPTION & Coupling   facility structure non-volatility and failure isolation from connectors    should   be provided when requested. & Yes & \&SUF \\ \hline
+			XCF\_CF\_STR\_POLICYSIZE  & ACTIVE (DISABLED) & EXCEPTION & Too   large a difference between INITSIZE and SIZE may waste coupling facility    space or prevent structure allocation.   & Yes & \&SUF \\ \hline
+			XCF\_CF\_STR\_PREFLIST    & ACTIVE (DISABLED) & SUCCES    & Check   Structure preference lists.                                                                                        & Yes & \&SUF \\ \hline
+		\end{tabular}
+		\caption[Health Checker ROO team tabel 9]{Setup van Health Checker voor het ROO team tabel 9}
+		\label{tbl:ROO Team Tabel 9}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			XCF\_CF\_STR\_SCM\_AUGMENTED   & ACTIVE (ENABLED)  & SUCCES & Residual   augmented space prevents alter processing from dynamically adjusting    CF   structure storage usage.         & Yes & N/A   \\ \hline
+			XCF\_CF\_STR\_SCM\_MINCOUNTS   & ACTIVE (ENABLED)  & SUCCES & Violating   a minimum structure object count causes inconsistency with defined   SCMMAXSIZE   when duplexed.             & Yes & N/A   \\ \hline
+			XCF\_CF\_STR\_SCM\_UTILIZATION & ACTIVE (DISABLED) & ENV N  & Structure assigned SCM is being used which indicates the structure   size is   insufficient for the application workload & Yes & N/A   \\ \hline
+			XCF\_CF\_STR\_SCHMAXSIZE       & ACTIVE (ENABLED)  & SUCCES & Storage-Class Memory (SCM) assigned to a structure should be   consistent with    the structure defined SCMMAXSIZE       & Yes & N/A   \\ \hline
+			XCF\_CF\_SYSPLEX\_CONNECTIVITY & ACTIVE (DISABLED) & SUCCES & Multiple   coupling facilities should be connected to all systems.                                                       & Yes & \&SUF \\ \hline
+			XCF\_CFRM\_MSGBASED            & ACTIVE (DISABLED) & SUCCES & CFRM   message-based event management improves recovery time for    users   of CF structures.                            & Yes & \&SUF \\ \hline
+		\end{tabular}
+		\caption[Health Checker ROO team tabel 10]{Setup van Health Checker voor het ROO team tabel 10}
+		\label{tbl:ROO Team Tabel 10}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			XCF\_CLEANUP\_VALUE        & ACTIVE (ENABLED)  & SUCCES & Quick   removal of a partitioned system from the SYSPLEX.                                                                    & Yes & N/A   \\ \hline
+			XCF\_DEFAULT\_MAXMSG       & ACTIVE (ENABLED)  & SUCCES & Avoid   problems with XCF signalling.                                                                                        & Yes & N/A   \\ \hline
+			XCF\_FDI                   & ACTIVE (ENABLED)  & SUCCES & Allow   adequate time for the system to recover before other systems in   the   sysplex take action to remove it.            & Yes & N/A   \\ \hline
+			XCF\_MAXMSG\_NUMBUF\_RATIO & ACTIVE (ENABLED)  & SUCCES & Avoid   problems with XCF signalling.                                                                                        & Yes & N/A   \\ \hline
+			XCF\_SFM\_ACTIVE           & ACTIVE (DISABLED) & SUCCES & An SFM policy provides better failuremanagement.                                                                             & Yes & \&SUF \\ \hline
+			XCF\_SFM\_CFSTRHANGTIME    & ACTIVE (ENABLED)  & SUCCES & Allow the system to take automatic action to relieve a hang when   an expected   connector response remains overdue too long & Yes & N/A   \\ \hline
+			XCF\_SFM\_CONNFAIL         & ACTIVE (DISABLED) & SUCCES & Allow SFM to reconfigure the sysplex when one or more systems lose   signaling connectivity.                                 & Yes & \&SUF \\ \hline
+		\end{tabular}
+		\caption[Health Checker ROO team tabel 11]{Setup van Health Checker voor het ROO team tabel 11}
+		\label{tbl:ROO Team Tabel 11}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			XCF\_SFM\_SSUMLIMIT         & ACTIVE (ENABLED) & SUCCES & Allow SFM to initiate status update missing processing when a   system remains in   a degraded state too long. & Yes & N/A \\ \hline
+			XCF\_SFM\_SUM\_ACTION       & ACTIVE (ENABLED) & SUCCES & Allow SFM to fence and partition a system without operator   intervention and    without undue delay.          & Yes & N/A \\ \hline
+			XCF\_SIG\_CONNECTIVITY      & ACTIVE (ENABLED) & SUCCES & Avoid   problems with XCF signalling.                                                                          & Yes & N/A \\ \hline
+			XCF\_SIG\_PATH\_SEPARATION  & ACTIVE (ENABLED) & SUCCES & XCF   signaling connections should have no single point of failure.                                            & Yes & N/A \\ \hline
+			XCF\_SIG\_STR\_SIZE         & ACTIVE (ENABLED) & SUCCES & XCF   signaling structures should be of sufficient size to support all systems in    the target sysplex.       & Yes & N/A \\ \hline
+			XCF\_SYSPLEX\_CDS\_CAPACITY & ACTIVE (ENABLED) & SUCCES & Check   sysplex CDS capacities.                                                                                & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker ROO team tabel 12]{Setup van Health Checker voor het ROO team tabel 12}
+		\label{tbl:ROO Team Tabel 12}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			XCF\_SYSSTATDET\_PARTITIONING & ACTIVE (ENABLED) & EXCEPTION & Verify best-practice recommendation of the SSD partitioning   protocol being enabled for expeditious removal of failed systems.  & Yes & N/A \\ \hline
+			XCF\_TCLASS\_CLASSLEN         & ACTIVE (ENABLED) & SUCCES    & Avoid   problems with XCF signalling.                                                                                            & Yes & N/A \\ \hline
+			XCF\_TCLASS\_CONNECTIVITY     & ACTIVE (ENABLED) & SUCCES    & Avoid   problems with XCF signalling.                                                                                            & Yes & N/A \\ \hline
+			XCF\_TCLASS\_HAS\_UNDESIG     & ACTIVE (ENABLED) & SUCCES    & Avoid   problems with XCF signalling.                                                                                            & Yes & N/A \\ \hline
+			GRS\_AUTHQLVL\_SETTINGS       & ACTIVE (ENABLED) & SUCCES    & If the   AUTHQLVL parameter is not set to the maximum level, certain requests may be   susceptible to denial of service attacks. & Yes & N/A \\ \hline
+			GRS\_CONVERT\_RESERVES        & ACTIVE (ENABLED) & SUCCES    & When in   STAR mode, converting RESERVEs can help improve performance and avoid   deadlock.                                      & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker ROO team tabel 13]{Setup van Health Checker voor het ROO team tabel 13}
+		\label{tbl:ROO Team Tabel 13}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			GRS\_EXIT\_PERFORMANCE  & ACTIVE   (ENABLED) & SUCCES & Certain   exits may negatively impact system performance.                                                                             & Yes & N/A \\ \hline
+			GRS\_GRSQ\_SETTING      & ACTIVE   (ENABLED) & SUCCES & IBM   recommends a GRSQ setting of contention.                                                                                        & Yes & N/A \\ \hline
+			GRS\_MODE               & ACTIVE   (ENABLED) & SUCCES & GRS   should run in STAR mode to improve performance.                                                                                 & Yes & N/A \\ \hline
+			GRS\_RNL\_IGNORED\_CONV & ACTIVE   (ENABLED) & SUCCES & If an   entry in the RESERVE Conversion performance RNL is superseded by an entry in   the SYSTEMS Exclusion RNL, it will be ignored. & Yes & N/A \\ \hline
+			GRS\_SYNCHRES           & ACTIVE   (ENABLED) & SUCCES & GRS   synchronous RESERVE processing should be enabled to avoid deadlock   conditions.                                                & Yes & N/A \\ \hline
+			GRS\_CONVERT\_RESERVES  & ACTIVE (ENABLED)    & SUCCES & When in   STAR mode, converting RESERVEs can help improve performance and avoid   deadlock.                                           & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker ROO team tabel 14]{Setup van Health Checker voor het ROO team tabel 14}
+		\label{tbl:ROO Team Tabel 14}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			MS\_MHS\_TM\_HOLDS  & ACTIVE (ENABLED) & EXCEPTION & ThruPut Manager MHS\_TM Held Jobs.     & No  & \&SUF \\ \hline
+			MS\_TM\_CLASSES     & ACTIVE (ENABLED) & SUCCES    & ThruPut   Manager Job Classes.         & Yes & N/A   \\ \hline
+			MS\_TM\_JES2\_EXITS & ACTIVE (ENABLED) & SUCCES    & ThruPut   Manager JES2 Exit Status.    & Yes & N/A   \\ \hline
+			MS\_TM\_LICENSE     & ACTIVE (ENABLED) & SUCCES    & ThruPut   Manager License Validation.  & Yes & N/A   \\ \hline
+			MS\_TM\_OPTIONS     & ACTIVE (ENABLED) & SUCCES    & ThruPut   Manager Options.             & Yes & N/A   \\ \hline
+			MS\_TM\_SETTINGS    & ACTIVE (ENABLED) & SUCCES    & ThruPut   Manager Support Options.     & Yes & N/A   \\ \hline
+			MS\_TM\_SMF         & ACTIVE (ENABLED) & SUCCES    & ThruPut   Manager SMF Exits.           & Yes & N/A   \\ \hline
+			MS\_TMSS\_ACTIVE    & ACTIVE (ENABLED) & SUCCES    & ThruPut   Manager Started Task Status. & Yes & N/A   \\ \hline
+		\end{tabular}
+		\caption[Health Checker RTC team tabel 1]{Setup van Health Checker voor het RTC team tabel 1}
+		\label{tbl:RTC Team Tabel 1}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			ASM\_LOCAL\_SLOT\_USAGE      & ACTIVE (ENABLED)  & SUCCES & To   check the local page data set utilization                            & No  & 00  \\ \hline
+			ASM\_NUMBER\_LOCAL\_DATASETS & ACTIVE (ENABLED)  & SUCCES & To   ensure that the recommended number of local page data sets ar in use & No  & 00  \\ \hline
+			ASM\_PAGE\_ADD               & ACTIVE (ENABLED)  & SUCCES & To   ensure that additional page data sets can be added dynamically       & No  & 00  \\ \hline
+			ASM\_PLPA\_COMMON\_SIZE      & ACTIVE (DISABLED) & ENV N  & To   ensure that the PLPA and comman page data sets are sized correctly   & No  & 00  \\ \hline
+			ASM\_PLPA\_COMMON\_USAGE     & ACTIVE (DISABLED) & ENV N  & To   check on PLPA and common page data sets utilization                  & No  & 00  \\ \hline
+			RSM\_AFQ                     & ACTIVE (ENABLED)  & SUCCES & System   may not recover in time if set too low                           & Yes & N/A \\ \hline
+			RSM\_HVCOMMON                & ACTIVE (ENABLED)  & SUCCES & Availability   may be impacted                                            & Yes & N/A \\ \hline
+			RSM\_HVSHARE                 & ACTIVE (ENABLED)  & SUCCES & Availability   may be impacted                                            & Yes & N/A \\ \hline
+			RSM\_INCLUDE1MACF            & ACTIVE (ENABLED)  & SUCCES & Obsolete   keyword has no effect                                          & Yes & N/A \\ \hline
+			RSM\_MAXCADS                 & ACTIVE (ENABLED)  & SUCCES & Performance   may be impacted                                             & Yes & N/A \\ \hline
+			RSM\_MEMLIMIT                & ACTIVE (ENABLED)  & SUCCES & Performance   may be impacted                                             & Yes & N/A \\ \hline			
+		\end{tabular}
+		\caption[Health Checker RTC team tabel 2]{Setup van Health Checker voor het RTC team tabel 2}
+		\label{tbl:RTC Team Tabel 2}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			RSM\_MINIMUM\_REAL          & ACTIVE (ENABLED) & SUCCES & Availability   may be impacted                                                    & Yes & N/A \\ \hline
+			RSM\_REAL                   & ACTIVE (ENABLED) & SUCCES & Performance   may be impacted                                                     & Yes & N/A \\ \hline
+			RSM\_RSU                    & ACTIVE (ENABLED) & SUCCES & Performance   may be impacted                                                     & Yes & N/A \\ \hline
+			IEA\_ASIDS                  & ACTIVE (ENABLED) & SUCCES & ASIDs   are a finite resource. It is important to know how many remain available. & Yes & N/A \\ \hline
+			IEA\_LXS                    & ACTIVE (ENABLED) & SUCCES & LXs are   a finite resource. It is important to know how many remain available.   & Yes & N/A \\ \hline
+			SUP\_HIPERDISPATCH          & ACTIVE (ENABLED) & SUCCES & A   system runs with optimal performance when HiperDispatch is enabled.           & Yes & N/A \\ \hline
+			SUP\_HIPERDISPATCHCPUCONFIG & ACTIVE (ENABLED) & SUCCES & HiperDispatch disabled can only use CPU ID 0 through 3Fx.                         & No  & 00  \\ \hline
+			RCF\_PCCA\_ABOVE\_16M       & ACTIVE (ENABLED) & SUCCES & More   storage is available below 16M when the PCCAs are RMODE 31.                & Yes & N/A \\ \hline
+			SUP\_LCCA\_ABOVE\_16M       & ACTIVE (ENABLED) & SUCCES & More   storage is available below 16M when the LCCAs are RMODE 31.                & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker RTC team tabel 3]{Setup van Health Checker voor het RTC team tabel 3}
+		\label{tbl:RTC Team Tabel 3}
+	\end{table}
+\end{landscape}
+
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			SUP\_SYSTEM\_SYMBOL\_TABLE\_SIZE & ACTIVE (ENABLED)   & SUCCES & Monitor   the size of the system symbol table         & Yes & N/A \\ \hline
+			VSM\_ALLOWUSERKEYCSA             & INACTIVE (ENABLED) & INACT  & Validate   the AllowUserKeyCSA DIAGxx Setting         & No  & 00  \\ \hline
+			VSM\_CSA\_CHANGE                 & ACTIVE (ENABLED)   & SUCCES & Audit   reductions in size of private virtual storage & Yes & N/A \\ \hline
+			VSM\_CSA\_LARGEST\_FREE          & ACTIVE (ENABLED)   & SUCCES & Audit   the size of the largest free CSA block        & Yes & N/A \\ \hline
+			VSM\_CSA\_LIMIT                  & ACTIVE (ENABLED)   & SUCCES & Audit   the size of CSA                               & Yes & N/A \\ \hline
+			VSM\_CSA\_THRESHOLD              & ACTIVE (ENABLED)   & SUCCES & Monitor   the allocation of CSA                       & Yes & N/A \\ \hline
+			VSM\_PVT\_LIMIY                  & ACTIVE (ENABLED)   & SUCCES & Audit   the size of private storage                   & Yes & N/A \\ \hline
+			VSM\_SQA\_LIMIT                  & ACTIVE (ENABLED)   & SUCCES & Audit   the size of SQA                               & Yes & N/A \\ \hline
+			VSM\_SQA\_THRESHOLD              & ACTIVE (ENABLED)   & SUCCES & Monitor   the allocation of SQA                       & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker RTC team tabel 4]{Setup van Health Checker voor het RTC team tabel 4}
+		\label{tbl:RTC Team Tabel 4}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			PMO\_LNKLST\_MEM\_NOT\_FNF   & ACTIVE ENABLED) & SUCCES & Ensure   that CA PMO is adequately assisting LNKLST searches.                                                                         & Yes & N/A \\ \hline
+			PMO\_NUMADDED\_EXCEEDED\_PCT & ACTIVE (ENABLED) & SUCCES & Ensure   there are enough entries for private libraries.                                                                              & Yes & N/A \\ \hline
+			PMO\_TIME\_BETWEEN\_SORTS    & ACTIVE (ENABLED) & SUCCES & Ensure   that the managed list is big enough to provide best performance for directory      searches   of LNKLST members with CA PMO. & Yes & N/A \\ \hline
+			VLF\_MAXVIRT                 & ACTIVE (ENABLED) & SUCCES & Help to   optimize VLF data space usage.                                                                                              & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker RTC team tabel 5]{Setup van Health Checker voor het RTC team tabel 5}
+		\label{tbl:RTC Team Tabel 5}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			ACF2\_AUTO\_START\_CHECK            & ACTIVE (ENABLED) & SUCCES    & Check   AFC2 auto start setting                     & Yes & N/A \\ \hline
+			ACF2\_CHECK\_DATABASES              & ACTIVE (ENABLED) & SUCCES    & Check   AFC2 Databases                              & Yes & N/A \\ \hline
+			ACF2\_CHECK\_EXITS                  & ACTIVE (ENABLED) & SUCCES    & Check   AFC2 Exits (Was inactive?)                  & No  & N/A \\ \hline
+			ACF2\_CHECK\_JES2\_EXITS            & ACTIVE (ENABLED) & SUCCES    & Check   AFC2 JES2 exits                             & Yes & N/A \\ \hline
+			ACF2\_SAFDEF\_NOAPF\_CHECK          & ACTIVE (ENABLED) & EXCEPTION & Check   AFC2 SAFDEFS for NOAPFCHECK (Was inactive?) & No  & N/A \\ \hline
+			ICSF\_COPROCESSOR\_STATE\_NEGCHANGE & ACTIVE (ENABLED) & SUCCES    & Detects   degradation in coprocessor state.         & Yes & N/A \\ \hline
+			ICSF\_DEPRECATED\_SERV\_WARNINGS    & ACTIVE (ENABLED) & SUCCES    & Detects   use of deprecated callable service.       & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker Security team tabel 1]{Setup van Health Checker voor het Security team tabel 1}
+		\label{tbl:Security Team Tabel 1}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			ICSF\_KEY\_EXPERATION               & ACTIVE (ENABLED)   & SUCCES & Detects   keys and objects that are expiring.       & Yes    & N/A    \\ \hline
+			ICSF\_MASTER\_KEY\_CONSISTENCY      & ACTIVE (ENABLED)   & SUCCES & Detects   Master Key state inconsistency.           & Yes    & N/A    \\ \hline
+			ICSF\_OPTIONS\_CHECKS               & ACTIVE (ENABLED)   & SUCCES & Detects   ICSF options not set to specified values. & Yes    & N/A    \\ \hline
+			ICSF\_PKCS\_PSS\_SUPPORT            & ACTIVE (ENABLED)   & SUCCES & Detects   PKCS-PSS capability.                      & Yes    & N/A    \\ \hline
+			ICSF\_UNSUPPORTED\_CCA\_KEYS        & ACTIVE (ENABLED)   & SUCCES & Detects   CCA keys that are unsupported.            & Yes    & N/A    \\ \hline
+			ICSF\_WEAK\_CCA\_KEYS               & ACTIVE (ENABLED)   & SUCCES & Detects   CCA keys that are weak.                   & Yes    & N/A    \\ \hline
+			ICSFMIG7731\_ICSF\_RETAINED\_RSAKEY & INACTIVE (ENABLED) & INACT  & Detects use of retained RSA private keys.           & No/Mod & \&SUF. \\ \hline		
+		\end{tabular}
+		\caption[Health Checker Security team tabel 2]{Setup van Health Checker voor het Security team tabel 2}
+		\label{tbl:Security Team Tabel 2}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			ZOSMIGV2R4\_NEXT\_CS\_OSIMGMT        & ACTIVE (ENABLED)   & SUCCES   & CHECK   IF OSIMGMT IS IN USE                                                                                     & Yes & N/A \\ \hline
+			ZOSMIGV2R4\_CS\_IWQSC\_TCPIP*        & INACTIVE (ENABLED) & INACT    & ENSURE   SUFFICIENT FIXED STORAGE FOR   IWQ   IPSEC ENABLING                                                     & No  & N/A \\ \hline
+			ZOSMIGREC\_ROOT\_FS\_SIZE            & INACTIVE (ENABLED) & INACT & Verify   size accommodation for the z/OS root file system to prevent halt on   installation.                     & No  & N/A \\ \hline
+			ZOSMIGV2R3\_NEXT\_USS\_SMB\_DETECTED & INACTIVE (ENABLED) & INACT & z/OS   V2.3 is planned to be the last release of the operating system to support    the   DFS/SMB functionality. & No  & N/A \\ \hline
+			ZOSMIGV2R3\_NEXT\_VSM\_USERKEYCOMM   & INACTIVE (ENABLED) & INACT &                                                                                                                  & No  & N/A \\ \hline
+			ZOSMIGV2R4\_SSH\_CONFIG              & INACTIVE (ENABLED) & INACT & A   migration check for OpenSSH config file                                                                      & No  & N/A \\ \hline
+			ZOSMIGV2R4\_SSHD\_CONFIG             & INACTIVE (ENABLED) & INACT & A   migration check for OpenSSH Daemon config file                                                               & No  & N/A \\ \hline
+			ZOSMIGREC\_ROOT\_FS\_SIZE            & INACTIVE (ENABLED) & INACT & Verify   size accommodation for the z/OS root file system to prevent halt on   installation.                     & No  & N/A \\ \hline
+			ZOSMIGV2R3\_NEXT\_USS\_SMB\_DETECTED & INACTIVE (ENABLED) & INACT & z/OS   V2.3 is planned to be the last release of the operating system to support    the   DFS/SMB functionality. & No  & N/A \\ \hline
+			ZOSMIGREC\_SUP\_TIMER\_INUSE         & INACTIVE (ENABLED) & INACT & Verify   STP is in use when applicable                                                                           & No  & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker SOE team tabel]{Setup van Health Checker voor het SOE team tabel}
+		\label{tbl:SOE Team Tabel}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			DISK\_SYSPARM\_CARTCALC\_N & ACTIVE (ENABLED)   & SUCCES & Ensure   CARTCALC is set to Y if using Cartridge tapes               & Yes & N/A \\ \hline
+			DISK\_SYSPARM\_DSNDUPVL\_N & ACTIVE (ENABLED)   & SUCCES & Ensure   DSNDUPVL is set to Y if using volume pooling                & Yes & N/A \\ \hline
+			DISK\_SYSPARM\_IOCHNBLK\_1 & ACTIVE (ENABLED)   & SUCCES & IOCHNBLK   is set greater than 1 if using   tape   cartridges.       & Yes & N/A \\ \hline
+			DISK\_SYSPARM\_IOTRACKS\_1 & ACTIVE (ENABLED)   & SUCCES & Ensure   IOTRACKS is set to the number of    tracks   on a cylinder. & Yes & N/A \\ \hline
+			DISK\_SYSPARM\_IXMQTIME\_0 & ACTIVE (ENABLED)   & SUCCES & Ensure   IXMQTIME is set greater than 0                              & Yes & N/A \\ \hline
+			DISK\_SYSPARM\_MERGSORT\_S & ACTIVE (ENABLED)   & SUCCES & Ensure   MERGSORT is set to S                                        & Yes & N/A \\ \hline
+			ALLOC\_ALLC\_OFFLN\_POLICY & ACTIVE (ENABLED)   & SUCCES & Check   ALLC\_OFFLN Policy                                           & Yes & N/A \\ \hline
+			ALLOC\_SPEC\_WAIT\_POLICY  & ACTIVE (ENABLED)   & SUCCES & CHECK   SPEC\_WAIT Policy                                            & Yes & N/A \\ \hline
+			ALLOC\_TAPELIB\_PREF       & INACTIVE (ENABLED) & INACT  & Check   TAPELIB\_PREF                                                & No  & 00  \\ \hline
+			ALLOC\_TIOT\_SIZE          & ACTIVE (ENABLED)   & SUCCES & CHECK   TIOT SIZE                                                    & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker Storage team tabel 1]{Setup van Health Checker voor het storage team tabel 1}
+		\label{tbl:Storage Team Tabel 1}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			CATALOG\_ATTRIBUTE\_CHECK        & ACTIVE (ENABLED)   & SUCCES & To   detect and report catalog DASD status and SHAREOPTIONS if they are   inconsistent.                         & Yes & N/A   \\ \hline
+			CATALOG\_IMBED\_REPLICATE        & INACTIVE (ENABLED) & INACT  & IMBED   and REPLICATE attributes are no  longer   allowed on the define of a new catalog                        & No  & 00    \\ \hline
+			CATALOG\_RNLS                    & ACTIVE (ENABLED)   & SUCCES & All   Catalog RESERVES should be converted to SYSTEMS ENQUEUEs unless catalogs are   shared outside the sysplex & Yes & N/A   \\ \hline
+			DMO\_REFUCB                      & ACTIVE (ENABLED)   & SUCCES & Reports   a REFUCB function in PARMLIB                                                                          & Yes & N/A   \\ \hline
+			DMO\_TAPE\_LIBRARY\_INIT\_ERRORS & ACTIVE (ENABLED)   & SUCCES & Reports   any tape library devices that failed to be initialized during IPL                                     & Yes & N/A   \\ \hline
+			HSM\_CDSB\_BACKUP\_COPIES        & ACTIVE (ENABLED)   & SUCCES & Ensure critical level of HSM CDS backups specified.                                                             & Mod & \&SUF \\ \hline
+			HSM\_CDSB\_DASD\_BACKUP          & ACTIVE (ENABLED)   & SUCCES & Ensure required DASD data sets exist for HSM CDS backups.                                                       & No  & 00    \\ \hline
+			HSM\_CDSB\_VALID\_BACKUPS        & ACTIVE (ENABLED)   & SUCCES & Ensure critical level of valid HSM CDS backups exist.                                                           & Mod & \&SUF \\ \hline
+		\end{tabular}
+		\caption[Health Checker Storage team tabel 2]{Setup van Health Checker voor het Storage team tabel 2}
+		\label{tbl:Storage Team Tabel 2}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			IOS\_BUFFER\_CREDITS  & ACTIVE (ENABLED) & SUCCES & Insufficient   Buffer Credits                       & Yes & N/A \\ \hline
+			IOS\_CAPTUCB\_PROTECT & ACTIVE (ENABLED) & SUCCES & Captured   UCB protection state verification.       & Yes & N/A \\ \hline
+			IOS\_CMRTIME\_MONITOR & ACTIVE (ENABLED) & SUCCES & Command   Response Time Monitor for Channel Paths   & Yes & N/A \\ \hline
+			IOS\_DYNAMIC\_ROUTING & ACTIVE (ENABLED) & SUCCES & Dynamic   Routing verification.                     & Yes & N/A \\ \hline
+			IOS\_FABRIC\_MONITOR  & ACTIVE (ENABLED) & SUCCES & Fabric   Health Monitor for CUP Diagnostics         & Yes & N/A \\ \hline
+			IOS\_IORATE\_MONITOR  & ACTIVE (ENABLED) & SUCCES & I/O   Rate Monitor for Channel Paths                & Mod & 00  \\ \hline
+			IOS\_MIDAW            & ACTIVE (ENABLED) & SUCCES & The   MIDAW facility state verification.            & Yes & N/A \\ \hline
+			IOS\_PORT\_SPEED      & ACTIVE (ENABLED) & SUCCES & Port   Speed Mismatch for Links                     & Yes & N/A \\ \hline
+			IOS\_STORAGE\_IOSBLKS & ACTIVE (ENABLED) & SUCCES & 31-bit   storage for IOS blocks state verification. & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker Storage team tabel 3]{Setup van Health Checker voor het Storage team tabel 3}
+		\label{tbl:Storage Team Tabel 3}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			OCE\_XTIOT\_CHECK                & ACTIVE (ENABLED)   & SUCCES & Check   whether XTIOTs for non VSAM is enabled.                                                                       & Yes & N/A   \\ \hline
+			PDSE\_SMSPDSE1                   & ACTIVE (ENABLED)   & SUCCES & Check   for the presence of SMSPDSE1.                                                                                 & Yes & N/A   \\ \hline
+			SMS\_CDS\_REUSE\_OPTION          & ACTIVE (ENABLED)   & SUCCES & Avoid   ACDS or COMMDS running into space problems                                                                    & Yes & N/A   \\ \hline
+			SMS\_CDS\_SEPARATE               & ACTIVE (ENABLED)   & SUCCES & Prevent   single point of failure for ACDS and COMMDS                                                                 & Yes & N/A   \\ \hline
+			VSAM\_CA\_RECLAIM                & ACTIVE (ENABLED)   & SUCCES & IBM   recommends running with CA reclaim enabled to provide improved DASD space   usage and performance enhancements. & Yes & N/A   \\ \hline
+			VSAM-INDEX-TRAP                  & INACTIVE (ENABLED) & SUCCES & VSAM Index Trap provides better first failure data capture                                                            & Yes & 00    \\ \hline
+			VSAMRLS\_CFCACHE\_MINIMUM\_SIZE  & ACTIVE (ENABLED)   & SUCCES & Reduces   performance impact due to small CF cache size                                                               & Yes & \&SUF \\ \hline
+			VSAMRLS\_CFLS\_FALSE\_CONTENTION & ACTIVE (DISABLED)  & SUCCES & Prevents   performance degradation due to false lock contention                                                       & Mod & \&SUF \\ \hline
+			VSAMRLS\_DIAG\_CONTENTION        & ACTIVE (ENABLED)   & SUCCES & Gives   the customer ability to monitor VSAM RLS contention                                                           & Yes & N/A   \\ \hline
+		\end{tabular}
+		\caption[Health Checker Storage team tabel 4]{Setup van Health Checker voor het Storage team tabel 4}
+		\label{tbl:Storage Team Tabel 4}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			VSAMRLS\_QUIESCE\_STATUS        & ACTIVE (ENABLED)  & SUCCES & Unresponsive   CICS regions for QUIESCE and    UNQUIESCE   could indicate a problem & Yes & N/A   \\ \hline
+			VSAMRLS\_SHCDS\_CONSISTENCY     & ACTIVE (DISABLED) & SUCCES & Optimizes   space utilization                                                       & Mod & \&SUF \\ \hline
+			VSAMRLS\_SHCDS\_MINIMUM\_SIZE   & ACTIVE (DISABLED) & SUCCES & Prevents   performance impact due to small SHCDS size                               & Mod & \&SUF \\ \hline
+			VSAMRLS\_SINGLE\_POINT\_FAILURE & ACTIVE (DISABLED) & SUCCES & Prevents   a single point of failure due to a lost volumes.                         & Mod & \&SUF \\ \hline
+			VSAMRLS\_TVS\_ENABLED           & ACTIVE (DISABLED) & ENV N  & Verify that DFSMStvs is enabled.                                                    & No  & 00    \\ \hline
+			VANTAGE\_HELP\_DD\_IN\_USE@*    & ACTIVE (ENABLED)  & SUCCES & CA   Vantage should use a //HELP DD statement, not the HELP sysparm.                & Yes & N/A   \\ \hline
+			VANTAGE\_LOG\_THRSH@*           & ACTIVE (ENABLED)  & SUCCES & Verify   CA Vantage is configured to run with enough free space for log processing. & Yes & N/A   \\ \hline
+			VANTAGE\_LOGBREAK\_USAGE@*      & ACTIVE (ENABLED)  & SUCCES & Verify   CA Vantage script use of the script keyword SET\_LOGBREAK value.           & Yes & N/A   \\ \hline
+		\end{tabular}
+		\caption[Health Checker Storage team tabel 5]{Setup van Health Checker voor het Storage team tabel 5}
+		\label{tbl:Storage Team Tabel 5}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			VANTAGE\_MEM\_ABOVE\_THRSH@* & ACTIVE (ENABLED) & SUCCES & Check   if running out of virtual memory                                                                                & Yes & N/A \\ \hline
+			VANTAGE\_MEM\_BELOW\_THRSH@* & ACTIVE (ENABLED) & SUCCES & Check   if running out of virtual memory                                                                                & Yes & N/A \\ \hline
+			VANTAGE\_OLD\_AUT\_INACT@*   & ACTIVE (ENABLED) & SUCCES & Verify   CA Vantage is configured to run with the old threshold automation   inactive.                                  & Yes & N/A \\ \hline
+			VANTAGE\_SCRIPT\_ACCUM@*     & ACTIVE (ENABLED) & SUCCES & Check   if scripts accumulate forever.                                                                                  & Yes & N/A \\ \hline
+			VANTAGE\_STMON\_ACT@*        & ACTIVE (ENABLED) & SUCCES & The   Internal Status Monitor is recommended to be active to take advantage of the   Internal Status Monitor functions. & Yes & N/A \\ \hline
+			VANTAGE\_VANTREL\_SYSPARM@*  & ACTIVE (ENABLED) & SUCCES & Verify   CA Vantage is configured to run with the VANTREL sysparm default setting                                       & Yes & N/A \\ \hline
+			VANTAGE\_WARMSTART\_ACT@*    & ACTIVE (ENABLED) & SUCCES & Verify   CA Vantage is configured to run with the Warmstart feature active.                                             & Yes & N/A \\ \hline
+			VANTAGE\_ZIIP\_ENABLED@*     & ACTIVE (ENABLED) & SUCCES & It is   recommended that you make CA Vantage code eligible to be dispatched on zIIP -   set sysparm ZIIPIT to (Y).      & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker Storage team tabel 6]{Setup van Health Checker voor het Storage team tabel 6}
+		\label{tbl:Storage Team Tabel 6}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			USS\_AUTOMOUNT\_DELAY             & ACTIVE (ENABLED)  & SUCCES    & Low   automount delay times in a SYSPLEX can cause the system to hang,   continually   trying to unmount file systems and failing. & Yes & N/A \\ \hline
+			USS\_CLIENT\_MOUNTS               & ACTIVE (ENABLED)  & SUCCES    & File   systems should not function ship if they can be mounted locally.     Performance   is not optimal in this situation.        & Yes & N/A \\ \hline
+			USS\_FILESYS\_CONFIG              & ACTIVE (ENABLED)  & SUCCES    & Avoid   performance problems in Unix System services and improve recovery after an   outage                                        & Yes & N/A \\ \hline
+			USS\_HFS\_DETECTED                & ACTIVE (ENABLED)  & EXCEPTION & HFS file systems are no longer the strategic file system.  All HFS file systems   should be migrated to zFS                        & Yes & N/A \\ \hline
+			USS\_INETD\_UNSECURE\_SERVICES    & ACTIVE (ENABLED)  & SUCCES    & Check   if inetd daemon is configured with unsecure services which may result in    a   security exposure.                         & Yes & N/A \\ \hline
+			USS\_KERNEL\_PVTSTG\_THRESHOLD    & ACTIVE (ENABLED)  & SUCCES    & If no   private storage is available in the kernel some UNIX System Services syscalls   will fail. This can result in an outage.   & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker zOpen team tabel 1]{Setup van Health Checker voor het zOPEN team tabel 1}
+		\label{tbl:zOpen Team Tabel 1}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			USS\_KERNEL\_RESOURCES\_THRESHOLD & ACTIVE (DISABLED) & ENV N     & Running out of z/OS UNIX System Services resources can cause   system calls to start failing.                                     & Yes & N/A \\ \hline
+			USS\_KERNEL\_STACKS\_THRESHOLD    & ACTIVE (ENABLED)  & SUCCES    & If no   kernel stack cells are available some UNIX System Services syscalls will    fail.   This can result in an outage.         & Yes & N/A \\ \hline
+			USS\_MAXSOCKETS\_MAXFILEPROC      & ACTIVE (ENABLED)  & EXCEPTION & If   MAXSOCKETS or MAXFILEPROC are set too low you can run out of usable sockets    or file   descriptors respectively.           & Mod & 00  \\ \hline
+			USS\_PARMLIB                      & ACTIVE (ENABLED)  & EXCEPTION & Reconfiguration   settings should be kept in a permanent location so they are available the   next time z/OS UNIX is initialized. & Yes & N/A \\ \hline
+			USS\_PARMLIB\_MOUNTS              & ACTIVE (ENABLED)  & EXCEPTION & BPXPRMxx   parmlib mount failures can cause outages if not handled in a timely manner.                                            & Yes & N/A \\ \hline
+			USS\_SUPERUSER                    & ACTIVE (ENABLED)  & SUCCES    & The   userID value for SUPERUSER must be defined to the security product and have   an OMVS   segment with a UID of 0.            & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker zOpen team tabel 2]{Setup van Health Checker voor het zOPEN team tabel 2}
+		\label{tbl:zOpen Team Tabel 2}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			ZFS\_CACHE\_REMOVALS             & ACTIVE(ENABLED) & SUCCES & Verifies   whether the default meta cache/transaction/client    cache   sizes are used                                      & Yes & N/A \\ \hline
+			ZFS\_VERIFY-CAHCESIZE            & ACTIVE(ENABLED) & SUCCES & Verifies   whether the default cache sizes are used                                                                         & Yes & N/A \\ \hline
+			ZFS\_VERIFY\_COMPRESSION\_HEALTH & ACTIVE(ENABLED) & SUCCES & Verifies   that all user cache pages are reistered with the zEDC    Express   service when there are compressed aggregates. & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker zOpen team tabel 3]{Setup van Health Checker voor het zOPEN team tabel 3}
+		\label{tbl:zOpen Team Tabel 3}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			DB2\_OFS\_CREATE\_VIEW@PTX*      & ACTIVE (ENABLED)   & SUCCES & Validate   value that is specified for the GENERATE\_COLUMN \_NAMES\_WITH\_SELECT(*) & Yes & N/A \\ \hline
+			DB2\_PDA\_BP\_LOOKUP@PTX*        & ACTIVE (ENABLED)   & SUCCES & Validate   value specified for the DB2\_BUFFER\_CHECKING parameter                          & Yes & N/A \\ \hline
+			DB2\_EXCP\_ACCESS@PTX*           & ACTIVE (ENABLED)   & SUCCES & Validate   value specified for the EXCP\_READ\_ACCESS parameter                             & Yes & N/A \\ \hline
+			DB2\_PPA\_EXPLAIN\_RC1@*         & ACTIVE (ENABLED)   & SUCCES & Ensure   Plan Analyzer EXPLRC1 is set to a non-zero return code.                            & Yes & N/A \\ \hline
+			DB2\_PPA\_EXPLAIN\_RC2@*         & ACTIVE (ENABLED)   & SUCCES & Ensure   Plan Analyzer EXPLRC2 is set to a non-zero return code.                            & Yes & N/A \\ \hline
+			DB2\_PPA\_EXPLAIN\_RC3@*         & ACTIVE (ENABLED)   & SUCCES & Ensure   Plan Analyzer EXPLRC3 is set to a non-zero return code.                            & Yes & N/A \\ \hline
+			DB2\_PRA\_\#LOAD\_LAST\_RUN@PTX* & INACTIVE (ENABLED) & INACT  & Check   when PRA\#LOAD was last run                                                         & No  & 00  \\ \hline
+			DB2\_PRA\_PARM\_LEVEL@PTX*       & ACTIVE (ENABLED)   & SUCCES & Ensure   the parmlib level and program level are the same                                   & Yes & N/A \\ \hline
+			DB2\_PRA\_TAPE\_RETENTION@PTX*   & INACTIVE (ENABLED) & INACT  & Determine   if tape retention or expiration is set to a value other than default            & No  & 00  \\ \hline
+		\end{tabular}
+		\caption[Health Checker DB team tabel 1]{Setup van Health Checker voor het DB team tabel 13}
+		\label{tbl:DB Team Tabel 1}
+	\end{table}
+\end{landscape}
+
+\begin{landscape}
+	\begin{table}[h]
+		\begin{tabular}{|l|p{2.3cm}|l|p{4.5cm}|l|l|}
+			\hline
+			\textbf{Name}                       & \textbf{Status}   & \textbf{Outcome} & \textbf{Reason}    & \textbf{Run} &	\textbf{00/\&SUF.} \\ \hline
+			DB2\_RCM\_FULLTREE\_CHECK@PTX*  & INACTIVE (ENABLED) & INACT     & Validate   that the optimum FULLTREE option is used for R12                                                                   & No  & 00  \\ \hline
+			DTCM\_DB\_FORCE\_CHKPT@*        & ACTIVE (ENABLED)   & SUCCES    & Ensure   no forced check points                                                                                               & Yes & N/A \\ \hline
+			DTCM\_DB\_MAX\_TSK@*            & ACTIVE (ENABLED)   & SUCCES    & Too few   tasks for concurrent work can cause application delays or failures                                                  & Yes & N/A \\ \hline
+			IDMS\_CHANGE\_TRACKING@SYST*    & ACTIVE (ENABLED)   & EXCEPTION & Verify   whether CA IDMS Change Tracking is enabled.                                                                          & Yes & N/A \\ \hline
+			IDMS\_CPU\_EFFECTIVENESS@SYST*  & ACTIVE (ENABLED)   & SUCCES    & Calculate   the ratio of CPU time received versus CPU time required to provide a measure   of involuntary waits for CPU time. & Yes & N/A \\ \hline
+			IDMS\_SCRATCH\_IN\_MEMORY@SYST* & ACTIVE (ENABLED)   & SUCCES    & Verify   if scratch is in memory.                                                                                             & Yes & N/A \\ \hline
+			IDMS\_ZIIP\_USAGE@SYST*         & ACTIVE (ENABLED)   & SUCCES    & Verify   whether CA IDMS exploits zIIP processors.                                                                            & Yes & N/A \\ \hline
+		\end{tabular}
+		\caption[Health Checker DB team tabel 2]{Setup van Health Checker voor het DB team tabel 2}
+		\label{tbl:DB Team Tabel 2}
 	\end{table}
 \end{landscape}

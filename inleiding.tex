@@ -5,7 +5,7 @@
 \chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}
 \label{ch:inleiding}
 
-Men zal het niet beseffen maar zonder de Mainframe zouden veel hedendaagse diensten wegvallen. Ook al is de mainframe voor velen iets uit het verleden blijven veel sectoren er op vertrouwen. Bijvoorbeeld de banken, de kans is groot dat als je iets betaalt met je bankkaart dat de transactie verwerkt wordt door een mainframe. Een ander voorbeeld zijn de vliegmaatschappijen, als je eens een kijk zou kunnen nemen naar de computer die gebruikt word op de luchthaven om je in te checken op je vlucht, zal je merken dat dit hoogstwaarschijnlijk een terminal is die aangesloten zit op een Mainframe. Verder wordt de mainframe ook nog gebruikt in andere sectoren zoals:
+Men zal het niet beseffen maar zonder de Mainframe zouden veel hedendaagse diensten wegvallen. Ook al is de mainframe voor velen iets uit het verleden, veel sectoren blijven er op vertrouwen. Een voorbeeld zijn de bankinstellingen, de kans is groot dat als je iets betaalt met je bankkaart dat de transactie verwerkt wordt door een mainframe. Een ander voorbeeld zijn de vliegmaatschappijen, als je eens een kijkje zou kunnen nemen naar de computer die gebruikt wordt op de luchthaven om je in te checken op je vlucht, zal je merken dat dit hoogstwaarschijnlijk een terminal is die aangesloten zit op een Mainframe. Verder wordt de mainframe ook nog gebruikt in andere sectoren zoals:
 
 
 \begin{itemize}
@@ -17,17 +17,15 @@ Men zal het niet beseffen maar zonder de Mainframe zouden veel hedendaagse diens
   \item \ldots
 \end{itemize}
 
-Een uitval van een mainframe kan dus kritische diensten laten wegvallen. Bijvoorbeeld de mogelijkheid tot overschrijven via de bank. Daarom is een van de belangrijkste factoren van de mainframe de toegankelijkheid. De mainframe garandeert een uptime van 24 op 24, 7 op 7, 365 op 365 het hele jaar door dus. Hiervoor heeft het al verscheidene technieken waaronder de alles 2 regel. Je zult in een mainframe alles dubbel vinden. Ook de architectuur binnen de mainframe, de Parallel Sysplex(Meer hierover in de hoofdstuk 2) zorgt dat bij een uitval van 1 partitie een andere zijn workload direct overneemt. Dan zijn er binnen die architectuur ook nog verschillende software componenten hiervoor. Een daarvan is degene waar deze proef zich op focust z/OS Health Checker, deze tool werkt preventief. Hij probeert dus problemen op te sporen voor ze kunnen plaatsnemen en verwittigd de System Administrator hiervan. In hoofdstuk 2 zal de werking hiervan tot in detail worden uitgelegd.
+Een uitval van een mainframe kan dus kritische diensten laten wegvallen. Bijvoorbeeld de mogelijkheid tot overschrijven via de bank. Daarom is een van de belangrijkste factoren van de mainframe de beschikbaarheid. De mainframe garandeert een uptime van 24 op 24, 7 op 7, 365 op 365 het hele jaar door dus. Hiervoor worden verscheidene technieken gebruikt zoals de "alles 2 regel". Je zult in een mainframe alles dubbel terugvinden. Ook de architectuur binnen de mainframe, de Parallel Sysplex(Meer hierover in hoofdstuk \ref{ch:stand-van-zaken}) zorgt dat bij een uitval van 1 partitie een andere zijn workload direct overneemt.an zijn er binnen die architectuur ook nog verschillende software componenten die hier voor zorgen. Een daarvan is degene waar deze proef zich op focust z/OS Health Checker, deze tool werkt preventief. Het zal proberen om de problemen op te sporen alvorens die plaats vinden en zal de System Administrator hiervan verwittigen. In hoofdstuk \ref{ch:stand-van-zaken} zal de werking hiervan tot in detail worden uitgelegd.
 
 \section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}
 \label{sec:probleemstelling}
 
-De z/OS Health Checker opstelling van HCL Technologies is al lang niet meer verandert en is ook niet gestandaardiseerd over de verschillende partities binnen de Mainframe. Bij eventuele uitbreiding van het systeem is er dus ook niet direct een standaardopstelling die men kan toepassen. Verder vind er ook een inefficiënte logging plaats. Deze is nu niet echt aanwezig, de bedoeling is dat de verantwoordelijke van elke partitie een log krijgt van alle fouten binnen zijn partitie.
+De z/OS Health Checker opstelling van HCL Technologies is al lang niet meer veranderd en is ook niet gestandaardiseerd over de verschillende partities binnen de Mainframe. Bij eventuele uitbreiding van het systeem is er dus ook niet direct een standaardopstelling die men kan toepassen. Verder vind er ook een inefficiënte logging plaats. Deze is nu niet echt aanwezig, de bedoeling is dat de verantwoordelijke van elke partitie een log krijgt van alle fouten binnen zijn partitie.
 
 \section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}
 \label{sec:Hoofdonderzoeksvraag}
-
-Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
 
 Deze proef zal zich focussen op de z/OS Health checker opstelling van HCL technologies met volgende onderzoeksvraag.
 
