@@ -69,47 +69,55 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.1}Analyse van huidige z/OS Health Checker Setup}{33}{subsection.3.1.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusie}{37}{chapter.4}% 
+\contentsline {subsection}{\numberline {3.1.2}Parmlib Members voor de standaard setup}{36}{subsection.3.1.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{39}{appendix.A}% 
+\contentsline {section}{\numberline {3.2}Logging van z/OS Health Checker}{37}{section.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{39}{section.A.1}% 
+\contentsline {subsection}{\numberline {3.2.1}JCL jobs voor het logging}{37}{subsection.3.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}State-of-the-art}{39}{section.A.2}% 
+\contentsline {subsection}{\numberline {3.2.2}Jobs schedulen met IWS}{39}{subsection.3.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{40}{section.A.3}% 
+\contentsline {chapter}{\numberline {4}Conclusie}{41}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{40}{section.A.4}% 
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{43}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{40}{section.A.5}% 
+\contentsline {section}{\numberline {A.1}Introductie}{43}{section.A.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Bijlagen}{41}{appendix.B}% 
+\contentsline {section}{\numberline {A.2}State-of-the-art}{43}{section.A.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Check Output}{41}{section.B.1}% 
+\contentsline {section}{\numberline {A.3}Methodologie}{44}{section.A.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Tabellen Standaard opstelling z/OS Health Checker}{44}{section.B.2}% 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{44}{section.A.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Parmlib members voor z/OS Health Checker}{84}{section.B.3}% 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{44}{section.A.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3.1}HZSPRM00}{84}{subsection.B.3.1}% 
+\contentsline {chapter}{\numberline {B}Bijlagen}{45}{appendix.B}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3.2}HZSPRMT1}{87}{subsection.B.3.2}% 
+\contentsline {section}{\numberline {B.1}Check Output}{45}{section.B.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3.3}HZSPRMT2}{87}{subsection.B.3.3}% 
+\contentsline {section}{\numberline {B.2}Tabellen Standaard opstelling z/OS Health Checker}{48}{section.B.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3.4}HZSPRMT3}{90}{subsection.B.3.4}% 
+\contentsline {section}{\numberline {B.3}Parmlib members voor z/OS Health Checker}{88}{section.B.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3.5}HZSPRMT4}{93}{subsection.B.3.5}% 
+\contentsline {subsection}{\numberline {B.3.1}HZSPRM00}{88}{subsection.B.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.4}JCL jobs}{96}{section.B.4}% 
+\contentsline {subsection}{\numberline {B.3.2}HZSPRMT1}{91}{subsection.B.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4.1}FHZSVT11}{96}{subsection.B.4.1}% 
+\contentsline {subsection}{\numberline {B.3.3}HZSPRMT2}{91}{subsection.B.3.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4.2}FHZSVT21}{97}{subsection.B.4.2}% 
+\contentsline {subsection}{\numberline {B.3.4}HZSPRMT3}{94}{subsection.B.3.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4.3}FHZSVT31}{97}{subsection.B.4.3}% 
+\contentsline {subsection}{\numberline {B.3.5}HZSPRMT4}{97}{subsection.B.3.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4.4}FHZSVT41}{98}{subsection.B.4.4}% 
+\contentsline {section}{\numberline {B.4}JCL jobs}{100}{section.B.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{99}{appendix*.16}% 
+\contentsline {subsection}{\numberline {B.4.1}FHZSVT11}{100}{subsection.B.4.1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.4.2}FHZSVT21}{101}{subsection.B.4.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.4.3}FHZSVT31}{101}{subsection.B.4.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {B.4.4}FHZSVT41}{102}{subsection.B.4.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{103}{appendix*.16}% 
 \contentsfinish 

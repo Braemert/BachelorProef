@@ -88,4 +88,175 @@ Nog een kleine verduidelijking per team
 	\label{tbl:Checks Per Team}
 \end{table}
 
-Nadat alle checks per team werden gegroepeerd, is er eerst zelf een voorstel gemaakt voor de opstelling van hun checks waar zij feedback op konden geven. Wanneer er geen feedback was is de voorgestelde opstelling geimplementeerd.
+Nadat alle checks per team werden gegroepeerd, is er eerst zelf een voorstel gemaakt voor de opstelling van hun checks waar zij feedback op konden geven. Wanneer er geen feedback was is de voorgestelde opstelling geimplementeerd. Als een check gewijzigd werd moet dit gedefinieerd worden in de parmlib. Maar men moet ook weten of een wijzinging in alle LPARs moet gebeuren of maar in 1 LPAR. Daarom hebben we bij de tabellen van de gehele setup nog 2 extra kolommen.
+
+\begin{itemize}
+	\item Run: Dit definieert dat de check uitgevoerd moet worden(Yes of No). Of dat deze check aangepast moet worden(MOD).
+	\item 00/\&SUF: Dit definieert dat de check voor alle LPARs wordt uitgeschakeld (00) of maar voor 1 LPAR(\&SUF\footnote{Dit is een omgevings variabele dat de huidige LPAR specifieerd})
+\end{itemize}
+
+De volledige health Checker setup zoals ze na deze proef is bevind zich in bijlage \ref{sec:Tabellen Standaard opstelling z/OS Health Checker}. Dit is een samenvatting van hoe HCL wilt dat de setup eruit ziet. 
+
+\subsection{Parmlib Members voor de standaard setup}
+\label{subsec:Parmlib Members voor de standaard setup}
+
+Om dit door te voeren moeten we de parmlib members wijzigen. Als een check over het gehele systeem wordt uitgeschakeld gebeurt dit in HZSPRM00. Is het voor een enkele LPAR dan moet de wijziging gedefinieerd worden in de parmlib member van die LPAR. Er zijn 5 parmlib members voor z/OS Health Checker binnn de setup van HCL Technologies.
+
+\begin{enumerate}
+	\item HZSPRM00: Wijzigingen in deze member gelden voor alle LPARs binnen de parallel sysplex.
+	\item HZSPRMT1: Wijzingingen in deze member gelden enkel voor VT1
+	\item HZSPRMT2: Wijzingingen in deze member gelden enkel voor VT2
+	\item HZSPRMT3: Wijzingingen in deze member gelden enkel voor VT3
+	\item HZSPRMT4: Wijzingingen in deze member gelden enkel voor VT4
+\end{enumerate}
+
+Deze wijzigingen gebeuren met een ADDREPLACE-statement. De statement in figuur \ref{fig:addreplace} doet het volgende:
+
+\begin{itemize}
+	\item Statement(NOPLEX) specefieerd de naam van de wijziging
+	\item Update specifieerd dat de check zal blijven draaien maar met andere parameters. Dit kan ook 'inactive' zijn voor de check te deactiveren of 'Delete' om de check te verwijderen.
+	\item Check(,) definieert de check owner en de check zelf die gewijzigd wordt.
+	\item Parm('NOPLEX') dit is de parameter die meegegeven wordt voor de wijziging.
+	\item Reason() dit is een zelf in te vullen reden voor het wijzigen van de check.
+	\item Date(20090701) dit is de datum van de wijziging in yyyymmdd formaat. \cite{Bezzi2010}
+\end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics{img/addreplace}
+	\caption[ADDREPLACE statement]{Voorbeeld van een ADDREPLACE Statement}
+	\label{fig:addreplace}
+\end{figure}
+
+Bij de analyse van de setup bleek ook dat er veel checks waren die de GLOBAL status hadden. Maar deze draaiden verspreid over de 4 LPARs. Voor de nieuwe standaard setup van z/OS Health Checker wenste HCL Technologies dat alle GLOBAL checks draaide op de VT1 LPAR, hiervoor moesten dus alle GLOBAL checks inactief gezet worden op alle LPARs buiten VT1. Dit is mogelijk door dat te doen in volgende parmlib members: HZSPRMT2, HZSPRMT3 en HZSPRMT4. Met deze requirements zijn de 4 parmlib members aangemaakt. Deze bevinden zich in bijlage \ref{sec:Parmlin members voor z/OS Health Checker}
+
+Nadat de parmlib members aangepast werden, moeten ze nog door het systeem geïmplementeerd worden. Dit doet men met volgende commando's in SDSF.
+
+\begin{itemize}
+	\item /F HZSCHK,REPLACE,PARMLIB=(00,T1) voor LPAR VT1. 
+	\item /F HZSCHK,REPLACE,PARMLIB=(00,T2) voor LPAR VT2.
+	\item /F HZSCHK,REPLACE,PARMLIB=(00,T3) voor LPAR VT3.
+	\item /F HZSCHK,REPLACE,PARMLIB=(00,T4) voor LPAR VT4.
+\end{itemize}
+
+Verder is er nu ook een HSPRMTK member dit is een kopie van HZSPRMT4. Als het syteem zou uitbreiden met een LPAR, zal deze member gebruikt worden om z/OS Health checker in te stellen voor de nieuwe LPAR. de HZSPRMT4 member is gekozen omdat deze het meest geschikt is voor nieuwe LPARs.
+
+\section{Logging van z/OS Health Checker}
+\label{sec:Logging van z/OS Health Checker}
+
+Nu er een standaard setup van z/OS Health Checker tot stand is gekomen. Is er nog een systeem nodig dat de potentiële problemen kan loggen. Want SDSF zal geen berichten sturen naar gebruikers dat er een probleem is. Via SDSF zal je enkel zelf kunnen kijken tussen alle checks om te zoeken welke een exception hebben. Daarom zijn er JCL jobs geschreven, die voor elke LPAR een mail gaan sturen met alle checks die in exception staan. Deze mail gaat naar een team in India dat ervoor zal zorgen dat de problemen opgelost worden. Omdat checks meerdere keren draaien zal er met IBM Tivoli Workload scheduler een plan gemaakt worden. Met dit plan zullen de jobs automatische elke vrijdag draaien.
+
+\subsection{JCL jobs voor het logging}
+\label{subsec:JCL jobs voor het logging}
+
+De jobs zelf bevinden zich in bijlage \ref{sec:JCL jobs}. De JCL job in bijlage \ref{subsec:FHZSVT11} zal gebruikt worden om de werking van de job uit te leggen.
+
+De eerste regels van de job definiëren zijn naam en zijn eigenschappen. Deze job wordt dan gebonden aan VT01 omdat hij voor deze LPAR draait.
+ \\
+\fbox{
+	\parbox{\textwidth}{
+		//FHZSVT11 JOB (610VV110000,4352,,,,1800),'RTN=FHZSPRVT',CLASS=D,  \\ 
+		//          MSGCLASS=A,MSGLEVEL=(1,1)                              \\ 
+		/*ROUTE XEQ NJEVT                                                  \\
+		/*ROUTE PRINT NJOVT                                                \\ 
+		//*+JBS BIND VT01                                                  \\ 
+		//*    															   
+	}
+}
+
+Dan wordt het HZSPRINT programma opgeroepen. Met de parameters zoals hieronder, roep je alle checks aan van alle owners met een exception. Er worden hier voor wildcards gebruikt(*). 
+
+\fbox{
+	\parbox{\textwidth}{
+		//HZSPRINT EXEC PGM=HZSPRNT,     \\                                   
+		//   PARM='CHECK(*,*),EXCEPTIONS'          							   
+	}
+}     
+
+De output van het HZSPRINT prorgamma word in een tijdelijk bestand gestopt als volgt.
+
+\fbox{
+	\parbox{\textwidth}{
+	//SYSOUT   DD DISP=(NEW,PASS),DSN=\&\&OUT,LRECL=256,RECFM=FB,         \\
+	//         DATACLAS=PSEN                                              \\
+	//*    							   
+	}
+}     
+
+Dan wordt er met het SMTPAPIX programma een mail opgezet via noreply@volvo.com. Deze gebruikt het tijdelijke bestand als input(MEMO statement), die input verzend het dan naar de email adressen waarnaar verwezen word in de job. 
+
+\fbox{
+	\parbox{\textwidth}{
+		//SNDMEM  EXEC PGM=SMTPAPIX,PARM='MSGLVL=4, \\
+		//        FROM=NOREPLYÖVOLVO.COM', \\
+		//             COND=(0400,EQ,HZSPRINT)                              \\
+		//APIFILE DD *                                                      \\
+		)SEND                                                               \\
+		ETITLE    VT01: Health Checker exceptions                         	\\
+		OPTION   FORCE                                                   	\\
+		DEST     jonas.braemÖsupplier.volvo.com                          	\\
+		DEST     david.westbrandÖhcl.com                                 	\\
+		DEST     kevin.somersÖhcl.com                                    	\\
+		DEST     bengt.gellingskogÖhcl.com                               	\\
+		MEMO FILEA                                                       	\\
+		)END 						   
+	}
+} 
+
+Als laatste zal het tijdelijk bestand verwijdert worden met volgende code.
+
+\fbox{
+	\parbox{\textwidth}{
+		//FILEA DD DISP=(OLD,DELETE),DSN=\&\&OUT						   
+	}
+}  
+
+De mail zelf zal nu de check output bevatten van alle checks met een exception zoals in bijlage \ref{subsubsec:Check Output}
+
+\subsection{Jobs schedulen met IWS}
+\label{subsec:Jobs schedulen met IWS}
+
+Eens de jobs klaar zijn moeten ze gepland worden. In de setup van HCL zullen de jobs elke vrijdag moeten draaien. Dit zal gebeuren met IBM Tivoli Workload Scheduler(IWS). Met deze tool kunnen we jobs automatisch laten uitvoeren met een interval. Je kan deze tool vergelijk met CRON op linux. Om de scheduler te initializeren wordt volgend commando gebruikt vanuit het ISPF hoofdmenu
+
+\fbox{
+	\parbox{\textwidth}{
+		TSO OPCA
+	}
+} 
+
+Hier is dan een plan opgesteld met de 4 print jobs als volgt. De FHZRS is een 'Routine start' en de FHZSRE een 'Routine exit' om zo het begin en einde van het plan af te bakenen. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{img/IWS}
+	\caption[Plan voor de print jobs]{Het plan met de 4 JCL print jobs samen met een routine start en routine end.}
+	\label{fig:iws}
+\end{figure}
+
+Dan moet men het interval instellen dat bepaald wanneer het plan uitgevoerd word. Dit moet elke vrijdag gebeuren. Dit stel je in als volgt.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{img/Interval}
+	\caption[Interval in IWS]{Het interval is ingesteld om het plan elke vrijdag van elke week uit te voeren.}
+	\label{fig:interval}
+\end{figure}
+
+Om na te kijken of het interval goed ingesteld is kunnen we via het GENDAYS commando via het scherm op figuur \ref{fig:interval} naar een kalender gaan. Deze kalender duid alle dagen dat het plan zal uitvoeren aan in het blauw. En op figuur \ref{fig:calender} is te zien dat dit alle vrijdagen zijn vanaf 01/05/20. Dit is de datum wanneer het plan voor de eerste keer werd uitgevoerd. Dit plan staat gepland voor de komende 10 jaar zoals te zien is op figuur 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{img/Calender}
+	\caption[Kalender IWS]{De kalender duid datums aan met een blauw lettertype. Op deze dagen zal het plan uitgevoerd worden}
+	\label{fig:calender}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{img/Caleder2030}
+	\caption[Kalender IWS 2030]{Het interval van het plan staat alvast gepland tot 2031}
+	\label{fig:caleder2030}
+\end{figure}
+
+ 
+
