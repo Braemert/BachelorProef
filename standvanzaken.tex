@@ -12,10 +12,10 @@ Dit onderzoek zal zich focussen op z/OS Health Checker. Dit is een tool die draa
 \section{De Mainframe}
 \label{sec:De Mainframe}
 
-De Mainframe speelt een centrale rol in de dagelijkse operaties bij de meeste grote bedrijven. De Ontwikkeling van de mainframe gaat terug tot de jaren '50. Ook al is er door de jaren heen veel veranderd aan de mainframe blijft het het meest stabiele,veilige en compatibele computing platform. Desondanks dat de mainframe een grote aanwezigheid heeft binnen de financiële wereld, blijft deze vrij onzichtbaar voor de grote menigte. Maar eigenlijk zijn we bijna allemaal indirect mainframe gebruikers ook al realiseren we het niet. \cite{Ebbers2011}
+De Mainframe speelt een centrale rol in de dagelijkse operaties bij de meeste grote bedrijven. De Ontwikkeling van de mainframe gaat terug tot de jaren '50. Ook al is er door de jaren heen veel veranderd aan de mainframe blijft het het meest stabiele,veilige en compatibele computing platform. Desondanks dat de mainframe een grote aanwezigheid heeft binnen de financiële wereld, blijft deze vrij onzichtbaar voor de grote menigte. Maar eigenlijk zijn we bijna allemaal indirect mainframe gebruikers ook al realiseren we het niet. (\cite{Ebbers2011})
 
 De term mainframe kan vandaag het beste beschreven worden als een stijl van operaties, applicaties en besturing systeem faciliteiten. Een definitie hiervan zou zijn: "Een mainframe is hetgeen dat bedrijven gebruiken voor het hosten van commerciële databanken, transactie servers en applicaties die een hogere graad van security en availability nodig hebben dan die in machines van een kleinere schaal. 
-De term mainframe is duidelijk vervaagd met de jaren daarom wordt de term meestal geassocieerd met een systeem met volgende eigenschappen. \cite{Ebbers2011}
+De term mainframe is duidelijk vervaagd met de jaren daarom wordt de term meestal geassocieerd met een systeem met volgende eigenschappen. (\cite{Ebbers2011})
 
 \begin{itemize}
 	\item Compatibiliteit met System z besturingssystemen, applicaties en data.
@@ -48,7 +48,7 @@ De IBM mainframe kan verdeeld worden in verscheidene logische systemen. Tussen d
 	\item Processors
 	\item Input-Output devices.
 \end{itemize}
-Deze aparte systemen noemt men een logische partitie of LPAR. Al deze LPARs staan onder de controle van een hypervisor. De hypervisor is een software laag voor het beheer van meerdere besturingssystemen. De Verdeling van resources gebeurt door de Processor Resource/Systems Manager(PR/SM). De volledige definitie van een LPAR luidt als volgt: Een subset van de processor hardware dat gedefinieerd is voor het ondersteunen van een besturingssysteem. Meerdere LPARs zijn dus gelijkaardig aan verschillende aparte mainframes. Ze hebben elk hun eigen besturingssysteem en toegewezen hardware. \cite{Ebbers2011}
+Deze aparte systemen noemt men een logische partitie of LPAR. Al deze LPARs staan onder de controle van een hypervisor. De hypervisor is een software laag voor het beheer van meerdere besturingssystemen. De Verdeling van resources gebeurt door de Processor Resource/Systems Manager(PR/SM). De volledige definitie van een LPAR luidt als volgt: Een subset van de processor hardware dat gedefinieerd is voor het ondersteunen van een besturingssysteem. Meerdere LPARs zijn dus gelijkaardig aan verschillende aparte mainframes. Ze hebben elk hun eigen besturingssysteem en toegewezen hardware. (\cite{Ebbers2011})
 
 \begin{figure}[h]
 	\centering
@@ -63,19 +63,19 @@ Deze aparte systemen noemt men een logische partitie of LPAR. Al deze LPARs staa
 
 De Parallel Sysplex is een een techniek van clusteren. Waarmee men meerdere LPARs groepeert.  z/OS Health Checker zal zowel opereren op aparte LPAR als op de gehele Parallel Sysplex door globale checks(meer hierover in sectie \ref{sec:z/OS Health Checker}). Daarvoor gaan we ons ook verdiepen in deze clustering techniek.
 
-Sysplex staat voor SYStems comPLEX dit is een of meerdere LPARs met z/OS, samengevoegd als 1 unit die gespecialiseerde hardware en software gebruikt. Het gebruikt unieke messaging services en kan bestandsstructuren delen in de couple facilty(CF) datasets. Een sysplex is een instantie van een computer systeem dat draait op 1 of meerdere fysieke partities waarvan elke een andere release kan draaien van het z/OS besturingssysteem. Een sysplex is wel geïsoleerd tot 1 fysieke mainframe. De Parallel Sysplex anderzijds laat meerdere mainframes zich voordoen als 1 systeem. \cite{Ebbers2011} 
+Sysplex staat voor SYStems comPLEX dit is een of meerdere LPARs met z/OS, samengevoegd als 1 unit die gespecialiseerde hardware en software gebruikt. Het gebruikt unieke messaging services en kan bestandsstructuren delen in de couple facilty(CF) datasets. Een sysplex is een instantie van een computer systeem dat draait op 1 of meerdere fysieke partities waarvan elke een andere release kan draaien van het z/OS besturingssysteem. Een sysplex is wel geïsoleerd tot 1 fysieke mainframe. De Parallel Sysplex anderzijds laat meerdere mainframes zich voordoen als 1 systeem. (\cite{Ebbers2011}) 
 
 Een Parallel Sysplex is een symmetrische sysplex die gebruik maakt van het delen van data met meerdere systemen. Dit is dus de clustering van meerder mainframes. We bespreken ook enkele protocollen die de Parallel Sysplex gebruikt. 
 
 \subsubsection{Server Time Protocol}
 \label{subsubsec:Server Time Protocol}
 
-Een belangrijk aspect van de Parallel Sysplex is het synchroniseren van de Time Of Day(TOD) klokken van de meerdere servers. Stel nu meerdere systemen hebben net in dezelfde database data aangepast, maar daarna gebeurt er een uitval. Dan zal men de databank reconstrueren met behulp van alle timestamps van alle aanpassingen. Hiervoor is het belangrijk dat de klokken van elke LPAR gesynchroniseerd zijn om zo de juiste data in de juiste volgorde te reconstrueren. Dit gebeurt vandaag met het Server Time Protocol(STP). \cite{Ebbers2011}
+Een belangrijk aspect van de Parallel Sysplex is het synchroniseren van de Time Of Day(TOD) klokken van de meerdere servers. Stel nu meerdere systemen hebben net in dezelfde database data aangepast, maar daarna gebeurt er een uitval. Dan zal men de databank reconstrueren met behulp van alle timestamps van alle aanpassingen. Hiervoor is het belangrijk dat de klokken van elke LPAR gesynchroniseerd zijn om zo de juiste data in de juiste volgorde te reconstrueren. Dit gebeurt vandaag met het Server Time Protocol(STP). (\cite{Ebbers2011})
 
 \subsubsection{Coupling Facilty}
 \label{subsubsec:Coupling Facility}
 
-Sommige z/OS applicaties op verschillende LPARs hebben vaak toegang nodig to dezelfde informatie. Hiervoor betrouwt een Parallel Sysplex op een of meerder Coupling Facilities(CF). Een CF maakt het mogelijk om aan data sharing te doen met meerdere systemen. Een CF is ook een LPAR maar een speciale die andere LPARs toelaat data te delen. \cite{Ebbers2011}
+Sommige z/OS applicaties op verschillende LPARs hebben vaak toegang nodig to dezelfde informatie. Hiervoor betrouwt een Parallel Sysplex op een of meerder Coupling Facilities(CF). Een CF maakt het mogelijk om aan data sharing te doen met meerdere systemen. Een CF is ook een LPAR maar een speciale die andere LPARs toelaat data te delen. (\cite{Ebbers2011})
 
 \begin{figure}[h]
 	\centering
@@ -84,14 +84,14 @@ Sommige z/OS applicaties op verschillende LPARs hebben vaak toegang nodig to dez
 	\label{fig:parallelsysplex}
 \end{figure}
 
-Een goed geconfigureerde parallel sysplex cluster is zodanig ontworpen dat het een hoge beschikbaarheid biedt met een minimale onbeschikbaarheid. Dit is dus al een van technieken die de mainframe zijn hoge availabilty garanderen. Bijvoorbeeld: wanneer een system uitvalt, dan kan een ander systeem dit direct opvangen omdat alle data en kritische applicaties gedeeld worden in de parallel sysplex. De taken van het uitvallende systeem worden overgenomen. Ondertussen kan het gefaalde systeem herstart worden. Dit zorgt er uiteindelijk voor dat een laag aantal single points of failure aanwezig is binnen de sysplex. \cite{Ebbers2011}
+Een goed geconfigureerde parallel sysplex cluster is zodanig ontworpen dat het een hoge beschikbaarheid biedt met een minimale onbeschikbaarheid. Dit is dus al een van technieken die de mainframe zijn hoge availabilty garanderen. Bijvoorbeeld: wanneer een system uitvalt, dan kan een ander systeem dit direct opvangen omdat alle data en kritische applicaties gedeeld worden in de parallel sysplex. De taken van het uitvallende systeem worden overgenomen. Ondertussen kan het gefaalde systeem herstart worden. Dit zorgt er uiteindelijk voor dat een laag aantal single points of failure aanwezig is binnen de sysplex. (\cite{Ebbers2011})
 
 \section{z/OS}
 \label{subsec:z/OS}
 
 Een ander belangrijk component van elk systeem is het besturingssysteem. In het geval van deze proef is dat z/OS. Dit niet het enige maar wel het meest gebruikte besturingssysteem op de mainframe. Zoals de naam het zelf zegt draait ook z/OS Health Checker op dit besturingssysteem. Daarom bespreken we ook dit besturingssysteem. Een besturingssysteem is eigenlijk een collectie van programma's die de interne werking van het computer systeem beheren. Een besturingssysteem is ontworpen om er voor te zorgen dat de resources van de computer optimaal gebruikt worden.
 
-z/OS is vandaag een resultaat van tientallen jaren technologische vooruitgang door IBM. Het begon als een besturingssysteem dat maar 1 programma tegelijk kon afhandelen naar een dat vandaag duizenden programma's en gebruikers tegelijk kan afhandelen. Het besturingssysteem wordt uitgevoerd in de processor en bevindt zich ook in de processor storage. Mainframe hardware bestaat uit een aantal processors en gekoppelde toestellen zoals DASD(Direct Acces storage devices de mainframe term voor hard disks). Die worden dan allemaal aangestuurd vanuit de consoles gekoppeld aan de mainframe. De DASD's worden gebruikt voor systeem functies of door programma's van gebruikers die uitgevoerd worden door z/OS. \cite{Ebbers2011}
+z/OS is vandaag een resultaat van tientallen jaren technologische vooruitgang door IBM. Het begon als een besturingssysteem dat maar 1 programma tegelijk kon afhandelen naar een dat vandaag duizenden programma's en gebruikers tegelijk kan afhandelen. Het besturingssysteem wordt uitgevoerd in de processor en bevindt zich ook in de processor storage. Mainframe hardware bestaat uit een aantal processors en gekoppelde toestellen zoals DASD(Direct Acces storage devices de mainframe term voor hard disks). Die worden dan allemaal aangestuurd vanuit de consoles gekoppeld aan de mainframe. De DASD's worden gebruikt voor systeem functies of door programma's van gebruikers die uitgevoerd worden door z/OS. (\cite{Ebbers2011})
 
 \begin{figure}[h]
 	\centering
@@ -126,7 +126,7 @@ z/OS gebruikt deze 2 soorten storage om een andere soort te vormen namelijk virt
 
 Een address space is eigenlijk een range van virtuele adressen dat het besturingssysteem toekent aan een programma of gebruiker. Voor een gebruiker kan dit beschouwd worden als een container waar zijn data in zit. Door deze addres space moet z/OS niet een heel programma naar de real storage laden om het uit te voeren. Daarom zal men het programma in stukken(ook gekend als pages) van de auxiliary storage naar de real storage verplaatsen in de volgorde die nodig is om het prorgamma uit te voeren. Eens dat een page niet meer nodig is kan men het terugschrijven naar de auxiliary storage. Dit laat z/OS toe om meer programma's simultaan uit te voeren.
 
-De fysieke opslag is daarom opgedeeld in verschillende stukken die elke hun eigen adres hebben maar de pages worden opgevraagd met hun virtueel adres. Het proces om een virtueel adres te vertalen in een real address noemt men Dynamic Address translation(DAT). \cite{Ebbers2011}
+De fysieke opslag is daarom opgedeeld in verschillende stukken die elke hun eigen adres hebben maar de pages worden opgevraagd met hun virtueel adres. Het proces om een virtueel adres te vertalen in een real address noemt men Dynamic Address translation(DAT). (\cite{Ebbers2011})
 
 \begin{figure}[h]
 	\centering
@@ -145,7 +145,7 @@ Om een systeem te beheren moeten we er natuurlijk ook mee kunnen werken. Voor de
 \subsection{Time Sharing Option/Extensions en Interactive System Productivity Facility}
 \label{subsec:Time Sharing Option}
 
-TSO/E of Time Sharing Option/Extensions laat gebruikers toe om een interactieve sessie te maken met een z/OS systeem. Hierdoor kunnen ze aanloggen op het z/OS systeem en gebruik maken van een command prompt interface. Maar omdat de command prompt niet echt handig is wordt er meestal gebruik gemaakt van de Interactive System Productivity Facility (ISPF). Dit is een collectie van menu's en panelen die een wijde range van functies aanbied voor het bewerken van data in z/OS. Zo bied ISPF onder andere een tekst editor aan en functies voor het vinden en oplijsten van bestanden. \cite{Parziale2017}
+TSO/E of Time Sharing Option/Extensions laat gebruikers toe om een interactieve sessie te maken met een z/OS systeem. Hierdoor kunnen ze aanloggen op het z/OS systeem en gebruik maken van een command prompt interface. Maar omdat de command prompt niet echt handig is wordt er meestal gebruik gemaakt van de Interactive System Productivity Facility (ISPF). Dit is een collectie van menu's en panelen die een wijde range van functies aanbied voor het bewerken van data in z/OS. Zo bied ISPF onder andere een tekst editor aan en functies voor het vinden en oplijsten van bestanden. (\cite{Parziale2017})
 
 \begin{figure}
 	\centering
@@ -167,7 +167,7 @@ De bestanden binnen z/OS worden ook wel 'data sets' genoemd, dit is de term die 
 
 In deze proef worden ook Jobs uitgevoerd voor het opstellen van de logs van z/OS Health Checker. Hiervoor wordt de Job Control Language(JCL) gebruikt. Want om een prorgamma uit te voeren moet het verwerkt worden door z/OS.
 
-Vooraleer het z/OS systeem een programma voor je kan uitvoeren moet je een paar dingen doen. Je moet eerst natuurlijk beschrijven welk programma je wil uitvoeren maar ook welke resources er gebruikt zullen worden(bv: eventuele input). Dit doe je met een JCL job. Deze jobs 'submit' je dan naar het Job Entry Subsystem(JES) deze zal de jobs inplannen en hun output verwerken. \cite{Cosimo2018}
+Vooraleer het z/OS systeem een programma voor je kan uitvoeren moet je een paar dingen doen. Je moet eerst natuurlijk beschrijven welk programma je wil uitvoeren maar ook welke resources er gebruikt zullen worden(bv: eventuele input). Dit doe je met een JCL job. Deze jobs 'submit' je dan naar het Job Entry Subsystem(JES) deze zal de jobs inplannen en hun output verwerken. (\cite{Cosimo2018})
 
 \begin{figure}[h]
 	\centering
@@ -194,16 +194,16 @@ In SDSF zijn er veel panelen en soorten output die je kan opvragen maar de enige
 \section{De Parmlib}
 \label{sec:De Parmlib}
 
-z/OS Health Checker heeft ook enkele datasets in de parmlib die veranderd worden in deze proef daarom moeten we ook begrijpen wat die parmlib eigenlijk is. Elk z/OS systeem heeft een PDS met members die worden meegegeven door IBM. Deze PDS is SYS1.PARMLIB. De members zijn allemaal systeem en applicatie parameters die het systeem nodig heeft bij het opstarten(Initial Program Load(IPL) in mainframe term). Bij de IPL wordt de parmlib gelezen om het systeem op te zetten. Deze PDS wordt later ook nog gelezen door andere componenten en programma's. \cite{Cosimo2018}
+z/OS Health Checker heeft ook enkele datasets in de parmlib die veranderd worden in deze proef daarom moeten we ook begrijpen wat die parmlib eigenlijk is. Elk z/OS systeem heeft een PDS met members die worden meegegeven door IBM. Deze PDS is SYS1.PARMLIB. De members zijn allemaal systeem en applicatie parameters die het systeem nodig heeft bij het opstarten(Initial Program Load(IPL) in mainframe term). Bij de IPL wordt de parmlib gelezen om het systeem op te zetten. Deze PDS wordt later ook nog gelezen door andere componenten en programma's. (\cite{Cosimo2018})
  
 Een van deze componenten is z/OS Health Checker. In de parmlib zitten members die definiëren welke controles (Checks) er zullen uitgevoerd worden en welke niet.
  
 \section{z/OS Health Checker}
 \label{sec:z/OS Health Checker}
 
-Na een analyse naar de oorzaken van de verschillende uitvallen kwam men tot de conclusie dat veel hiervan perfect vermeden had kunnen worden. Vele uitvallen kwamen door slechte configuraties die leiden tot single points of failure. Hierdoor is z/OS Health Checker ontwikkelt door IBM. \cite{Walle2013}
+Na een analyse naar de oorzaken van de verschillende uitvallen kwam men tot de conclusie dat veel hiervan perfect vermeden had kunnen worden. Vele uitvallen kwamen door slechte configuraties die leiden tot single points of failure. Hierdoor is z/OS Health Checker ontwikkelt door IBM. (\cite{Walle2013})
 
-IBM Health Checker voor z/OS is een tool die helpt om potentiële problemen op te sporen in de configuratie van het systeem. Deze problemen zouden een grote impact kunnen hebben op het systeem of zouden zelfs een uitval kunnen veroorzaken. Health Checker kijkt de huidige instellingen van z/OS en de Sysplex na en vergelijkt deze met instellingen die door IBM aangeraden worden. Bij eventuele problemen zal Health Checker een output genereren met gedetailleerde info over het probleem zelf en op welke manier je het probleem het beste oplost. Wel belangrijk is dat Health Checker eerder een preventieve tool is en geen monitoring tool. \cite{Bezzi2010}
+IBM Health Checker voor z/OS is een tool die helpt om potentiële problemen op te sporen in de configuratie van het systeem. Deze problemen zouden een grote impact kunnen hebben op het systeem of zouden zelfs een uitval kunnen veroorzaken. Health Checker kijkt de huidige instellingen van z/OS en de Sysplex na en vergelijkt deze met instellingen die door IBM aangeraden worden. Bij eventuele problemen zal Health Checker een output genereren met gedetailleerde info over het probleem zelf en op welke manier je het probleem het beste oplost. Wel belangrijk is dat Health Checker eerder een preventieve tool is en geen monitoring tool. (\cite{Bezzi2010})
 
 z/OS Health Checker bestaat uit 2 delen
 \begin{itemize}
@@ -214,7 +214,7 @@ z/OS Health Checker bestaat uit 2 delen
 \subsection{Health Checker Framework}
 \label{subsec:Health Checker Framework}
 
-Het framework van z/OS Health Checker is de interface die je gebruikt om checks uit te voeren en te beheren. Deze ondersteunt niet enkele checks van IBM maar ook die van software producenten zoals Computer Associates en Compuware. Binnen het framework zit de HZSPQE data, hierin zit alle informatie die een check nodig zou hebben zoals de default parameters.  Het framework bevat ook de Message table die de data bijhoudt van de output van de checks. \cite{IBMCorporation2019}
+Het framework van z/OS Health Checker is de interface die je gebruikt om checks uit te voeren en te beheren. Deze ondersteunt niet enkele checks van IBM maar ook die van software producenten zoals Computer Associates en Compuware. Binnen het framework zit de HZSPQE data, hierin zit alle informatie die een check nodig zou hebben zoals de default parameters.  Het framework bevat ook de Message table die de data bijhoudt van de output van de checks. (\cite{IBMCorporation2019})
 
 \begin{figure}[h]
 	\centering
@@ -227,14 +227,14 @@ Het framework van z/OS Health Checker is de interface die je gebruikt om checks 
 \subsection{De Checks}
 \label{sec:z/OS Health Checker Checks}
 
-De Checks zelf zijn programma's die componenten en instellingen evalueren en dan eventuele problemen melden. Deze checks worden voornamelijk aangeboden door IBM zelf maar deze kunnen ook van andere bedrijven zijn. Je kan ook zelf Checks schrijven met System REXX. Een check vergelijkt de instellingen van 1 bepaald component met een set van instellingen die aangeraden worden door de eigenaar van de check. De aangeraden instellingen zijn geen verplichte instellingen maar eerder een best practice van IBM. Je kan deze ook zelf definiëren of aanpassen. \cite{Bezzi2010}
+De Checks zelf zijn programma's die componenten en instellingen evalueren en dan eventuele problemen melden. Deze checks worden voornamelijk aangeboden door IBM zelf maar deze kunnen ook van andere bedrijven zijn. Je kan ook zelf Checks schrijven met System REXX. Een check vergelijkt de instellingen van 1 bepaald component met een set van instellingen die aangeraden worden door de eigenaar van de check. De aangeraden instellingen zijn geen verplichte instellingen maar eerder een best practice van IBM. Je kan deze ook zelf definiëren of aanpassen. (\cite{Bezzi2010})
 
 Een check wordt gedefinieerd met 3 waarden
 
 \subsubsection{Check Owner}
 \label{subsubsec:Check Owner}
 
-Elke check heeft zijn eigenaar. De naam van de check is meestal verbonden met het component waarvoor hij draait. In deze naam zit ook bijna altijd een verwijzing naar het bedrijf of product die de check gemaakt heeft. De checks van IBM beginnen dan ook allemaal met IBM. Een check owner is een string van maximum 16 karakters. Een voorbeeld van een check owner is bijvoorbeeld IBMXCF. Deze check is dus geschreven door IBM en zal iets te maken hebben met XCF(Cross-system Coupling Facility). Een check owner heeft meerdere checks zelf. \cite{Bezzi2010}
+Elke check heeft zijn eigenaar. De naam van de check is meestal verbonden met het component waarvoor hij draait. In deze naam zit ook bijna altijd een verwijzing naar het bedrijf of product die de check gemaakt heeft. De checks van IBM beginnen dan ook allemaal met IBM. Een check owner is een string van maximum 16 karakters. Een voorbeeld van een check owner is bijvoorbeeld IBMXCF. Deze check is dus geschreven door IBM en zal iets te maken hebben met XCF(Cross-system Coupling Facility). Een check owner heeft meerdere checks zelf. (\cite{Bezzi2010})
 
 \subsubsection{Check Name}
 \label{subsubsec:Check Name}
@@ -273,7 +273,7 @@ Voor een voorbeeld van check output zie bijlage \ref{sec:Check Output}
 \subsubsection{Check Status}
 \label{subsubsec:Check Status}
 
-Een check heeft ook een bepaalde status. Deze status duid aan of dat een check al dan niet geactiveerd is. Volgende statussen zijn mogelijk. \cite{IBM2019}
+Een check heeft ook een bepaalde status. Deze status duid aan of dat een check al dan niet geactiveerd is. Volgende statussen zijn mogelijk. (\cite{IBM2019})
 
 \begin{itemize}
 	\item ACTIVE: Dit specifieert dat de check actief is en draait.
@@ -283,4 +283,4 @@ Een check heeft ook een bepaalde status. Deze status duid aan of dat een check a
 \end{itemize}
 
 
-Verder is er nog 1 speciaal soort check. Namelijk de migration check. Deze check helpen je bij het plannen voor een overschakelen van z/OS versie. Deze checks kan je uitvoeren na een migratie om te kijken of deze succesvol was. Deze checks beginnen altijd met 'ZOSMIG'.
+Verder is er nog 1 speciaal soort check. Namelijk de migration check. Deze check helpen je bij het plannen voor een overschakelen van z/OS versie. Deze checks kan je uitvoeren na een migratie om te kijken of deze succesvol was. Deze checks beginnen altijd met 'ZOSMIG'. (\cite{IBMCorporation2019})

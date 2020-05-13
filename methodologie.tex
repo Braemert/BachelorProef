@@ -35,7 +35,7 @@ De analyse is gemaakt met de check data uit SDSF deze kan je bereiken door bij h
 
 
 Na het overlopen van alle checks op VT1 hebben we de SDSF ouptut samengevat in volgende tabel. Met de naam van de check. De status, deze beschrijft of de check aanstaat of niet. De outcome, deze beschrijft of de check succesvol was of niet. En de reason, dit is de reden waarvoor de check draait. Een voorbeeld:
-\begin{table}
+\begin{table}[]
 	\begin{tabular}{|p{5cm}|p{3.5cm}|p{1.5cm}|p{5cm}|}
 		\hline
 		\textbf{Name} & \textbf{Status} & \textbf{Outcome} & \textbf{Reason} \\
@@ -51,9 +51,24 @@ Na het overlopen van alle checks op VT1 hebben we de SDSF ouptut samengevat in v
 
 Voor de volledige tabel zie bijlage 
 
-Hier uit bleek dat er verscheidene check een exception hadden. Deze zijn eerst gecontroleerd of dat men deze zelf kon oplossen zonder ondersteuning van de collega's die het product beheren. Bij deze analyse bleek ook dat er veel checks zijn die onnodig draaiden omdat het product van de check bijvoorbeeld niet aanwezig was. Niet alle checks moeten in alle LPARs draaien en sommige moesten aangepast worden. Maar daarvoor heb je nog de belangrijke vraag of een wijziging van een check doorgevoerd moet worden naar alle LPARs of maar naar 1 LPAR binnen de Parallel Sysplex. Met deze informatie is naar feedback gevraagd van alle Mainframe Teams binnen HCL Technologies. Want men kan checks niet aanpassen van bijvoorbeeld DB2 zonder dit raad te plegen met het DB team. Hiervoor zijn alle checks gegroepeerd per owner daarna nog eens gegroepeerd per mainframe team en uiteindelijk werd tabel \ref{tbl:Checks Per Team} bereikt.
+Hier uit bleek dat er verscheidene check een exception hadden. Deze zijn eerst gecontroleerd of dat men deze zelf kon oplossen zonder ondersteuning van de collega's die het product beheren. Bij deze analyse bleek ook dat er veel checks zijn die onnodig draaiden omdat het product van de check bijvoorbeeld niet aanwezig was. Niet alle checks moeten in alle LPARs draaien en sommige moesten aangepast worden. Maar daarvoor heb je nog de belangrijke vraag of een wijziging van een check doorgevoerd moet worden naar alle LPARs of maar naar 1 LPAR binnen de Parallel Sysplex. Met deze informatie is naar feedback gevraagd van alle Mainframe Teams binnen HCL Technologies. Want men kan checks niet aanpassen van bijvoorbeeld DB2 zonder feedback van het DB team. Hiervoor zijn alle checks gegroepeerd per owner daarna nog eens gegroepeerd per mainframe team en uiteindelijk werd tabel \ref{tbl:Checks Per Team} bereikt.
 
-\begin{table}[]
+Nog een kleine verduidelijking per team
+\begin{itemize}
+	\item CICS: Dit team is verantwoordelijk voor de IBM CICS Software\footnote{Customer Information Control System dit is software voor het verwerken van transacties (\cite{ChrisRayns2011}) }
+	\item Communication: Dit team is verantwoordelijk voor alle communicatie-gerelateerd software zoals TCP/IP, FTP\footnote{File Transfer Protocol}, etc.
+	\item Print: Dit team is verantwoordelijk voor alle output software zoals CA-View\footnote{Tool van Computer Associates}, VPS, etc.
+	\item Automation: Dit team is verantwoordelijk voor alles wat met automatisering te maken heeft. Vooral software zoals System Automation, NetView en GDPS. Dit team is het meest betrokken bij monitoring.
+	\item ROO: Roll-Out \& Operate, dit team beheert de 'basics' van z/OS. Dit team voert ook de upgrades uit.
+	\item RTC: RunTime Control, dit team is verantwoordelijk voor performance en rapportering.
+	\item Security: Dit team spreekt voor zich het beheert toels zoals RACF/ACF2/Top Secret dit zijn allemaal tool die extra beveiliging aanbieden voor de mainframe.	
+	\item SOE: Standard Operating Environment, dit team doet alle installaties van software voor de mainframe.
+	\item Storage: Dit team beheert alles wat te maken heeft met opslag en ook de software die erbij hoort.
+	\item zOPEN: Dit team beheert alles van zLinux\footnote{Een linux besturingsysteem voor mainframe} samen met Unix System Services\footnote{UNIX besturingssysteem implementatie voor de mainframe} en Websphere\footnote{Software product gericht op web-technologie}
+	\item DB: Database team, beheert alles database systemen waaronder DB2.
+\end{itemize}
+
+\begin{table}[h]
 	\begin{tabular}{|l|p{9cm}|}
 		\hline
 		\textbf{Team}                      & \textbf{Checks(Owner)}                                                                                                                                                 \\ \hline
@@ -73,4 +88,4 @@ Hier uit bleek dat er verscheidene check een exception hadden. Deze zijn eerst g
 	\label{tbl:Checks Per Team}
 \end{table}
 
-Nadat alle checks per team werden gegroepeerd, is er eerst zelf een voorstel gemaakt voor een de opstelling van hun checks waar zij feedback op konden geven. Wanneer er geen feedback was is de voorgestelde opstelling geimplementeerd.
+Nadat alle checks per team werden gegroepeerd, is er eerst zelf een voorstel gemaakt voor de opstelling van hun checks waar zij feedback op konden geven. Wanneer er geen feedback was is de voorgestelde opstelling geimplementeerd.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.4.25)  12 MAY 2020 22:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.4.25)  13 MAY 2020 14:30
 entering extended mode
 **./bachproef-tin.tex
 (bachproef-tin.tex
@@ -1470,21 +1470,21 @@ Package csquotes Info: Redefining alias 'default' -> 'dutch'.
 (bachproef-tin.aux)
 \openout1 = `bachproef-tin.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 49.
 
 (C:\Users\Jonas-PC-2\Documents\Miktex\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -1552,7 +1552,7 @@ G,.JBIG2,.JB2,.eps]
 \c@lstlisting=\count475
 
 ABD: EveryShipout initializing macros
-LaTeX Info: Redefining \microtypecontext on input line 47.
+LaTeX Info: Redefining \microtypecontext on input line 49.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1567,7 +1567,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 \AtBeginShipoutBox=\box71
-Package hyperref Info: Link coloring OFF on input line 47.
+Package hyperref Info: Link coloring OFF on input line 49.
 
 (C:\Users\Jonas-PC-2\Documents\Miktex\tex/latex/hyperref\nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1577,9 +1577,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count476
 )
-LaTeX Info: Redefining \ref on input line 47.
-LaTeX Info: Redefining \pageref on input line 47.
-LaTeX Info: Redefining \nameref on input line 47.
+LaTeX Info: Redefining \ref on input line 49.
+LaTeX Info: Redefining \pageref on input line 49.
+LaTeX Info: Redefining \nameref on input line 49.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1588,8 +1588,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'bachproef-tin.bbl' found.
 (bachproef-tin.bbl)
-Package biblatex Info: Reference section=0 on input line 47.
-Package biblatex Info: Reference segment=0 on input line 47.
+Package biblatex Info: Reference section=0 on input line 49.
+Package biblatex Info: Reference segment=0 on input line 49.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1625,7 +1625,7 @@ Package biblatex Info: Reference segment=0 on input line 47.
 <img/HOGENT_Logo_Pos_rgb.png, id=6, 3503.0875pt x 1975.38pt>
 File: img/HOGENT_Logo_Pos_rgb.png Graphic file (type png)
 <use img/HOGENT_Logo_Pos_rgb.png>
-Package pdftex.def Info: img/HOGENT_Logo_Pos_rgb.png  used on input line 57.
+Package pdftex.def Info: img/HOGENT_Logo_Pos_rgb.png  used on input line 59.
 (pdftex.def)             Requested size: 71.13188pt x 40.08864pt.
  [1
 
@@ -1671,7 +1671,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57 \inserttitlepage
+l.59 \inserttitlepage
                       [1
 
 
@@ -1759,97 +1759,60 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Hoofdstuk 2.
-
-LaTeX Warning: Citation 'Ebbers2011' on page 19 undefined on input line 15.
-
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
-
-LaTeX Warning: Citation 'Ebbers2011' on page 19 undefined on input line 18.
-
 [19]
-<img/mainframe.jpg, id=399, 276.03125pt x 183.68625pt>
+<img/mainframe.jpg, id=404, 276.03125pt x 183.68625pt>
 File: img/mainframe.jpg Graphic file (type jpg)
 <use img/mainframe.jpg>
 Package pdftex.def Info: img/mainframe.jpg  used on input line 31.
 (pdftex.def)             Requested size: 276.03056pt x 183.68578pt.
  [20 <./img/mainframe.jpg>]
-
-LaTeX Warning: Citation 'Ebbers2011' on page 21 undefined on input line 51.
-
-<img/LPAR.jpg, id=404, 370.38374pt x 210.7875pt>
+<img/LPAR.jpg, id=410, 370.38374pt x 210.7875pt>
 File: img/LPAR.jpg Graphic file (type jpg)
 <use img/LPAR.jpg>
 Package pdftex.def Info: img/LPAR.jpg  used on input line 55.
 (pdftex.def)             Requested size: 370.38283pt x 210.78699pt.
-
-LaTeX Warning: Citation 'Ebbers2011' on page 21 undefined on input line 66.
-
 LaTeX Font Info:    Font shape `T1/pag/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/b/n' tried instead on input line 70.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 70.
-
-LaTeX Warning: Citation 'Ebbers2011' on page 21 undefined on input line 73.
-
-[21 <./img/LPAR.jpg>]
-
-LaTeX Warning: Citation 'Ebbers2011' on page 22 undefined on input line 78.
-
-<img/ParallelSysplex.jpg, id=410, 371.58826pt x 251.7405pt>
+ [21 <./img/LPAR.jpg>]
+<img/ParallelSysplex.jpg, id=419, 371.58826pt x 251.7405pt>
 File: img/ParallelSysplex.jpg Graphic file (type jpg)
 <use img/ParallelSysplex.jpg>
 Package pdftex.def Info: img/ParallelSysplex.jpg  used on input line 82.
 (pdftex.def)             Requested size: 371.58734pt x 251.73987pt.
-
-LaTeX Warning: Citation 'Ebbers2011' on page 22 undefined on input line 87.
-
-[22 <./img/ParallelSysplex.jpg>]
-
-LaTeX Warning: Citation 'Ebbers2011' on page 23 undefined on input line 94.
-
-<img/Omgeving_zOS.jpg, id=417, 363.15675pt x 321.6015pt>
+ [22 <./img/ParallelSysplex.jpg>]
+<img/Omgeving_zOS.jpg, id=428, 363.15675pt x 321.6015pt>
 File: img/Omgeving_zOS.jpg Graphic file (type jpg)
 <use img/Omgeving_zOS.jpg>
 Package pdftex.def Info: img/Omgeving_zOS.jpg  used on input line 98.
 (pdftex.def)             Requested size: 363.15585pt x 321.60071pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23]
-
-LaTeX Warning: Citation 'Ebbers2011' on page 24 undefined on input line 129.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24 <./img/Omgeving_zOS.jpg>]
-<img/Storage.jpg, id=429, 366.77025pt x 283.65974pt>
+<img/Storage.jpg, id=441, 366.77025pt x 283.65974pt>
 File: img/Storage.jpg Graphic file (type jpg)
 <use img/Storage.jpg>
 Package pdftex.def Info: img/Storage.jpg  used on input line 133.
 (pdftex.def)             Requested size: 366.76935pt x 283.65904pt.
-
-
-LaTeX Warning: Citation 'Parziale2017' on page 25 undefined on input line 148.
-
-[25 <./img/Storage.jpg>]
-<img/IPSF.jpg, id=434, 891.33pt x 692.5875pt>
+ [25 <./img/Storage.jpg>]
+<img/IPSF.jpg, id=447, 891.33pt x 692.5875pt>
 File: img/IPSF.jpg Graphic file (type jpg)
 <use img/IPSF.jpg>
 Package pdftex.def Info: img/IPSF.jpg  used on input line 152.
 (pdftex.def)             Requested size: 298.75264pt x 232.13713pt.
-
-
-LaTeX Warning: Citation 'Cosimo2018' on page 26 undefined on input line 170.
-
-[26 <./img/IPSF.jpg>]
-<img/JES.jpg, id=439, 405.31425pt x 277.035pt>
+ [26 <./img/IPSF.jpg>]
+<img/JES.jpg, id=454, 405.31425pt x 277.035pt>
 File: img/JES.jpg Graphic file (type jpg)
 <use img/JES.jpg>
 Package pdftex.def Info: img/JES.jpg  used on input line 174.
 (pdftex.def)             Requested size: 405.31326pt x 277.03432pt.
-<img/SDSF.jpg, id=441, 481.8pt x 361.35pt>
+<img/SDSF.jpg, id=456, 481.8pt x 361.35pt>
 File: img/SDSF.jpg Graphic file (type jpg)
 <use img/SDSF.jpg>
 Package pdftex.def Info: img/SDSF.jpg  used on input line 188.
@@ -1858,43 +1821,20 @@ Package pdftex.def Info: img/SDSF.jpg  used on input line 188.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation 'Cosimo2018' on page 27 undefined on input line 197.
-
 [27 <./img/JES.jpg>]
-
-LaTeX Warning: Citation 'Walle2013' on page 28 undefined on input line 204.
-
-
-LaTeX Warning: Citation 'Bezzi2010' on page 28 undefined on input line 206.
-
-
 Underfull \vbox (badness 2165) has occurred while \output is active []
 
  [28 <./img/SDSF.jpg>]
-
-LaTeX Warning: Citation 'IBMCorporation2019' on page 29 undefined on input line
- 217.
-
-<img/HCFramework.jpg, id=450, 448.67625pt x 200.54926pt>
+<img/HCFramework.jpg, id=472, 448.67625pt x 200.54926pt>
 File: img/HCFramework.jpg Graphic file (type jpg)
 <use img/HCFramework.jpg>
 Package pdftex.def Info: img/HCFramework.jpg  used on input line 221.
 (pdftex.def)             Requested size: 298.75264pt x 133.54105pt.
-
-LaTeX Warning: Citation 'Bezzi2010' on page 29 undefined on input line 230.
-
-
-LaTeX Warning: Citation 'Bezzi2010' on page 29 undefined on input line 237.
-
-[29 <./img/HCFramework.jpg>]
+ [29 <./img/HCFramework.jpg>]
 Overfull \hbox (16.45221pt too wide) in paragraph at lines 242--243
 \T1/ptm/m/n/12 (-20) mum 32 ka-rak-ters lang zijn. Een voor-beeld van een check
  naam: "XCF_CDS_MAXSYSTEM". 
  []
-
-
-LaTeX Warning: Citation 'IBM2019' on page 30 undefined on input line 276.
 
 
 Underfull \vbox (badness 4886) has occurred while \output is active []
@@ -1904,13 +1844,17 @@ Underfull \vbox (badness 4886) has occurred while \output is active []
 
 ]
 Hoofdstuk 3.
-<img/SDSFCK.png, id=477, 788.9475pt x 467.49657pt>
+<img/SDSFCK.png, id=505, 788.9475pt x 467.49657pt>
 File: img/SDSFCK.png Graphic file (type png)
 <use img/SDSFCK.png>
 Package pdftex.def Info: img/SDSFCK.png  used on input line 31.
 (pdftex.def)             Requested size: 298.75264pt x 177.0228pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 38.
 
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 39
 .
@@ -1956,6 +1900,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 41.
 
 Overfull \hbox (3.97644pt too wide) in paragraph at lines 41--41
 []|\T1/ptm/b/n/12 Outcome| 
@@ -1982,31 +1928,33 @@ Overfull \hbox (49.99994pt too wide) in paragraph at lines 39--47
  []
 
 [33]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 56.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+ [34 <./img/SDSFCK.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 []|\T1/ptm/m/n/12 (+20) CA_CSS, IBMCNZ, IMBC-TRACE, IBM-DAE,
  []
 
 
-Underfull \hbox (badness 5105) in paragraph at lines 63--63
+Underfull \hbox (badness 5105) in paragraph at lines 78--78
 \T1/ptm/m/n/12 (+20) IB-MISPF, IB-MX-LOGR, IBM-JES(2), IBMRRS,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 \T1/ptm/m/n/12 (+20) IBMRTM, IBMSDSF, IBMS-DUMP, IBM-SLIP,
  []
 
 
-Overfull \hbox (1.45802pt too wide) in paragraph at lines 57--72
+Overfull \hbox (1.45802pt too wide) in paragraph at lines 72--87
 [][] 
  []
 
-) (conclusie.tex [34 <./img/SDSFCK.png>] [35] [36
+) (conclusie.tex [35] [36
 
 ]
 Hoofdstuk 4.
@@ -4339,46 +4287,37 @@ Underfull \vbox (badness 6708) has occurred while \output is active []
  [97]
 File: JCL/FHZSVT41.txt  (verbatim)
 )
+[98] [99
 
-LaTeX Warning: Empty bibliography on input line 134.
-
-[98]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 136.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 136.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 139.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 139.
  (bachproef-tin.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 136.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 136.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                bachproef-tin
-(biblatex)                and rerun LaTeX afterwards.
-
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 139.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 139.
 Package logreq Info: Writing requests to 'bachproef-tin.run.xml'.
 \openout1 = `bachproef-tin.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40588 strings out of 492946
- 757135 string characters out of 3131573
- 1361453 words of memory out of 3000000
- 43453 multiletter control sequences out of 15000+200000
- 585790 words of font info for 174 fonts, out of 3000000 for 9000
+ 40779 strings out of 492946
+ 760748 string characters out of 3131573
+ 1362318 words of memory out of 3000000
+ 43596 multiletter control sequences out of 15000+200000
+ 607604 words of font info for 221 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,67p,1140b,3844s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Jonas-PC-2\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dp
-i600\ectt1200.pk>{C:/Users/Jonas-PC-2/Documents/Miktex/fonts/enc/dvips/base/8r.
-enc}<C:/Users/Jonas-PC-2/Documents/Miktex/fonts/type1/public/amsfonts/cm/cmsy10
+{C:/Users/Jonas-PC-2/Documents/Miktex/fonts/enc/dvips/base/8r.enc} <C:\Users\
+Jonas-PC-2\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200
+.pk><C:/Users/Jonas-PC-2/Documents/Miktex/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Users/Jonas-PC-2/Documents/Miktex/fonts/type1/urw/avantgar/uagd8a.pfb>
 <C:/Users/Jonas-PC-2/Documents/Miktex/fonts/type1/urw/avantgar/uagk8a.pfb><C:/U
 sers/Jonas-PC-2/Documents/Miktex/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Jon
-as-PC-2/Documents/Miktex/fonts/type1/urw/times/utmr8a.pfb>
-Output written on bachproef-tin.pdf (100 pages, 1026108 bytes).
+as-PC-2/Documents/Miktex/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Jonas-PC-2/
+Documents/Miktex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bachproef-tin.pdf (101 pages, 1050393 bytes).
 PDF statistics:
- 1056 PDF objects out of 1200 (max. 8388607)
- 223 named destinations out of 1000 (max. 500000)
- 29612 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1114 PDF objects out of 1200 (max. 8388607)
+ 239 named destinations out of 1000 (max. 500000)
+ 44980 words of extra memory for PDF output out of 51595 (max. 10000000)
 

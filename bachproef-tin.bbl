@@ -1,0 +1,322 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Bezzi2010}{book}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=892ec64968288d413bb7b228b2752b2d}{%
+           family={Bezzi},
+           familyi={B\bibinitperiod},
+           given={Mario},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=39ccc600e62c5006f96c2670a5cb7815}{%
+           family={O'Conner},
+           familyi={O\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6ecd099af2be60c866fa8d892c989179}{%
+           family={Philips},
+           familyi={P\bibinitperiod},
+           given={Sharon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2bf62b56d61afe231fd1547422a5e464}{%
+           family={Thiemann},
+           familyi={T\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6ea7adb1c1fd7ef24c995086b44f2cfe}
+      \strng{fullhash}{67cf591d179a5828e2bd538dc3792a08}
+      \strng{bibnamehash}{67cf591d179a5828e2bd538dc3792a08}
+      \strng{authorbibnamehash}{67cf591d179a5828e2bd538dc3792a08}
+      \strng{authornamehash}{6ea7adb1c1fd7ef24c995086b44f2cfe}
+      \strng{authorfullhash}{67cf591d179a5828e2bd538dc3792a08}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Exploiting the IBM Health Checker for z/OS Infrastructure}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb :C\:/Users/Jonas-PC-2/Downloads/redp4590.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Cosimo2018}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=6e9c1b992b290fe090a3e1e3aa0e3131}{%
+           family={Cosimo},
+           familyi={C\bibinitperiod},
+           given={Guillermo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=3aebca8324802e874893d4528878cc43}{%
+           family={Kuehner},
+           familyi={K\bibinitperiod},
+           given={Lutz},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c072731ccac9eb2b20129103cc92ac5c}
+      \strng{fullhash}{c072731ccac9eb2b20129103cc92ac5c}
+      \strng{bibnamehash}{c072731ccac9eb2b20129103cc92ac5c}
+      \strng{authorbibnamehash}{c072731ccac9eb2b20129103cc92ac5c}
+      \strng{authornamehash}{c072731ccac9eb2b20129103cc92ac5c}
+      \strng{authorfullhash}{c072731ccac9eb2b20129103cc92ac5c}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{ABCs of z/OS System Programming Volume 2}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb :Bib/zOS System programming guide VOL 2.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Ebbers2011}{book}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=0572753d621e10f0b9d63fd3e44eee30}{%
+           family={Ebbers},
+           familyi={E\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5c8e8561bcb0d244eced5799ee2a682a}{%
+           family={Kettner},
+           familyi={K\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0d453b5feab4ecc6964d2feca1835ad2}{%
+           family={O'Brien},
+           familyi={O\bibinitperiod},
+           given={Wayne},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=c004d07fb47ba69885cb5b5b8347b064}{%
+           family={Ogden},
+           familyi={O\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{586c23d7114408b7fc45a8bba4e55abc}
+      \strng{fullhash}{de860955e337571a44293b4053e846e6}
+      \strng{bibnamehash}{de860955e337571a44293b4053e846e6}
+      \strng{authorbibnamehash}{de860955e337571a44293b4053e846e6}
+      \strng{authornamehash}{586c23d7114408b7fc45a8bba4e55abc}
+      \strng{authorfullhash}{de860955e337571a44293b4053e846e6}
+      \field{sortinit}{E}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{title}{Introduction to the New Mainframe z/OS Basics}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb :C\:/Users/Jonas-PC-2/Downloads/Introduction to the new mainframe.pdf:PDF
+      \endverb
+    \endentry
+    \entry{IBM2019}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={IBM},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{chapter}{Chapter 10}
+      \field{title}{MVS System Messages Volume 6 (GOS -IEA)}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb :Bib/MVS system messages VOL 6.pdf:PDF
+      \endverb
+    \endentry
+    \entry{IBMCorporation2019}{manual}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=7bb018b160d19c13ef9838e91e53cccf}{%
+           family={IBMCorporation},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{fullhash}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{bibnamehash}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{authorbibnamehash}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{authornamehash}{7bb018b160d19c13ef9838e91e53cccf}
+      \strng{authorfullhash}{7bb018b160d19c13ef9838e91e53cccf}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{edition}{version 2 edition 3}
+      \field{month}{6}
+      \field{title}{IBM Health Checker for z/OSUser's Guide}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb :C\:/Users/Jonas-PC-2/Downloads/e0zl100_v2r3.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Parziale2017}{book}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=72ce3955f961068a64f18c9d445327a4}{%
+           family={Parziale},
+           familyi={P\bibinitperiod},
+           given={Lydia},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f889f7139ac128bb0484fc50559da25c}{%
+           family={Fadel},
+           familyi={F\bibinitperiod},
+           given={Luiz},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=ece7a90050187d5c1f06d2d63939cf2a}{%
+           family={Jon},
+           familyi={J\bibinitperiod},
+           given={Stanley},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f9602ba550dd3932a47f1ebb22ce9c1d}
+      \strng{fullhash}{ded2dcc3ebd7282ab7e3b39f6587fff7}
+      \strng{bibnamehash}{ded2dcc3ebd7282ab7e3b39f6587fff7}
+      \strng{authorbibnamehash}{ded2dcc3ebd7282ab7e3b39f6587fff7}
+      \strng{authornamehash}{f9602ba550dd3932a47f1ebb22ce9c1d}
+      \strng{authorfullhash}{ded2dcc3ebd7282ab7e3b39f6587fff7}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{ABCs of z/OS System Programming Volume 1}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb :Bib/zOS System programming guide.pdf:PDF
+      \endverb
+    \endentry
+    \entry{ChrisRayns2011}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=a99fdc0a73f29d11ed607c29a03407a0}{%
+           family={Rayns},
+           familyi={R\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a99fdc0a73f29d11ed607c29a03407a0}
+      \strng{fullhash}{a99fdc0a73f29d11ed607c29a03407a0}
+      \strng{bibnamehash}{a99fdc0a73f29d11ed607c29a03407a0}
+      \strng{authorbibnamehash}{a99fdc0a73f29d11ed607c29a03407a0}
+      \strng{authornamehash}{a99fdc0a73f29d11ed607c29a03407a0}
+      \strng{authorfullhash}{a99fdc0a73f29d11ed607c29a03407a0}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{CICS TransactionServer fromStart to Finish}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb :C\:/Users/Jonas-PC-2/Documents/Hogent/Hogent 1920/Bachelorproef/Bib/CICS Transaction Server from Start to Finish.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Walle2013}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=75ccb34e69d4025ee0ef404ea0fc0af2}{%
+           family={Walle},
+           familyi={W\bibinitperiod},
+           given={Marne},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{75ccb34e69d4025ee0ef404ea0fc0af2}
+      \strng{fullhash}{75ccb34e69d4025ee0ef404ea0fc0af2}
+      \strng{bibnamehash}{75ccb34e69d4025ee0ef404ea0fc0af2}
+      \strng{authorbibnamehash}{75ccb34e69d4025ee0ef404ea0fc0af2}
+      \strng{authornamehash}{75ccb34e69d4025ee0ef404ea0fc0af2}
+      \strng{authorfullhash}{75ccb34e69d4025ee0ef404ea0fc0af2}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{2}
+      \field{title}{Introduction and Getting Started with theIBM Health Checker for z/OS}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb :C\:/Users/Jonas-PC-2/Downloads/Intro and Getting Started with HC.pdf:PDF
+      \endverb
+      \verb{urlraw}
+      \verb https://share.confex.com/share/120/webprogram/Session13118.html
+      \endverb
+      \verb{url}
+      \verb https://share.confex.com/share/120/webprogram/Session13118.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
