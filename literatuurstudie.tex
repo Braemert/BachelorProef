@@ -1,0 +1,53 @@
+\section{Literatuurstudie}
+\label{sec:Literatuurstudie}
+
+\subsection{Inleiding}
+\label{subsec:Inleiding}
+
+De mainframe is een computer dat bekend staat voor zijn continue toegankelijkheid. Door deze availability wordt de mainframe soms nog verkozen boven de gewone servers. Een mainframe is ontworpen om heel lang operationeel te blijven zonder onderbreking. Dit gebeurt natuurlijk niet zomaar. Een van de tools dat IBM hiervoor heeft gemaakt is Health Checker.  Een preventietool die probeert problemen op te sporen voordat ze zich voordoen. Maar deze heeft geen efficiënte manier om de problemen te loggen. Dit is ook bij de opdrachtgever HCL Technologies. Deze heeft een setup die al jaren niet meer veranderd is. En ook niet uniform is op de verschillende Logische partities. 
+
+De bedoeling van deze proef is: 
+
+\begin{itemize}
+	\item Nieuw log systeem van eventuele problemen opgemerkt door Health Checker 
+	\item Gecentraliseerd beheer van de tool \& checks op 1 LPAR 
+	\item Aanpassen van checks naar wensen van HCL 
+\end{itemize}
+
+\subsection{Mainframe}
+\label{subsec:Mainframe}
+
+De mainframe is een type computer gespecialiseerd in het afhandelen van input \& output requests ook gekend als transacties. Een mainframe is ook veel groter dan een gewone computer en heeft zo ook veel meer processing vermogen. De eerste mainframe is ontworpen in de jaren 50 en tot nu toe blijft ze een belangrijke verwerkers van workloads terwijl ze nog steeds applicaties draaien gemaakt in 1970. De term mainframe begint door nieuwe technologieën te vervagen. Tegenwoordig kan men volgens IBM (\cite{Ebbers2011}) beter beschrijven als een systeem dat bedrijven gebruiken voor het beheren van commerciële databanken, transactie servers en applicaties die een hogere graad van veiligheid en toegankelijkheid nodig hebben in tegenstelling tot die gevonden in kleiner geschaalde machines.  
+
+De mainframe ziet zijn gebruik vooral in volgende sectors: banken, financiën, zieken zorg, verzekeringen overheden en veel meer. De mainframe blijft een fundamenteel onderdeel van deze sectoren.  
+
+Men mag een mainframe ook niet verwarren met een supercomputer. Een supercomputer is namelijk eerder gespecialiseerd in het uitvoeren van calculaties en niet in het afhandelen van transacties in tegenstelling tot de mainframe. 
+
+\subsection{z/OS}
+\label{subsec: z/OS Literatuurstudie}
+
+Is het besturingssysteem voor de IBM mainframe. z/OS is het resultaat van tientallen jaren van ontwikkeling dat is begonnen bij het eerste besturingssysteem voor IBM mainframes. Het begon als een systeem dat maar 1 programma tegelijk kon draaien naar een dat er duizenden tegelijk aankan. z/OS bied volgens IBM (\cite{Ebbers2011})  een stabiele veilige schaalbare en continu toegankelijke omgeving. 
+
+\subsection{LPAR of Logische Partitie}
+\label{subsec:LPAR of Logische Partitie}
+
+LPARs of logische partities zijn eigenlijk op zichzelf aparte mainframes die hun eigen besturingssysteem hebben. Dit hoeft niet z/OS te zijn maar kan ook z/VM zijn of Linux on Z. Volgens IBM kan het er zo’n 60 hebben op 1 fysieke mainframe \cite{Ebbers2011}. Elke LPAR heeft zijn eigen toegewezen aantal processors \& hoeveelheid geheugen. LPARS kunnen wel met elkaar communiceren via de SYSPLEX. Een architectuur van verscheiden LPARS die met elkaar communiceren wordt een parallel sysplex genoemd. Op elke LPAR zal er een instantie van Health Checker aanwezig zijn. 
+
+\subsection{z/OS Health checker}
+\label{subsec:z/OS Health checker}
+
+Health Checker is een preventieve tool. Die standaard in elke IBM mainframe meegegeven word elke nieuwe versie van z/OS. De tool is ontworpen doordat de meest voorkomende reden van een uitval een single point of failure was in de instellingen van het systeem volgens IBM \cite{Bezzi2010} of door performance bottlenecks \cite{Walle2013}. Ze wordt dus gebruikt om single points of failures te zoeken in slecht opgestelde instellingen van een systeem. De tool doet dat door de huidige systeeminstellingen te vergelijken met instellingen die door de eigenaar van een Check worden gedefinieerd of door zelf gedefinieerde waarden. Nogmaals moet de nadruk gelegd worden op dat health checker een preventieve tool is, dit betekent dat het dus zelfs niks zal doen buiten het rapporteren van problemen. De tool geeft bij de rapportering van een probleem wel mee welke acties de verscheidene administrators van de mainframe moeten ondernemen. Het oplossen van de problemen moet dus gebeuren door de administrators. Health Checker bestaat uit 2 delen die samen een geheel vormen: 
+
+\begin{itemize}
+	\item Health Checker Framework 
+	\item Checks 
+\end{itemize}
+
+\subsubsection{Health Checker Framework}
+\label{subsubsec:Health Checker Framework}
+
+Dit is de interface die de checks beheert onder andere hun logging, het plannen van de uitvoering van checks. Ze ondersteunt checks gemaakt door IBM maar ook checks door externe bedrijven of checks die je zelf schrijft. 
+
+\subsubsection{Checks}
+\label{subsubsec:Check}
+De check zelf is een programma of routine die een bepaald component of instelling evalueert om zo potentiele problemen te zoeken op een systeem. Ze zijn op zichzelf onafhankelijk van het framework. 

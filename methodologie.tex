@@ -51,9 +51,9 @@ Na het overlopen van alle checks op VT1 hebben we de SDSF ouptut samengevat in v
 
 Voor de volledige tabel zie bijlage 
 
-Hier uit bleek dat er verscheidene check een exception hadden. Deze zijn eerst gecontroleerd of dat men deze zelf kon oplossen zonder ondersteuning van de collega's die het product beheren. Bij deze analyse bleek ook dat er veel checks zijn die onnodig draaiden omdat het product van de check bijvoorbeeld niet aanwezig was. Niet alle checks moeten in alle LPARs draaien en sommige moesten aangepast worden. Maar daarvoor heb je nog de belangrijke vraag of een wijziging van een check doorgevoerd moet worden naar alle LPARs of maar naar 1 LPAR binnen de Parallel Sysplex. Met deze informatie is naar feedback gevraagd van alle Mainframe Teams binnen HCL Technologies. Want men kan checks niet aanpassen van bijvoorbeeld DB2 zonder feedback van het DB team. Hiervoor zijn alle checks gegroepeerd per owner daarna nog eens gegroepeerd per mainframe team en uiteindelijk werd tabel \ref{tbl:Checks Per Team} bereikt.
+Hier uit bleek dat er verscheidene checks een exception hadden. Deze zijn eerst gecontroleerd of dat men deze zelf kon oplossen zonder ondersteuning van de collega's die het product beheren. Bij deze analyse bleek ook dat er veel checks zijn die onnodig draaiden omdat het product van de check bijvoorbeeld niet aanwezig was. Niet alle checks moeten in alle LPARs draaien en sommige moesten aangepast worden. Maar daarvoor heb je nog de belangrijke vraag of een wijziging van een check doorgevoerd moet worden naar alle LPARs of maar naar 1 LPAR binnen de Parallel Sysplex. Met deze informatie is naar feedback gevraagd van alle Mainframe Teams binnen HCL Technologies. Want men kan checks niet aanpassen van bijvoorbeeld DB2 zonder feedback van het DB team. Hiervoor zijn alle checks gegroepeerd per owner daarna nog eens gegroepeerd per mainframe team en uiteindelijk werd tabel \ref{tbl:Checks Per Team} bereikt. Deze tabellen zijn er gekomen na veel overleg om zo tot de beste setup te bekomen.
 
-Nog een kleine verduidelijking per team
+Nog een kleine verduidelijking voor alle teams die belang hebben bij de z/OS Health Checker setup.
 \begin{itemize}
 	\item CICS: Dit team is verantwoordelijk voor de IBM CICS Software\footnote{Customer Information Control System dit is software voor het verwerken van transacties (\cite{ChrisRayns2011}) }
 	\item Communication: Dit team is verantwoordelijk voor alle communicatie-gerelateerd software zoals TCP/IP, FTP\footnote{File Transfer Protocol}, etc.
@@ -67,6 +67,8 @@ Nog een kleine verduidelijking per team
 	\item zOPEN: Dit team beheert alles van zLinux\footnote{Een linux besturingsysteem voor mainframe} samen met Unix System Services\footnote{UNIX besturingssysteem implementatie voor de mainframe} en Websphere\footnote{Software product gericht op web-technologie}
 	\item DB: Database team, beheert alles database systemen waaronder DB2.
 \end{itemize}
+
+Alle Check owners gegroepeerd per team.
 
 \begin{table}[h]
 	\begin{tabular}{|l|p{9cm}|}
@@ -92,8 +94,10 @@ Nadat alle checks per team werden gegroepeerd, is er eerst zelf een voorstel gem
 
 \begin{itemize}
 	\item Run: Dit definieert dat de check uitgevoerd moet worden(Yes of No). Of dat deze check aangepast moet worden(MOD).
-	\item 00/\&SUF: Dit definieert dat de check voor alle LPARs wordt uitgeschakeld (00) of maar voor 1 LPAR(\&SUF\footnote{Dit is een omgevings variabele dat de huidige LPAR specifieerd})
+	\item 00/\&SUF: Dit definieert dat de check voor alle LPARs wordt uitgeschakeld (00) of maar voor 1 LPAR(\&SUF\footnote{Dit is een omgevings variabele dat de huidige LPAR specifieerd}). Wanneer er N/A(not applicable) staat betekent dit dat er niets verandert zal worden aan de check.
 \end{itemize}
+
+Verder was er nog 1 uitzondering voor het beheren van de checks. Het SOE team beheert alle migratie checks en deze zullen ongewijzigd blijven in de parmlibs. De migratie checks zelf worden maar 1 keer geactiveerd.
 
 De volledige health Checker setup zoals ze na deze proef is bevind zich in bijlage \ref{sec:Tabellen Standaard opstelling z/OS Health Checker}. Dit is een samenvatting van hoe HCL wilt dat de setup eruit ziet. 
 
@@ -124,7 +128,7 @@ Deze wijzigingen gebeuren met een ADDREPLACE-statement. De statement in figuur \
 \begin{figure}[h]
 	\centering
 	\includegraphics{img/addreplace}
-	\caption[ADDREPLACE statement]{Voorbeeld van een ADDREPLACE Statement}
+	\caption[ADDREPLACE statement]{Voorbeeld van een ADDREPLACE Statement (\cite{IBMCorporation2019})}
 	\label{fig:addreplace}
 \end{figure}
 
@@ -242,7 +246,7 @@ Dan moet men het interval instellen dat bepaald wanneer het plan uitgevoerd word
 	\label{fig:interval}
 \end{figure}
 
-Om na te kijken of het interval goed ingesteld is kunnen we via het GENDAYS commando via het scherm op figuur \ref{fig:interval} naar een kalender gaan. Deze kalender duid alle dagen dat het plan zal uitvoeren aan in het blauw. En op figuur \ref{fig:calender} is te zien dat dit alle vrijdagen zijn vanaf 01/05/20. Dit is de datum wanneer het plan voor de eerste keer werd uitgevoerd. Dit plan staat gepland voor de komende 10 jaar zoals te zien is op figuur 
+Om na te kijken of het interval goed ingesteld is kunnen we via het GENDAYS commando via het scherm op figuur \ref{fig:interval} naar een kalender te gaan. Deze kalender duid alle dagen dat het plan zal uitvoeren aan in het blauw. En op figuur \ref{fig:calender} is te zien dat dit alle vrijdagen zijn vanaf 01/05/20. Dit is de datum wanneer het plan voor de eerste keer werd uitgevoerd. Dit plan staat gepland voor de komende 10 jaar zoals te zien is op figuur 
 
 \begin{figure}[h]
 	\centering
@@ -258,5 +262,4 @@ Om na te kijken of het interval goed ingesteld is kunnen we via het GENDAYS comm
 	\label{fig:caleder2030}
 \end{figure}
 
- 
-
+Zoals te zien op de kalenders zijn de JCL jobs nu geprogrammeerd en zal een team elke vrijdag een log ontvangen met alle exceptions van alle LPARs. Het team zal dan de verantwoordelijke van de check met een exception aansporen om deze op te lossen. Door deze werking zal er nu efficiënter gewerkt worden met z/OS Health Checker en is er nog minder kans dat er problemen over het hoofd worden gezien.

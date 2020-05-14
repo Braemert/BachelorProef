@@ -151,6 +151,35 @@
       \verb :C\:/Users/Jonas-PC-2/Downloads/Introduction to the new mainframe.pdf:PDF
       \endverb
     \endentry
+    \entry{IBM2010}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=cbf44511d041dc6d1dd73cc0c033122c}{%
+           family={IBM},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{fullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{bibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Serving dynamic Web pages on z/OS}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ibm.com/support/knowledgecenter/zosbasics/com.ibm.zos.zmidwebs/zmiddle_86.htm?view=embed#zmiddle_86__usingplug
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/support/knowledgecenter/zosbasics/com.ibm.zos.zmidwebs/zmiddle_86.htm?view=embed#zmiddle_86__usingplug
+      \endverb
+    \endentry
     \entry{IBM2019}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=cbf44511d041dc6d1dd73cc0c033122c}{%
@@ -163,11 +192,11 @@
       \strng{authorbibnamehash}{cbf44511d041dc6d1dd73cc0c033122c}
       \strng{authornamehash}{cbf44511d041dc6d1dd73cc0c033122c}
       \strng{authorfullhash}{cbf44511d041dc6d1dd73cc0c033122c}
+      \field{extraname}{2}
       \field{sortinit}{I}
       \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{chapter}{Chapter 10}
@@ -317,6 +346,9 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{Parziale2007}
+  \missing{Vilaghy2002}
+  \missing{Wood2012}
 \endrefsection
 \endinput
 
