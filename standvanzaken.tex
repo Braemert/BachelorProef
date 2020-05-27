@@ -7,33 +7,23 @@
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
 
-Dit onderzoek zal zich focussen op z/OS Health Checker. Dit is een tool die draait in een mainframe omgeving. Vooraleer we kunnen beginnen met het bespreken van de oplossingsmethode van de onderzoeksvragen moeten we ons eerst verdiepen in de mainframe zelf en de omgeving waarin z/OS Health Checker draait om zo duidelijk te maken waarom deze tool zijn aanwezigheid belangrijk is en hoe deze werkt. Verder moeten we ook de basis begrijpen van andere tools en systemen binnen de mainframe zoals ISPF, SDS en JES. Om daarna te eindigen met JCL de taal die word gebruikt om de z/OS Health Checker logs op te stellen.
+Dit onderzoek zal zich focussen op z/OS Health Checker. Dit is een tool die draait in een mainframe omgeving. Vooraleer we kunnen beginnen met het bespreken van de oplossingsmethode van de onderzoeksvragen moeten we ons eerst verdiepen in de mainframe zelf en de omgeving waarin z/OS Health Checker draait om zo duidelijk te maken waarom deze tool zijn aanwezigheid belangrijk is en hoe deze werkt. Verder moeten we ook de basis begrijpen van andere tools en systemen binnen de mainframe zoals ISPF, SDSF en JES. Om daarna te eindigen met JCL de taal die word gebruikt om de z/OS Health Checker logs op te stellen.
 
 \section{De Mainframe}
 \label{sec:De Mainframe}
 
 De Mainframe speelt een centrale rol in de dagelijkse operaties bij de meeste grote bedrijven. De Ontwikkeling van de mainframe gaat terug tot de jaren '50. Ook al is er door de jaren heen veel veranderd aan de mainframe blijft het het meest stabiele,veilige en compatibele computing platform. Desondanks dat de mainframe een grote aanwezigheid heeft binnen de financiële wereld, blijft deze vrij onzichtbaar voor de grote menigte. Maar eigenlijk zijn we bijna allemaal indirect mainframe gebruikers ook al realiseren we het niet. (\cite{Ebbers2011})
 
-De term mainframe kan vandaag het beste beschreven worden als een stijl van operaties, applicaties en besturing systeem faciliteiten. Een definitie hiervan zou zijn: "Een mainframe is hetgeen dat bedrijven gebruiken voor het hosten van commerciële databanken, transactie servers en applicaties die een hogere graad van security en availability nodig hebben dan die in machines van een kleinere schaal. 
-De term mainframe is duidelijk vervaagd met de jaren daarom wordt de term meestal geassocieerd met een systeem met volgende eigenschappen. (\cite{Ebbers2011})
-
-\begin{itemize}
-	\item Compatibiliteit met System z besturingssystemen, applicaties en data.
-	\item Gecentraliseerde controle van resources
-	\item Hardware en besturingssystemen die toegang kunnen delen tot disk drives met ander systemen met automatische locking en bescherming tegen destructief simultaan gebruik van data.
-	\item Hardware en besturingssystemen die continu werken met honderden of duizenden simultane input-output operaties
-	\item Clustering technologieën bevatten zoals de Parallel Sysplex die de mainframe flexibel en schaalbaar maken
-	\item Geoptimaliseerd voor input-output business gerelateerde data processing applicaties
-\end{itemize}
+Een mainframe is een computer die gebruikt wordt door vooral grote bedrijven voor kritieke applicaties(bijvoorbeeld geld transacties bij een bank), of voor het verwerken van grote hoeveelheid data(bijvoorbeeld de gehele voorraad van een bedrijf beheren). De mainframe is voor zulke operaties geschikt omdat het gespecialiseerd is voor het afhandelen van Input-Output transacties, een mainframe kan er tot 30000 afhandelen per seconde. En dit hoog niveau van data verwerking is zeker nodig, probeer je maar eens in te beelden hoeveel geld transacties er op 1 dag plaatsvinden. Een groot verschil van een mainframe tegenover een server is de hardware. In een mainframe kunnen er tegenwoordig 100 processors aanwezig zijn. Een ander verschil is dat de mainframe een langere uptime heeft. Het is niet speciaal dat een mainframe langer dan 10 jaar continu draait. Verder is een mainframe ook fysiek veel groter dan één enkele server(zie figuur \ref{fig:mainframe}).\cite{Ebbers2011}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics{img/mainframe}
-	\caption[Mainframe]{2 mainframes de System z Business Class en Enterprise class(\cite{Ebbers2011})}
+	\caption[Mainframe]{{\small \textit{2 mainframes de System z Business Class en Enterprise class(\cite{Ebbers2011})}}}
 	\label{fig:mainframe}
 \end{figure}
 
-
+Men mag bij de term mainframe wel niet denken aan een supercomputer. Het grote verschil tussen de 2 is dat een mainframe gespecialiseerd is in het afhandelen van transacties en het verwerken van data. Terwijl een supercomputer gespecialiseerd is in het maken van wiskundige berekeningen.
 
 \section{Logische partities en de Parallel Sysplex}
 \label{sec:Logische partities en de Parallel Sysplex}
@@ -48,12 +38,12 @@ De IBM mainframe kan verdeeld worden in verscheidene logische systemen. Tussen d
 	\item Processors
 	\item Input-Output devices.
 \end{itemize}
-Deze aparte systemen noemt men een logische partitie of LPAR. Al deze LPARs staan onder de controle van een hypervisor. De hypervisor is een software laag voor het beheer van meerdere besturingssystemen. De Verdeling van resources gebeurt door de Processor Resource/Systems Manager(PR/SM). De volledige definitie van een LPAR luidt als volgt: Een subset van de processor hardware dat gedefinieerd is voor het ondersteunen van een besturingssysteem. Meerdere LPARs zijn dus gelijkaardig aan verschillende aparte mainframes. Ze hebben elk hun eigen besturingssysteem en toegewezen hardware. (\cite{Ebbers2011})
+Deze aparte systemen noemt men een logische partitie of LPAR. Al deze LPARs staan onder de controle van een hypervisor. De hypervisor is een software laag voor het beheer van meerdere besturingssystemen. De Verdeling van resources gebeurt door de Processor Resource/Systems Manager(PR/SM)(zie figuur \ref{fig:lpar}). De volledige definitie van een LPAR luidt als volgt: Een subset van de processor hardware dat gedefinieerd is voor het ondersteunen van een besturingssysteem. Meerdere LPARs zijn dus gelijkaardig aan verschillende aparte mainframes. Ze hebben elk hun eigen besturingssysteem en toegewezen hardware. (\cite{Ebbers2011})
 
 \begin{figure}[h]
 	\centering
 	\includegraphics{img/LPAR}
-	\caption[Logische Partities]{Visualisatie van logische partities(\cite{Ebbers2011})}
+	\caption[Logische Partities]{{\small \textit{Visualisatie van logische partities(\cite{Ebbers2011})}}}
 	\label{fig:lpar}
 \end{figure}
 
@@ -80,27 +70,23 @@ Sommige z/OS applicaties op verschillende LPARs hebben vaak toegang nodig to dez
 \begin{figure}[h]
 	\centering
 	\includegraphics{img/ParallelSysplex}
-	\caption[Visualisatie van een Parallel Sysplex]{Visualisatie van een parallel sysplex met 2 LPARs en 1 Coupling Facility. Control Units controleren de logica voor bepaalde I/O-apparaten zoals printers of opslagfaciliteiten.(\cite{Ebbers2011})}
+	\caption[Visualisatie van een Parallel Sysplex]{{\small \textit{Visualisatie van een parallel sysplex met 2 LPARs en 1 Coupling Facility. Control Units controleren de logica voor bepaalde I/O-apparaten zoals printers of opslagfaciliteiten.(\cite{Ebbers2011})}}}
 	\label{fig:parallelsysplex}
 \end{figure}
 
-Een goed geconfigureerde parallel sysplex cluster is zodanig ontworpen dat het een hoge beschikbaarheid biedt met een minimale onbeschikbaarheid. Dit is dus al een van technieken die de mainframe zijn hoge availabilty garanderen. Bijvoorbeeld: wanneer een system uitvalt, dan kan een ander systeem dit direct opvangen omdat alle data en kritische applicaties gedeeld worden in de parallel sysplex. De taken van het uitvallende systeem worden overgenomen. Ondertussen kan het gefaalde systeem herstart worden. Dit zorgt er uiteindelijk voor dat een laag aantal single points of failure aanwezig is binnen de sysplex. (\cite{Ebbers2011})
+Een goed geconfigureerde parallel sysplex cluster(zie figuur \ref{fig:parallelsysplex}) is zodanig ontworpen dat het een hoge beschikbaarheid biedt met een minimale onbeschikbaarheid. Dit is dus al een van technieken die de mainframe zijn hoge availabilty garanderen. Bijvoorbeeld: wanneer een systeem uitvalt, dan kan een ander systeem dit direct opvangen omdat alle data en kritische applicaties gedeeld worden in de parallel sysplex. De taken van het uitvallende systeem worden overgenomen. Ondertussen kan het gefaalde systeem herstart worden. Dit zorgt er uiteindelijk voor dat een laag aantal single points of failure aanwezig is binnen de sysplex. (\cite{Ebbers2011})
+
+Een voorbeeld van een single point of failure(SPOF): Stel dat er een paar datasets van de coupling facility zijn die allebei op dezelfde fysieke drive staan, zouden die er bij een uitval van de CF LPAR niet meer toegankelijk zijn. In de parallel sysplex wordt dit vermeden door deze data te delen over meerder LPARs. Hiervoor bestaat bijvoorbeeld ook een check(XCF\_CDS\_SPOF)(\cite{IBMCorporation2019}).
 
 \section{z/OS}
 \label{subsec:z/OS}
 
-Een ander belangrijk component van elk systeem is het besturingssysteem. In het geval van deze proef is dat z/OS. Dit niet het enige maar wel het meest gebruikte besturingssysteem op de mainframe. Zoals de naam het zelf zegt draait ook z/OS Health Checker op dit besturingssysteem. Daarom bespreken we ook dit besturingssysteem. Een besturingssysteem is eigenlijk een collectie van programma's die de interne werking van het computer systeem beheren. Een besturingssysteem is ontworpen om er voor te zorgen dat de resources van de computer optimaal gebruikt worden.
+Een ander belangrijk component van elke computer is het besturingssysteem. In het geval van deze proef is dat z/OS. Dit niet het enige maar wel het meest gebruikte besturingssysteem op de mainframe. Zoals de naam het zelf zegt draait ook z/OS Health Checker op dit besturingssysteem. Daarom bespreken we ook dit besturingssysteem. Een besturingssysteem is eigenlijk een collectie van programma's die de interne werking van het computer systeem beheren. Een besturingssysteem is ontworpen om er voor te zorgen dat de resources van de computer optimaal gebruikt worden.
 
-z/OS is vandaag een resultaat van tientallen jaren technologische vooruitgang door IBM. Het begon als een besturingssysteem dat maar 1 programma tegelijk kon afhandelen naar een dat vandaag duizenden programma's en gebruikers tegelijk kan afhandelen. Het besturingssysteem wordt uitgevoerd in de processor en bevindt zich ook in de processor storage. Mainframe hardware bestaat uit een aantal processors en gekoppelde toestellen zoals DASD(Direct Acces storage devices de mainframe term voor hard disks). Die worden dan allemaal aangestuurd vanuit de consoles gekoppeld aan de mainframe. De DASD's worden gebruikt voor systeem functies of door programma's van gebruikers die uitgevoerd worden door z/OS. (\cite{Ebbers2011})
+z/OS is vandaag een resultaat van tientallen jaren technologische vooruitgang door IBM. Het begon als een besturingssysteem dat maar 1 programma tegelijk kon afhandelen naar een dat vandaag duizenden programma's en gebruikers tegelijk kan afhandelen. Het besturingssysteem wordt uitgevoerd in de processor en bevindt zich ook in de processor storage(zie figuur \ref{fig:omgevingzos}). Mainframe hardware bestaat uit een aantal processors en gekoppelde toestellen zoals DASD(Direct Acces storage devices de mainframe term voor hard disks). Die worden dan allemaal aangestuurd vanuit de consoles gekoppeld aan de mainframe. De DASD's worden gebruikt voor systeem functies of door programma's van gebruikers die uitgevoerd worden door z/OS. (\cite{Ebbers2011})
 
-\begin{figure}[h]
-	\centering
-	\includegraphics{img/Omgeving_zOS}
-	\caption[z/OS binnen de mainframe omgeving]{z/OS binnen de hardware omgeving bevindt zich op de mainframe. En wordt aangestuurd door aangesloten consoles/terminals. Om dan de data te bewerken op tape drives of DASD(term voor hard disk binnen de mainframe wereld)\cite{Ebbers2011}}
-	\label{fig:omgevingzos}
-\end{figure}
 
-z/OS maakt het ook mogelijk om aan multiprocessing en multiprogramming te doen. Hierdoor maakt het z/OS geschikt voor het uitvoeren van programma's die veel input/output operaties nodig hebben. 
+z/OS maakt het ook mogelijk om aan multiprocessing en multiprogramming te doen. Hierdoor is z/OS geschikt voor het uitvoeren van programma's die veel input/output operaties nodig hebben. 
 
 \subsubsection{Multiprocessing}
 \label{subsubsec:Multiprocessing}
@@ -108,12 +94,19 @@ Dit is het simultaan opereren van meerdere processors die meerdere hardware reso
 
 \subsubsection{Multiprogramming}
 \label{subsubsec:Multiprogramming}
-Multiprogramming laat z/OS toe om duizenden programma's te draaien voor gebruikers die werken aan verschillende projecten waar men zich ook bevindt op de wereld.
+Multiprogramming laat z/OS toe om duizenden programma's te draaien voor gebruikers die werken aan verschillende projecten waar men zich ook bevindt op de wereld. Dit komt doordat z/OS het mogelijk maakt om belangrijke data van een onderbroken programma op te slagen, zodat men een ander programma kan uitvoeren. Als het onderbroken programma terug klaar is om uit te voeren kan het gewoon verder doen vanaf het punt van de onderbreking.(\cite{Ebbers2011})
+
+\begin{figure}[h]
+	\centering
+	\includegraphics{img/Omgeving_zOS}
+	\caption[z/OS binnen de mainframe omgeving]{{\small \textit{z/OS binnen de hardware omgeving bevindt zich op de mainframe. En wordt aangestuurd door aangesloten consoles/terminals. Om dan de data te bewerken op tape drives of DASD(term voor hard disk binnen de mainframe wereld). (\cite{Ebbers2011})}}}
+	\label{fig:omgevingzos}
+\end{figure}
 
 \subsection{Storage gebruik van z/OS}
 \label{subsec:Storage gebruik van z/OS}
 
-z/OS heeft ook zijn eigen manier voor het gebruik van opslag/storage. Dit is ook belangrijk, omdat de term 'address space' gebruikt zal worden binnen deze proef. En die term is de techniek die z/OS gebruikt binnen de storage omgeving.
+z/OS heeft ook zijn eigen manier voor het gebruik van opslag/storage. Dit is ook belangrijk, omdat de term 'address space' gebruikt zal worden binnen deze proef. En die term is een techniek die z/OS gebruikt binnen de storage omgeving.
 
 Een mainframe en een gewone computer hebben 2 soorten fysieke opslag:
 
@@ -126,12 +119,12 @@ z/OS gebruikt deze 2 soorten storage om een andere soort te vormen namelijk virt
 
 Een address space is eigenlijk een range van virtuele adressen dat het besturingssysteem toekent aan een programma of gebruiker. Voor een gebruiker kan dit beschouwd worden als een container waar zijn data in zit. Door deze addres space moet z/OS niet een heel programma naar de real storage laden om het uit te voeren. Daarom zal men het programma in stukken(ook gekend als pages) van de auxiliary storage naar de real storage verplaatsen in de volgorde die nodig is om het prorgamma uit te voeren. Eens dat een page niet meer nodig is kan men het terugschrijven naar de auxiliary storage. Dit laat z/OS toe om meer programma's simultaan uit te voeren.
 
-De fysieke opslag is daarom opgedeeld in verschillende stukken die elke hun eigen adres hebben maar de pages worden opgevraagd met hun virtueel adres. Het proces om een virtueel adres te vertalen in een real address noemt men Dynamic Address translation(DAT). (\cite{Ebbers2011})
+De fysieke opslag is daarom opgedeeld in verschillende stukken die elke hun eigen adres hebben maar de pages worden opgevraagd met hun virtueel adres. Het proces om een virtueel adres te vertalen in een real address noemt men Dynamic Address translation(DAT)(zie figuur \ref{fig:storage}). (\cite{Ebbers2011})
 
 \begin{figure}[h]
 	\centering
 	\includegraphics{img/Storage}
-	\caption[Visualisatie van het concept van virtuele storage]{Bijna alle programma's gebruiken virtuele adressen als ze refereren naar data in de real storage. Maar als een aangevraagd adres zich niet in de real storage bevindt zal er een onderbreking plaatsvinden en zal men de nodige data uit auxiliary storage naar de real storage laden(ook wel paging genoemd)(\cite{Ebbers2011})}
+	\caption[Visualisatie van het concept van virtuele storage]{{\small \textit{Bijna alle programma's gebruiken virtuele adressen als ze refereren naar data in de real storage. Maar als een aangevraagd adres zich niet in de real storage bevindt zal er een onderbreking plaatsvinden en zal men de nodige data uit auxiliary storage naar de real storage laden(ook wel paging genoemd)(\cite{Ebbers2011})}}}
 	\label{fig:storage}
 \end{figure}
 
@@ -140,20 +133,19 @@ Een andere manier om te denken aan een address space is eigenlijk een soort van 
 \section{Interactie met z/OS}
 \label{sec:interactie met z/OS}
 
-Om een systeem te beheren moeten we er natuurlijk ook mee kunnen werken. Voor deze interactie gebruikt men bijvoorbeeld een TSO/E commando om aan te loggen en dan ISPF, een collectie van menu's en panels die brede range van functies aanbied.
+Om een systeem te beheren moeten we er natuurlijk ook op kunnen aanloggen om zo bijvoorbeeld programma's te schrijven of bestanden te manipuleren. Voor deze interactie gebruikt men bijvoorbeeld een TSO/E commando om aan te loggen en dan ISPF, een collectie van menu's en panels die brede range van functies aanbied.
 
 \subsection{Time Sharing Option/Extensions en Interactive System Productivity Facility}
 \label{subsec:Time Sharing Option}
 
-TSO/E of Time Sharing Option/Extensions laat gebruikers toe om een interactieve sessie te maken met een z/OS systeem. Hierdoor kunnen ze aanloggen op het z/OS systeem en gebruik maken van een command prompt interface. Maar omdat de command prompt niet echt handig is wordt er meestal gebruik gemaakt van de Interactive System Productivity Facility (ISPF). Dit is een collectie van menu's en panelen die een wijde range van functies aanbied voor het bewerken van data in z/OS. Zo bied ISPF onder andere een tekst editor aan en functies voor het vinden en oplijsten van bestanden. (\cite{Parziale2017})
+TSO/E of Time Sharing Option/Extensions laat gebruikers toe om een interactieve sessie te maken met een z/OS systeem. Hierdoor kunnen ze aanloggen op het z/OS systeem en gebruik maken van een command prompt interface. Maar omdat de command prompt niet echt handig is wordt er meestal gebruik gemaakt van de Interactive System Productivity Facility (ISPF). Dit is een collectie van menu's en panelen die een wijde range van functies aanbied voor het bewerken van data in z/OS. Zo biedt ISPF onder andere een tekst editor aan en functies voor het vinden en oplijsten van bestanden(zie figuur \ref{fig:ispf}). (\cite{Parziale2017})
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{img/IPSF}
-	\caption[ISPF hoofdmenu]{Dit is het hoofdmenu van ISPF vanaf hier kan je de verschillende panelen gebruiken}
+	\caption[ISPF hoofdmenu]{{\small \textit{Dit is het hoofdmenu van ISPF vanaf hier kan je de verschillende panelen gebruiken}}}
 	\label{fig:ispf}
 \end{figure}
-
 
 De bestanden binnen z/OS worden ook wel 'data sets' genoemd, dit is de term die ook verder gebruikt zal worden als we over bestanden spreken binnen z/OS. Er zijn 2 soorten data sets waarmee gewerkt word in deze proef.
 
@@ -165,14 +157,14 @@ De bestanden binnen z/OS worden ook wel 'data sets' genoemd, dit is de term die 
 \section{Job Control Language en Job Entry Subsystem}
 \label{sec:Job Control Language en Job Entry Subsystem}
 
-In deze proef worden ook Jobs uitgevoerd voor het opstellen van de logs van z/OS Health Checker. Hiervoor wordt de Job Control Language(JCL) gebruikt. Want om een prorgamma uit te voeren moet het verwerkt worden door z/OS.
+In deze proef worden ook Jobs uitgevoerd voor het opstellen van de logs van z/OS Health Checker. Hiervoor wordt de Job Control Language(JCL) gebruikt. Want om een programma uit te voeren moet het verwerkt worden door z/OS.
 
-Vooraleer het z/OS systeem een programma voor je kan uitvoeren moet je een paar dingen doen. Je moet eerst natuurlijk beschrijven welk programma je wil uitvoeren maar ook welke resources er gebruikt zullen worden(bv: eventuele input). Dit doe je met een JCL job. Deze jobs 'submit' je dan naar het Job Entry Subsystem(JES) deze zal de jobs inplannen en hun output verwerken. (\cite{Cosimo2018})
+Vooraleer het z/OS systeem een programma kan uitvoeren moet men een paar dingen doen. Eerst moet er beschreven worden welk programma men wil uitvoeren maar ook welke resources er gebruikt zullen worden(bv: eventuele input). Dit doet men aan de hand can een JCL ob. Deze jobs wordt gesubmit naar het Job Entry Subsystem(JES). Het JES zal deze jobs dan inplannen en uitvoeren en zal tot slot hun output verwerken(zie figuur \ref{fig:jes}). (\cite{Cosimo2018})
 
 \begin{figure}[h]
 	\centering
 	\includegraphics{img/JES}
-	\caption[Visualisatie van JCL en JES]{De gebruiker definieert, maakt en zal een job submitten. Deze wordt dan verwerkt door het Job Entry Subsystem en zal de output van de job teruggeven als resultaat.}
+	\caption[Visualisatie van JCL en JES]{{\small \textit{De gebruiker definieert, maakt en zal een job submitten. Deze wordt dan verwerkt door het Job Entry Subsystem en zal de output van de job teruggeven als resultaat.(\cite{Cosimo2018})}}}
 	\label{fig:jes}
 \end{figure}
 
@@ -181,12 +173,12 @@ Vooraleer het z/OS systeem een programma voor je kan uitvoeren moet je een paar 
 
 We willen natuurlijk de output van onze jobs kunnen zien daarvoor wordt er gebruikt gemaakt van de System Display and Search Facility of SDSF. Dit is niet het enige dat we kunnen zien in SDSF. Voor z/OS Health Checker zullen we ook deze tool gebruiken om alle info van het systeem op te vragen. Deze functie kan je bereiken via het hoofdmenu van ISPF met de optie 'S'(zie figuur \ref{fig:ispf} )
 
-In SDSF zijn er veel panelen en soorten output die je kan opvragen maar de enige die wij zullen gebruiken is namelijk die van z/OS Health Checker die bereik je binnen SDSF via de 'ck' optie. Verder zal je bij het schrijven van jobs het 'Status of jobs' paneel nodig hebben. Dit panel toont de output van uitgevoerde jobs, dit paneel bereik je met de 'st' optie.
+In SDSF zijn er veel panelen en soorten output die je kan opvragen maar de enige die wij zullen gebruiken is namelijk die van z/OS Health Checker die bereik je binnen SDSF via de 'ck' optie. Verder zal je bij het schrijven van jobs het 'Status of jobs' paneel nodig hebben. Dit panel toont de output van uitgevoerde jobs, dit paneel bereik je met de 'st' optie(zie figuur \ref{fig:sdsf}).
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{img/SDSF}
-	\caption[SDSF Hoofdmenu]{Hier zie je het hoofdmenu van SDSF en onder andere ook de 2 opties die gebruikt worden doorheen de proef namelijk 'ck' en 'st'}
+	\caption[SDSF Hoofdmenu]{{\small \textit{Hier zie je het hoofdmenu van SDSF en onder andere ook de 2 opties die gebruikt worden doorheen de proef namelijk 'ck' en 'st'}}}
 	\label{fig:sdsf}
 \end{figure}
 
@@ -214,12 +206,12 @@ z/OS Health Checker bestaat uit 2 delen
 \subsection{Health Checker Framework}
 \label{subsec:Health Checker Framework}
 
-Het framework van z/OS Health Checker is de interface die je gebruikt om checks uit te voeren en te beheren. Deze ondersteunt niet enkele checks van IBM maar ook die van software producenten zoals Computer Associates en Compuware. Binnen het framework zit de HZSPQE data, hierin zit alle informatie die een check nodig zou hebben zoals de default parameters.  Het framework bevat ook de Message table die de data bijhoudt van de output van de checks. (\cite{IBMCorporation2019})
+Het framework van z/OS Health Checker is de interface die je gebruikt om checks uit te voeren en te beheren. Deze ondersteunt niet enkele checks van IBM maar ook die van software producenten zoals Computer Associates en Compuware. Binnen het framework zit de HZSPQE data, hierin zit alle informatie die een check nodig zou hebben zoals de default parameters.  Het framework bevat ook de Message table die de data bijhoudt van de output van de checks(zie figuur \ref{fig:hcframework}). (\cite{IBMCorporation2019})
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{img/HCFramework}
-	\caption[z/OS Health Checker Framework]{Het z/OS Health Checker Framework dat het mogelijk maakt om checks uit te voeren en de output hiervan door te geven aan SDSF en andere tools.(\cite{IBMCorporation2019})}
+	\caption[z/OS Health Checker Framework]{{\small \textit{Het z/OS Health Checker Framework dat het mogelijk maakt om checks uit te voeren en de output hiervan door te geven aan SDSF en andere tools.(\cite{IBMCorporation2019})}}}
 	\label{fig:hcframework}
 \end{figure}
 
@@ -248,24 +240,24 @@ Een check bezit verder ook nog enkele vooraf gedefinieerde waarden
 
 \begin{enumerate}
 	\item Een interval die definieert hoe vaak en wanneer de check uitgevoerd wordt.
-	\item De ernst(Severity) van een check deze definieert de check output. Hoe grotere het potentiele probleem hoe hoger de severity. 
+	\item De ernst(Severity) van een check die de check output definieert. Hoe grotere het potentiële probleem hoe hoger de severity. 
 \end{enumerate}
 
 \subsubsection{Check Types}
 \label{subsubsec:Check Type}
 
-Verder zijn er ook 3 types van checks: Local, remote en REXX checks. In deze proef komen enkel de local checks aan bod. De lokale check is geschreven in ASSEMBLER. En draaien binnen de Health Checker address space. Deze worden opgeroepen met parameters die verwijzen naar de HZSPQE data hierin zit alle data die de check routine nodig heeft. Het verschil met een Remote check is dat een remote check niet binnen de addres space van Health Checker draait. 
+Verder zijn er ook 3 types van checks: Local, remote en REXX checks. In deze proef komen enkel de local checks aan bod. De lokale check is geschreven in ASSEMBLER voor z/OS. En draaien binnen de Health Checker address space.Deze worden opgeroepen met parameters die verwijzen naar de HZSPQE data. In de HZSPQE data zit alle data die de check routine nodig heeft. Het verschil met een Remote check is dat een remote check niet binnen de address space van Health Checker draait. 
 
 \subsubsection{Check Output}
 \label{subsubsec:Check Output}
 
-De check output is ook zeer belangrijk deze duid namelijk aan of een check al dan niet succesvol was. Er zijn verschillende soorten check messages.
+ De check output is ook zeer belangrijk. Deze duidt namelijk aan of een check al dan niet succesvol was. Er zijn verschillende soorten check messages.
 
 \begin{itemize}
 	\item Information Message: Deze message krijg je wanneer een check succesvol is of wanneer deze niet kan draaien in de huidige omgeving(Bijvoorbeeld wanneer het component dat de check evalueert niet aanwezig is op het systeem).
-	\item Exception Message: Deze message krijg je wanneer de check onsuccesvol was en deze een potentieel probleem heeft gevonden. Dit noemt een exception. Dit bericht bevat de severity van het probleem samen met suggesteis om het probleem op te lossen
-	\item Report: Bij een exception zal er ook een extra report bijgevoegd zijn met extra informatie over het probleem.
-	\item Debug: Sommige checks kan je in debug mode uitvoeren. Dit wordt vooral enkel gebruikt bij het ontwikkelen van een eigen check.	
+	\item Exception Message: Deze message krijg je wanneer de check onsuccesvol was en deze een potentieel probleem heeft gevonden. Dit noemt men een exception. Dit bericht bevat de severity van het probleem samen met suggesties om het probleem op te lossen
+	\item Report: Bij een exception zal er ook een extra report bijgevoegd worden met extra informatie over het probleem.
+	\item Debug: Sommige checks kan je in debug mode uitvoeren. Dit wordt vooral gebruikt bij het ontwikkelen van een eigen check.
 \end{itemize}
 
 Voor een voorbeeld van check output zie bijlage \ref{sec:Check Output}
@@ -273,14 +265,14 @@ Voor een voorbeeld van check output zie bijlage \ref{sec:Check Output}
 \subsubsection{Check Status}
 \label{subsubsec:Check Status}
 
-Een check heeft ook een bepaalde status. Deze status duid aan of dat een check al dan niet geactiveerd is. Volgende statussen zijn mogelijk. (\cite{IBM2019})
+Een check heeft ook een bepaalde status. Deze status duid aan of een check al dan niet geactiveerd is. Volgende statussen zijn mogelijk. (\cite{IBM2019})
 
 \begin{itemize}
 	\item ACTIVE: Dit specifieert dat de check actief is en draait.
 	\item INACTIVE: Dit specifieert dat de check niet actief is en deze niet zal draaien.
-	\item Ookal is een check actief of inactief kan deze ook nog 2 opties hebben namelijk Enabled \& Disabled. Wanneer een check enabled is betekent dat dat deze kan draaien binnen de huidige omgeving. Als een check disabled is kan dit betekenen dat deze niet kan draaien omdat er condities binnen de huidige parallel sysplex omgeving zijn die dat verhinderen. Bijvoorbeeld een check van DB2 die disabled staat omdat er om een bepaalde LPAR geen DB2 product is.
+	\item Ook al is een check actief of inactief kan deze ook nog 2 opties hebben namelijk Enabled \& Disabled. Wanneer een check enabled is betekent dat dat deze kan draaien binnen de huidige omgeving. Als een check disabled is kan dit betekenen dat deze niet kan draaien omdat er condities binnen de huidige parallel sysplex omgeving zijn die dat verhinderen. Bijvoorbeeld een check van DB2 die disabled staat omdat er op een bepaalde LPAR geen DB2 product is.
 	\item GLOBAL: Dit betekent dat de check globaal is en daarom maar op 1 LPAR mag draaien van de gehele sysplex. Maar de check zal wel instellingen controleren voor de hele parallel sysplex. 
 \end{itemize}
 
 
-Verder is er nog 1 speciaal soort check. Namelijk de migration check. Deze check helpen je bij het plannen voor een overschakelen van z/OS versie. Deze checks kan je uitvoeren na een migratie om te kijken of deze succesvol was. Deze checks beginnen altijd met 'ZOSMIG'. (\cite{IBMCorporation2019})
+Verder is er nog 1 speciaal soort check. Namelijk de migration check. Deze check kan je helpen bij het plannen voor een overschakelen van z/OS versie. Deze checks kan je uitvoeren na een migratie om te kijken of deze succesvol was. Of voor een migratie om te kijken of je systeem klaar is voor een upgrade. Deze checks beginnen altijd met 'ZOSMIG'. (\cite{IBMCorporation2019})

@@ -236,6 +236,59 @@
       \verb :C\:/Users/Jonas-PC-2/Downloads/e0zl100_v2r3.pdf:PDF
       \endverb
     \endentry
+    \entry{Parziale2007}{book}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=72ce3955f961068a64f18c9d445327a4}{%
+           family={Parziale},
+           familyi={P\bibinitperiod},
+           given={Lydia},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=110d542b8a1e057c9528d98c9ea33e1b}{%
+           family={Drobnic},
+           familyi={D\bibinitperiod},
+           given={Ludvik},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d1a15a619c116af99270397087e648bb}{%
+           family={Facchinetti},
+           familyi={F\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2078c58901ab740e49499e06683bca06}{%
+           family={Levey},
+           familyi={L\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=da60897bfea65e78272c885c73995c49}{%
+           family={Miu},
+           familyi={M\bibinitperiod},
+           given={Amy},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f9602ba550dd3932a47f1ebb22ce9c1d}
+      \strng{fullhash}{d9c188e4f33fcdba6ad570756718b65d}
+      \strng{bibnamehash}{d9c188e4f33fcdba6ad570756718b65d}
+      \strng{authorbibnamehash}{d9c188e4f33fcdba6ad570756718b65d}
+      \strng{authornamehash}{f9602ba550dd3932a47f1ebb22ce9c1d}
+      \strng{authorfullhash}{d9c188e4f33fcdba6ad570756718b65d}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Implementing REXX Support in SDSF}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb :C\:/Users/Jonas-PC-2/Documents/Hogent/Hogent 1920/Bachelorproef/Bib/REXX with sdsf.pdf:PDF
+      \endverb
+    \endentry
     \entry{Parziale2017}{book}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=72ce3955f961068a64f18c9d445327a4}{%
@@ -263,11 +316,11 @@
       \strng{authorbibnamehash}{ded2dcc3ebd7282ab7e3b39f6587fff7}
       \strng{authornamehash}{f9602ba550dd3932a47f1ebb22ce9c1d}
       \strng{authorfullhash}{ded2dcc3ebd7282ab7e3b39f6587fff7}
+      \field{extraname}{2}
       \field{sortinit}{P}
       \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{11}
@@ -308,6 +361,59 @@
       \verb :C\:/Users/Jonas-PC-2/Documents/Hogent/Hogent 1920/Bachelorproef/Bib/CICS Transaction Server from Start to Finish.pdf:PDF
       \endverb
     \endentry
+    \entry{Vilaghy2002}{book}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=893bfa53d0452736bd05f3357311353f}{%
+           family={Vilaghy},
+           familyi={V\bibinitperiod},
+           given={thomas},
+           giveni={t\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9d158ed3ee72a50e616827864be49a19}{%
+           family={Beyerle},
+           familyi={B\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=254b9143d5d87dd445253e23eadb08cf}{%
+           family={Lange},
+           familyi={L\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d518bc2dd2ca269309a92a6a945eac35}{%
+           family={Mester},
+           familyi={M\bibinitperiod},
+           given={Axel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=aea9d7d4459ab529c1c93b4995589427}{%
+           family={Pani},
+           familyi={P\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{45c41b26ed62b1eb47306df5b1e3f93c}
+      \strng{fullhash}{e2e4b4609bece0878416f09c81407c1e}
+      \strng{bibnamehash}{e2e4b4609bece0878416f09c81407c1e}
+      \strng{authorbibnamehash}{e2e4b4609bece0878416f09c81407c1e}
+      \strng{authornamehash}{45c41b26ed62b1eb47306df5b1e3f93c}
+      \strng{authorfullhash}{e2e4b4609bece0878416f09c81407c1e}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{e-business Cookbookfor z/OS Volume III:Java Development}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb :C\:/Users/Jonas-PC-2/Documents/Hogent/Hogent 1920/Bachelorproef/Bib/e-business cookbook voor zOS Vol 3 java development.pdf:PDF
+      \endverb
+    \endentry
     \entry{Walle2013}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=75ccb34e69d4025ee0ef404ea0fc0af2}{%
@@ -345,10 +451,36 @@
       \verb https://share.confex.com/share/120/webprogram/Session13118.html
       \endverb
     \endentry
+    \entry{Wood2012}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=eab9376f97aee36adcdd81b50c09fec5}{%
+           family={Wood},
+           familyi={W\bibinitperiod},
+           given={Chip},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eab9376f97aee36adcdd81b50c09fec5}
+      \strng{fullhash}{eab9376f97aee36adcdd81b50c09fec5}
+      \strng{bibnamehash}{eab9376f97aee36adcdd81b50c09fec5}
+      \strng{authorbibnamehash}{eab9376f97aee36adcdd81b50c09fec5}
+      \strng{authornamehash}{eab9376f97aee36adcdd81b50c09fec5}
+      \strng{authorfullhash}{eab9376f97aee36adcdd81b50c09fec5}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Accessing SDSF data using Rexx andJava}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb :C\:/Users/Jonas-PC-2/Documents/Hogent/Hogent 1920/Bachelorproef/Bib/SHARE_Anaheim2012_RexxJava.pdf:PDF
+      \endverb
+    \endentry
   \enddatalist
-  \missing{Parziale2007}
-  \missing{Vilaghy2002}
-  \missing{Wood2012}
 \endrefsection
 \endinput
 

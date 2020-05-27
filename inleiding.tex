@@ -5,19 +5,9 @@
 \chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}
 \label{ch:inleiding}
 
-Men zal het niet beseffen maar zonder de Mainframe zouden veel hedendaagse diensten wegvallen. Ook al is de mainframe voor velen iets uit het verleden, veel sectoren blijven er op vertrouwen. Een voorbeeld zijn de bankinstellingen, de kans is groot dat als je iets betaalt met je bankkaart dat de transactie verwerkt wordt door een mainframe. Een ander voorbeeld zijn de vliegmaatschappijen, als je eens een kijkje zou kunnen nemen naar de computer die gebruikt wordt op de luchthaven om je in te checken op je vlucht, zal je merken dat dit hoogstwaarschijnlijk een terminal is die aangesloten zit op een Mainframe. Verder wordt de mainframe ook nog gebruikt in andere sectoren zoals:
+Men zal het niet beseffen maar zonder de Mainframe zouden veel hedendaagse diensten wegvallen. Ook al is de mainframe voor velen iets uit het verleden, veel sectoren blijven er op vertrouwen. Een voorbeeld zijn de bankinstellingen, de kans is groot dat als je iets betaalt met je bankkaart dat de transactie verwerkt wordt door een mainframe. Een ander voorbeeld zijn de vliegmaatschappijen, als je eens een kijkje zou kunnen nemen naar de computer die gebruikt wordt op de luchthaven om je in te checken op je vlucht, zal je merken dat dit hoogstwaarschijnlijk een terminal is die aangesloten zit op een Mainframe. Verder wordt de mainframe ook nog gebruikt in andere sectoren zoals: Financiële Sector, Magazijnbeheer, Verzekeringen, Ziekenzorg, Overheid, etc.
 
-
-\begin{itemize}
-  \item Financiële Sector
-  \item Magazijnbeheer
-  \item Verzekeringen
-  \item Ziekenzorg
-  \item Overheid
-  \item \ldots
-\end{itemize}
-
-Een uitval van een mainframe kan dus kritische diensten laten wegvallen. Bijvoorbeeld de mogelijkheid tot overschrijven via de bank. Daarom is een van de belangrijkste factoren van de mainframe de beschikbaarheid. De mainframe garandeert een uptime van 24 op 24, 7 op 7, 365 op 365 het hele jaar door dus. Hiervoor worden verscheidene technieken gebruikt zoals de "alles 2 regel". Je zult in een mainframe alles dubbel terugvinden. Ook de architectuur binnen de mainframe, de Parallel Sysplex(Meer hierover in hoofdstuk \ref{ch:stand-van-zaken}) zorgt dat bij een uitval van 1 partitie een andere zijn workload direct overneemt.an zijn er binnen die architectuur ook nog verschillende software componenten die hier voor zorgen. Een daarvan is degene waar deze proef zich op focust z/OS Health Checker, deze tool werkt preventief. Het zal proberen om de problemen op te sporen alvorens die plaats vinden en zal de System Administrator hiervan verwittigen. In hoofdstuk \ref{ch:stand-van-zaken} zal de werking hiervan tot in detail worden uitgelegd.
+Een uitval van een mainframe kan dus kritische diensten laten wegvallen. Bijvoorbeeld de mogelijkheid tot overschrijven via de bank. Daarom is een van de belangrijkste factoren van de mainframe de beschikbaarheid. De mainframe garandeert een uptime van 24 op 24, 7 op 7, 365 op 365 het hele jaar door dus. Hiervoor worden verscheidene technieken gebruikt zoals de "alles 2 regel". Je zult in een mainframe alles dubbel terugvinden dit zorgt voor redundantie zo zal je in een mainframe kast 2 laptops vinden om met de mainframe te communiceren. Ook de architectuur binnen de mainframe, de Parallel Sysplex(Meer hierover in hoofdstuk \ref{ch:stand-van-zaken}) zorgt dat bij een uitval van 1 partitie een andere zijn workload direct overneemt. Dit zorgt voor hoge stabiliteit binnen de mainframe. Zo ligt hun mean time between failures\footnote{MTBF is een methode om de betrouwbaarheid van een systeem te meten} meting in de tientallen jaren. De mainframe garandeert ook een hoog niveau van security. Dan zijn er binnen die architectuur ook nog verschillende software componenten die hier voor zorgen. Een daarvan is degene waar deze proef zich op focust z/OS Health Checker, deze tool werkt preventief. Het zal proberen om de problemen op te sporen alvorens die plaats vinden en zal de System Administrator hiervan verwittigen. In hoofdstuk \ref{ch:stand-van-zaken} zal de werking hiervan tot in detail worden uitgelegd.
 
 \section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}
 \label{sec:probleemstelling}
@@ -30,7 +20,7 @@ De z/OS Health Checker opstelling van HCL Technologies is al lang niet meer vera
 Deze proef zal zich focussen op de z/OS Health checker opstelling van HCL technologies met volgende onderzoeksvraag.
 
 \begin{itemize}
-	\item Is het mogelijk een standaardopstelling te maken voor een z/OS Health Checker omgeving?
+	\item Kan een huidige Health Checker opstelling geoptimaliseerd worden zodat het beheer hiervan gecentraliseerd is \& gestandaardiseerd worden zodat deze bij een uitbreiding van het systeem, de opstelling toegepast kan worden?
 \end{itemize}
 
 \subsection{Deelonderzoeksvragen}
@@ -39,7 +29,8 @@ Deze proef zal zich focussen op de z/OS Health checker opstelling van HCL techno
 Daarnaast is er in deze proef ook een focus op verdere efficiëntere logging van z/OS Health Checker en of deze kan via een webUI. Daaruit volgen de deelonderzoeksvragen:
 
 \begin{itemize}
-	\item Kan er een efficiënt log-systeem opgezet worden voor de z/OS Health Checker output?
+	\item Kan er een effectiever log-systeem opgezet worden voor de z/OS Health Checker output?
+	\item Is het mogelijk een log systeem op te stellen via een WebUI?
 \end{itemize}
 
 

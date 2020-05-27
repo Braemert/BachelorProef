@@ -33,23 +33,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Multiprogramming}{23}{section*.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Storage gebruik van z/OS}{23}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.1}Storage gebruik van z/OS}{24}{subsection.2.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Interactie met z/OS}{25}{section.2.4}% 
+\contentsline {section}{\numberline {2.4}Interactie met z/OS}{26}{section.2.4}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.1}Time Sharing Option/Extensions en Interactive System Productivity Facility}{26}{subsection.2.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Job Control Language en Job Entry Subsystem}{26}{section.2.5}% 
+\contentsline {section}{\numberline {2.5}Job Control Language en Job Entry Subsystem}{27}{section.2.5}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.6}System Display and Search Facility}{27}{section.2.6}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.7}De Parmlib}{28}{section.2.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.8}z/OS Health Checker}{28}{section.2.8}% 
+\contentsline {section}{\numberline {2.8}z/OS Health Checker}{29}{section.2.8}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.8.1}Health Checker Framework}{29}{subsection.2.8.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8.2}De Checks}{29}{subsection.2.8.2}% 
+\contentsline {subsection}{\numberline {2.8.2}De Checks}{30}{subsection.2.8.2}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Check Owner}{30}{section*.10}% 
 \defcounter {refsection}{0}\relax 
@@ -59,7 +59,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Check Types}{30}{section*.13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Check Output}{30}{section*.14}% 
+\contentsline {subsubsection}{Check Output}{31}{section*.14}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Check Status}{31}{section*.15}% 
 \defcounter {refsection}{0}\relax 
